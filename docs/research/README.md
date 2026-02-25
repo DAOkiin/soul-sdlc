@@ -16,6 +16,8 @@
 - [Intent context итерации](distillation/ITERATION-03-INTENT.md): зачем выполняется ITER-03 и как проходит цикл дистилляции/нарезки/передистилляции.
 - [Runbook первичной дистилляции](distillation/ITERATION-03-PRIMARY-DISTILLATION.md): правила первого прохода.
 - [Реестр первичного прохода](distillation/PRIMARY_PASS_REGISTRY.md): очередь источников для дистилляции.
+- [Реестр концептов](distillation/CONCEPT_REGISTRY.md): единый operational registry (`concept_id`, aliases, first_seen, status).
+- [Индекс файл↔концепт](distillation/FILE_CONCEPT_MAP.md): персистентная карта покрытия источников и контекста появления концептов.
 - [Карта контекстных слайсов](distillation/CONTEXT_SLICE_MAP.md): нарезка полного контекста на переиспользуемые блоки.
 - [Backlog точечной передистилляции](distillation/TARGETED_REDISTILL_BACKLOG.md): второй проход по узким задачам.
 

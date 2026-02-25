@@ -14,10 +14,12 @@ Primary objective: keep repository knowledge legible, traceable, and dedup-ready
 4. `docs/research/repo-tree-status.md` (latest tree audit snapshot)
 5. `docs/research/distillation/ITERATION_LEDGER.md` (iteration progression)
 6. `docs/research/distillation/ITERATION-03-INTENT.md` (context anchor for current iteration intent)
-7. `docs/research/distillation/ITERATION-03-PRIMARY-DISTILLATION.md` (current distillation runbook)
-8. `docs/research/distillation/PRIMARY_PASS_REGISTRY.md` (primary-pass queue)
-9. `Harring.md` (selected harness engineering quotes)
-10. `docs/README.md` and `docs/research/README.md` (for artifact definitions and research scope)
+7. `docs/research/distillation/CONCEPT_REGISTRY.md` (operational concept memory)
+8. `docs/research/distillation/FILE_CONCEPT_MAP.md` (persistent file↔concept index)
+9. `docs/research/distillation/ITERATION-03-PRIMARY-DISTILLATION.md` (current distillation runbook)
+10. `docs/research/distillation/PRIMARY_PASS_REGISTRY.md` (primary-pass queue)
+11. `Harring.md` (selected harness engineering quotes)
+12. `docs/README.md` and `docs/research/README.md` (for artifact definitions and research scope)
 
 ## Source-of-truth hierarchy
 
@@ -98,11 +100,13 @@ Allowed transition direction: `raw -> indexed -> parsed -> synthesized -> verifi
 ## Iteration-03 distillation workflow
 
 1. Read `docs/research/distillation/ITERATION-03-INTENT.md` as context anchor before taking tasks.
-2. Take next `pending` row in `docs/research/distillation/PRIMARY_PASS_REGISTRY.md`.
-3. Create/update `docs/research/distillation/primary-notes/<SOURCE_ID>.md`.
-4. Extract atomic claims with explicit evidence references (`source_path:line`).
-5. Propose/adjust slice placement in `docs/research/distillation/CONTEXT_SLICE_MAP.md`.
-6. Add focused follow-up work into `docs/research/distillation/TARGETED_REDISTILL_BACKLOG.md`.
+2. Read `docs/research/distillation/CONCEPT_REGISTRY.md` as mandatory operational memory.
+3. Read `docs/research/distillation/FILE_CONCEPT_MAP.md` as mandatory operational memory.
+4. Take next `pending` row in `docs/research/distillation/PRIMARY_PASS_REGISTRY.md`.
+5. Create/update `docs/research/distillation/primary-notes/<SOURCE_ID>.md`.
+6. Extract atomic claims with explicit evidence references (`source_path:line`) and register new concepts in `CONCEPT_REGISTRY.md`.
+7. Propose/adjust slice placement in `docs/research/distillation/CONTEXT_SLICE_MAP.md` and update file→concept coverage in `FILE_CONCEPT_MAP.md`.
+8. Add focused follow-up work into `docs/research/distillation/TARGETED_REDISTILL_BACKLOG.md`.
 
 ## Scope currently tracked by CHAT_REGISTRY
 
