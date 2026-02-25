@@ -37,8 +37,6 @@ Files under `docs/research/artifacts` remain the truth source for standards/view
   - Scope: `iteration-00`
   - Rows: 10
   - ID family: `CHAT-CHATGPT-I00-XXXX`
-- Dedup registry: `CHAT_DEDUP_REGISTRY.md`
-  - Exact removals recorded: 1
 
 ## Iteration boundary rule
 
