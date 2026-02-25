@@ -20,7 +20,7 @@ Produce a first-pass distilled knowledge layer from all raw chat sources so the 
 
 ## ID Rules
 
-- Source IDs are reused as-is (`CHAT-*` and `CHAT-CHATGPT-I00-*`).
+- Source IDs are reused as-is (`Ixx-Fxxxx-PROVIDER` and `Ixx-Fxxxx-PROVIDER-DR`).
 - Slice IDs use `SLICE-XXXX`.
 - Distill tasks use `REDIST-XXXX`.
 
