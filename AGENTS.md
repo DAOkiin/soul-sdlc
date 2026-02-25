@@ -9,25 +9,34 @@ Primary objective: keep repository knowledge legible, traceable, and dedup-ready
 ## Mandatory read order
 
 1. `AGENTS.md` (this file)
-2. `CHAT_REGISTRY.md` (manual ordering + processing state)
-3. `docs/research/repo-tree-status.md` (latest tree audit snapshot)
-4. `Harring.md` (selected harness engineering quotes)
-5. `docs/README.md` and `docs/research/README.md`
-6. Target chat file(s) referenced by `CHAT_REGISTRY.md`
+2. `CHAT_REGISTRY.md` (manual ordering for SDLC iterations 01/02)
+3. `CHAT_REGISTRY_ITERATION_00.md` (legacy prehistory registry)
+4. `CHAT_DEDUP_REGISTRY.md` (exact-duplicate removals)
+5. `docs/research/repo-tree-status.md` (latest tree audit snapshot)
+6. `Harring.md` (selected harness engineering quotes)
+7. `docs/README.md` and `docs/research/README.md`
+8. Target chat file(s) referenced by the registries
 
 ## Source-of-truth hierarchy
 
 1. `docs/research/artifacts/**/*` is treated as canonical truth for standards and viewpoints.
 2. Curated docs in `docs/` are structured synthesis layers.
-3. `raw-exports/` files are immutable evidence transcripts.
-4. `CHAT_REGISTRY.md` is the canonical processing order for scoped chat exports.
+3. `raw-exports/` files are immutable evidence transcripts (content-level immutability).
+4. `CHAT_REGISTRY.md` is the canonical processing order for SDLC discovery chats.
+
+## Iteration model
+
+- `raw-exports/sdlc-discovery-iteration-00`: pre-SDLC-automation history (data collection/discovery).
+- `raw-exports/sdlc-discovery-iteration-01`: chats up to `CHAT-CHATGPT-0022` (inclusive).
+- `raw-exports/sdlc-discovery-iteration-02`: chats from `CHAT-CHATGPT-0023` and later.
 
 ## Hard constraints
 
 - Do not rewrite semantic content inside `raw-exports/` to "clean" it.
-- Do not delete source files during analysis/dedup planning.
-- Do not renumber existing `chat_id` values in `CHAT_REGISTRY.md`.
-- Any normalization happens in derived docs, not in raw exports.
+- File path/filename normalization inside `raw-exports/` is allowed only by ID policies below.
+- Delete raw files only for exact SHA256 duplicates and only after recording the event in `CHAT_DEDUP_REGISTRY.md`.
+- Do not renumber existing `chat_id` values in `CHAT_REGISTRY.md` (`0001..0032` are stable).
+- Keep lineage explicit: every dedup or move must preserve provenance to prior path(s).
 
 ## ID policy
 
@@ -36,9 +45,13 @@ Primary objective: keep repository knowledge legible, traceable, and dedup-ready
 - Deep research variant: `CHAT-<PROVIDER>-DR-XXXX`
 - Current providers: `CHATGPT`, `GEMINI`
 
+### Legacy iteration-00 IDs
+- Standard: `CHAT-CHATGPT-I00-XXXX`
+- Managed in `CHAT_REGISTRY_ITERATION_00.md`
+
 ### Requirement IDs
 - Canonical format in synthesis docs: `US-XXXX`, `UC-XXXX`, `NFR-XXXX`, `AT-XXXX`, `ADR-XXXX`
-- If source transcript uses `US-###` style, keep source untouched and map it via aliases in derived artifacts.
+- If source transcript uses `US-###` style, keep source untouched and map via aliases in derived artifacts.
 
 ## CHAT_REGISTRY contract
 
@@ -73,12 +86,12 @@ Allowed transition direction: `raw -> indexed -> parsed -> synthesized -> verifi
    - IDs (`US/UC/NFR/AT/ADR`) and missing-ID findings
    - quality notes (`Unsupported Content`, plugin insertions, corruption)
 4. Update row `status`, `linked_us`, and `notes`.
-5. If duplicates are detected, mark both rows with matching `duplicate-candidate: <topic-family>`.
+5. If duplicates are detected, mark related rows and record resolved exact dedup events in `CHAT_DEDUP_REGISTRY.md`.
 
 ## Scope currently tracked by CHAT_REGISTRY
 
 - `raw-exports/sdlc-discovery-iteration-01/*.md`
-- `raw-exports/sdlc-discovery-iteration-all-chatgpt-work/ChatGPT-*.md`
+- `raw-exports/sdlc-discovery-iteration-02/*.md`
 
 ## Quick checks before finalizing changes
 
@@ -86,20 +99,23 @@ Run from repository root:
 
 - `rg -n "^\| [0-9]{4} \|" CHAT_REGISTRY.md | wc -l`
 - `rg -n "CHAT-[A-Z0-9]+(-DR)?-[0-9]{4}" CHAT_REGISTRY.md`
-- `rg -n "duplicate-candidate:" CHAT_REGISTRY.md`
-- `rg -n "\[Unsupported Content\]" raw-exports/sdlc-discovery-iteration-all-chatgpt-work/*.md`
+- `rg -n "CHAT-CHATGPT-I00-[0-9]{4}" CHAT_REGISTRY_ITERATION_00.md`
+- `find raw-exports/sdlc-discovery-iteration-01 raw-exports/sdlc-discovery-iteration-02 -maxdepth 1 -type f -name '*.md' | sed 's#.*/##' | rg -v '^CHAT-(CHATGPT|GEMINI)(-DR)?-[0-9]{4}\.md$'`
+- `find raw-exports/sdlc-discovery-iteration-00 -maxdepth 1 -type f -name '*.md' | sed 's#.*/##' | rg -v '^(CHAT-CHATGPT-I00-[0-9]{4}\.md|README\.md)$'`
 
 ## Dedup preparation rule
 
 Dedup decisions must be evidence-based:
 
 - prefer best-completeness variant as canonical synthesis input;
-- keep alternative variants as references in notes;
+- keep alternative variants as references in notes/registry;
 - never lose provenance to raw source path and `chat_id`.
 
 ## Expected deliverables for each substantial pass
 
 - updated `CHAT_REGISTRY.md` rows;
+- updated `CHAT_REGISTRY_ITERATION_00.md` rows when legacy scope is touched;
+- updated `CHAT_DEDUP_REGISTRY.md` when exact duplicates are removed;
 - updated `docs/research/repo-tree-status.md` snapshot if tree reality changed;
 - derived synthesis/traceability updates in `docs/`;
 - explicit list of unresolved ambiguities.
