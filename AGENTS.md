@@ -13,9 +13,12 @@ Primary objective: keep repository knowledge legible, traceable, and dedup-ready
 3. `CHAT_REGISTRY_ITERATION_00.md` (legacy prehistory registry)
 4. `CHAT_DEDUP_REGISTRY.md` (exact-duplicate removals)
 5. `docs/research/repo-tree-status.md` (latest tree audit snapshot)
-6. `Harring.md` (selected harness engineering quotes)
-7. `docs/README.md` and `docs/research/README.md`
-8. Target chat file(s) referenced by the registries
+6. `docs/research/distillation/ITERATION_LEDGER.md` (iteration progression)
+7. `docs/research/distillation/ITERATION-03-PRIMARY-DISTILLATION.md` (current distillation runbook)
+8. `docs/research/distillation/PRIMARY_PASS_REGISTRY.md` (primary-pass queue)
+9. `Harring.md` (selected harness engineering quotes)
+10. `docs/README.md` and `docs/research/README.md`
+11. Target chat file(s) referenced by the registries
 
 ## Source-of-truth hierarchy
 
@@ -29,6 +32,7 @@ Primary objective: keep repository knowledge legible, traceable, and dedup-ready
 - `raw-exports/sdlc-discovery-iteration-00`: pre-SDLC-automation history (data collection/discovery).
 - `raw-exports/sdlc-discovery-iteration-01`: chats up to `CHAT-CHATGPT-0022` (inclusive).
 - `raw-exports/sdlc-discovery-iteration-02`: chats from `CHAT-CHATGPT-0023` and later.
+- `docs/research/distillation/*` (`ITER-03`): primary distillation of all sources, followed by slice-based targeted redistillation.
 
 ## Hard constraints
 
@@ -87,6 +91,14 @@ Allowed transition direction: `raw -> indexed -> parsed -> synthesized -> verifi
    - quality notes (`Unsupported Content`, plugin insertions, corruption)
 4. Update row `status`, `linked_us`, and `notes`.
 5. If duplicates are detected, mark related rows and record resolved exact dedup events in `CHAT_DEDUP_REGISTRY.md`.
+
+## Iteration-03 distillation workflow
+
+1. Take next `pending` row in `docs/research/distillation/PRIMARY_PASS_REGISTRY.md`.
+2. Create/update `docs/research/distillation/primary-notes/<SOURCE_ID>.md`.
+3. Extract atomic claims with explicit evidence references (`source_path:line`).
+4. Propose/adjust slice placement in `docs/research/distillation/CONTEXT_SLICE_MAP.md`.
+5. Add focused follow-up work into `docs/research/distillation/TARGETED_REDISTILL_BACKLOG.md`.
 
 ## Scope currently tracked by CHAT_REGISTRY
 
