@@ -9,7 +9,7 @@ Primary objective: keep repository knowledge legible, traceable, and dedup-ready
 ## Mandatory read order
 
 1. `AGENTS.md` (this file)
-2. `CHAT_REGISTRY.md` (manual ordering for SDLC iterations 01/02)
+2. `CHAT_REGISTRY.md` (manual ordering for SDLC iterations 01/02/03)
 3. `CHAT_REGISTRY_ITERATION_00.md` (legacy prehistory registry)
 4. `CHAT_DEDUP_REGISTRY.md` (exact-duplicate removals)
 5. `docs/research/repo-tree-status.md` (latest tree audit snapshot)
@@ -32,7 +32,8 @@ Primary objective: keep repository knowledge legible, traceable, and dedup-ready
 
 - `raw-exports/sdlc-discovery-iteration-00`: pre-SDLC-automation history (data collection/discovery).
 - `raw-exports/sdlc-discovery-iteration-01`: chats up to `CHAT-CHATGPT-0022` (inclusive).
-- `raw-exports/sdlc-discovery-iteration-02`: chats from `CHAT-CHATGPT-0023` and later.
+- `raw-exports/sdlc-discovery-iteration-02`: chats from `CHAT-CHATGPT-0023` to `CHAT-CHATGPT-0032`.
+- `raw-exports/sdlc-discovery-iteration-03`: chats from `CHAT-GEMINI-DR-0033` and later.
 - `docs/research/distillation/*` (`ITER-03`): primary distillation of all sources, followed by slice-based targeted redistillation.
 
 ## Hard constraints
@@ -40,7 +41,7 @@ Primary objective: keep repository knowledge legible, traceable, and dedup-ready
 - Do not rewrite semantic content inside `raw-exports/` to "clean" it.
 - File path/filename normalization inside `raw-exports/` is allowed only by ID policies below.
 - Delete raw files only for exact SHA256 duplicates and only after recording the event in `CHAT_DEDUP_REGISTRY.md`.
-- Do not renumber existing `chat_id` values in `CHAT_REGISTRY.md` (`0001..0032` are stable).
+- Do not renumber existing `chat_id` values in `CHAT_REGISTRY.md` (`0001..0033` are stable).
 - Keep lineage explicit: every dedup or move must preserve provenance to prior path(s).
 
 ## ID policy
@@ -106,6 +107,7 @@ Allowed transition direction: `raw -> indexed -> parsed -> synthesized -> verifi
 
 - `raw-exports/sdlc-discovery-iteration-01/*.md`
 - `raw-exports/sdlc-discovery-iteration-02/*.md`
+- `raw-exports/sdlc-discovery-iteration-03/*.md`
 
 ## Quick checks before finalizing changes
 
@@ -115,6 +117,7 @@ Run from repository root:
 - `rg -n "CHAT-[A-Z0-9]+(-DR)?-[0-9]{4}" CHAT_REGISTRY.md`
 - `rg -n "CHAT-CHATGPT-I00-[0-9]{4}" CHAT_REGISTRY_ITERATION_00.md`
 - `find raw-exports/sdlc-discovery-iteration-01 raw-exports/sdlc-discovery-iteration-02 -maxdepth 1 -type f -name '*.md' | sed 's#.*/##' | rg -v '^CHAT-(CHATGPT|GEMINI)(-DR)?-[0-9]{4}\.md$'`
+- `find raw-exports/sdlc-discovery-iteration-03 -maxdepth 1 -type f -name '*.md' | sed 's#.*/##' | rg -v '^CHAT-(CHATGPT|GEMINI)(-DR)?-[0-9]{4}\.md$'`
 - `find raw-exports/sdlc-discovery-iteration-00 -maxdepth 1 -type f -name '*.md' | sed 's#.*/##' | rg -v '^(CHAT-CHATGPT-I00-[0-9]{4}\.md|README\.md)$'`
 
 ## Dedup preparation rule
