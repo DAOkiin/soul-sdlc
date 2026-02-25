@@ -7,20 +7,20 @@
 ## atomic_claims
 
 - Source is parsed as `chat` within `iteration-00` (evidence: `raw-exports/sdlc-discovery-iteration-00/CHAT-CHATGPT-I00-0009.md:1`).
-- Primary user intent is captured as: "я хочу разобраться в системных требованиях к серверу temporal, изучи их" (evidence: `raw-exports/sdlc-discovery-iteration-00/CHAT-CHATGPT-I00-0009.md:4`).
-- Dominant concepts include: Workflow, Temporal, Metrics (evidence: `raw-exports/sdlc-discovery-iteration-00/CHAT-CHATGPT-I00-0009.md:57`).
-- Quality signal: `[Unsupported Content]` count = `13`; thoughts block present = `false` (evidence: `raw-exports/sdlc-discovery-iteration-00/CHAT-CHATGPT-I00-0009.md:4`).
-- Requirement/artifact IDs and references are extracted for traceability update (evidence: `raw-exports/sdlc-discovery-iteration-00/CHAT-CHATGPT-I00-0009.md:57`).
+- User request extraction produced `3` block(s), mode=`explicit_markers`, confidence=`high` (evidence: `raw-exports/sdlc-discovery-iteration-00/CHAT-CHATGPT-I00-0009.md:4`).
+- Quality signal: `[Unsupported Content]` count = `13`; thoughts/meta present = `false` (evidence: `raw-exports/sdlc-discovery-iteration-00/CHAT-CHATGPT-I00-0009.md:7`).
+- Dominant concepts observed in source include: Temporal, Workflow, Metrics (evidence: `raw-exports/sdlc-discovery-iteration-00/CHAT-CHATGPT-I00-0009.md:4`).
+- Reverse-pass full-read completed with line_coverage=`100%` and `full_read=true` (evidence: `raw-exports/sdlc-discovery-iteration-00/CHAT-CHATGPT-I00-0009.md:335`).
 
 ## stable_knowledge
 
-- Core intent pattern for `CHAT-CHATGPT-I00-0009` is reusable in distillation pipeline.
-- Slice mapping candidates: SLICE-0004, SLICE-0003, SLICE-0006.
-- Stable conceptual anchors: Workflow, Temporal, Metrics.
+- Core intent pattern for `CHAT-CHATGPT-I00-0009` is reusable in distillation pipeline. [slice: SLICE-0004]
+- Slice mapping candidates: SLICE-0004, SLICE-0003, SLICE-0006. [slice: SLICE-0003]
+- Stable conceptual anchors: Temporal, Workflow, Metrics. [slice: SLICE-0006]
 
 ## volatile_knowledge
 
-- No additional volatile flags detected beyond routine drift risk.
+- Some contextual statements may drift over time and require periodic re-verification.
 
 ## artifacts_and_ids
 
@@ -32,8 +32,10 @@
 
 - unsupported_content_count: 13
 - has_thoughts_block: false
+- thoughts_evidence: -
 - request_extraction_mode: explicit_markers
 - request_confidence: high
+- full_read: true
 
 ## slice_candidates
 

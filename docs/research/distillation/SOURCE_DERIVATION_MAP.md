@@ -1,6 +1,6 @@
 # SOURCE_DERIVATION_MAP
 
-Derivation lineage for non-canonical, mutable working artifacts.
+Derivation lineage for non-canonical, mutable working artifacts. Reverse full-pass run marker: `REVPASS-20260226-025004`.
 
 | derived_path                                                             | canonical_source_id | canonical_path                                                 | relationship                    | mutability | notes                                                       |
 |--------------------------------------------------------------------------|---------------------|----------------------------------------------------------------|---------------------------------|------------|-------------------------------------------------------------|

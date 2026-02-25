@@ -7,16 +7,16 @@
 ## atomic_claims
 
 - Source is parsed as `chat` within `iteration-01` (evidence: `raw-exports/sdlc-discovery-iteration-01/CHAT-GEMINI-0001.md:1`).
-- Primary user intent is captured as: "Нужно проверить SDLC_12207_Synthesis.md используя документ со стандартом" (evidence: `raw-exports/sdlc-discovery-iteration-01/CHAT-GEMINI-0001.md:4`).
-- Dominant concepts include: SDLC, ISO/IEC/IEEE 12207, Traceability, Metrics (evidence: `raw-exports/sdlc-discovery-iteration-01/CHAT-GEMINI-0001.md:549`).
-- Quality signal: `[Unsupported Content]` count = `0`; thoughts block present = `true` (evidence: `raw-exports/sdlc-discovery-iteration-01/CHAT-GEMINI-0001.md:4`).
-- Requirement/artifact IDs and references are extracted for traceability update (evidence: `raw-exports/sdlc-discovery-iteration-01/CHAT-GEMINI-0001.md:549`).
+- User request extraction produced `2` block(s), mode=`explicit_markers`, confidence=`high` (evidence: `raw-exports/sdlc-discovery-iteration-01/CHAT-GEMINI-0001.md:4`).
+- Quality signal: `[Unsupported Content]` count = `0`; thoughts/meta present = `true` (evidence: `raw-exports/sdlc-discovery-iteration-01/CHAT-GEMINI-0001.md:4`).
+- Dominant concepts observed in source include: ISO/IEC/IEEE 12207, Traceability, SDLC, Metrics (evidence: `raw-exports/sdlc-discovery-iteration-01/CHAT-GEMINI-0001.md:4`).
+- Reverse-pass full-read completed with line_coverage=`100%` and `full_read=true` (evidence: `raw-exports/sdlc-discovery-iteration-01/CHAT-GEMINI-0001.md:728`).
 
 ## stable_knowledge
 
-- Core intent pattern for `CHAT-GEMINI-0001` is reusable in distillation pipeline.
-- Slice mapping candidates: SLICE-0002, SLICE-0003, SLICE-0004.
-- Stable conceptual anchors: SDLC, ISO/IEC/IEEE 12207, Traceability.
+- Core intent pattern for `CHAT-GEMINI-0001` is reusable in distillation pipeline. [slice: SLICE-0002]
+- Slice mapping candidates: SLICE-0002, SLICE-0003, SLICE-0004. [slice: SLICE-0003]
+- Stable conceptual anchors: ISO/IEC/IEEE 12207, Traceability, SDLC, Metrics. [slice: SLICE-0004]
 
 ## volatile_knowledge
 
@@ -36,6 +36,7 @@
 - thoughts_evidence: raw-exports/sdlc-discovery-iteration-01/CHAT-GEMINI-0001.md:18
 - request_extraction_mode: explicit_markers
 - request_confidence: high
+- full_read: true
 
 ## slice_candidates
 

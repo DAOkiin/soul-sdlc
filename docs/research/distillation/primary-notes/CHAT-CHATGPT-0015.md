@@ -7,33 +7,35 @@
 ## atomic_claims
 
 - Source is parsed as `chat` within `iteration-01` (evidence: `raw-exports/sdlc-discovery-iteration-01/CHAT-CHATGPT-0015.md:1`).
-- Primary user intent is captured as: "я придумал как управлять процессом разработки через state machine. Насколько я изобретаю велосипед по шкалам инновационность\оправданность и стоящее фокуса?" (evidence: `raw-exports/sdlc-discovery-iteration-01/CHAT-CHATGPT-0015.md:4`).
-- Dominant concepts include: SDLC, Traceability, State Machine, Workflow, Guardrails (evidence: `raw-exports/sdlc-discovery-iteration-01/CHAT-CHATGPT-0015.md:119`).
-- Quality signal: `[Unsupported Content]` count = `0`; thoughts block present = `false` (evidence: `raw-exports/sdlc-discovery-iteration-01/CHAT-CHATGPT-0015.md:4`).
-- Requirement/artifact IDs and references are extracted for traceability update (evidence: `raw-exports/sdlc-discovery-iteration-01/CHAT-CHATGPT-0015.md:119`).
+- User request extraction produced `2` block(s), mode=`explicit_markers`, confidence=`high` (evidence: `raw-exports/sdlc-discovery-iteration-01/CHAT-CHATGPT-0015.md:4`).
+- Quality signal: `[Unsupported Content]` count = `0`; thoughts/meta present = `false` (evidence: `raw-exports/sdlc-discovery-iteration-01/CHAT-CHATGPT-0015.md:4`).
+- Dominant concepts observed in source include: State Machine, Workflow, Traceability, SDLC (evidence: `raw-exports/sdlc-discovery-iteration-01/CHAT-CHATGPT-0015.md:4`).
+- Reverse-pass full-read completed with line_coverage=`100%` and `full_read=true` (evidence: `raw-exports/sdlc-discovery-iteration-01/CHAT-CHATGPT-0015.md:422`).
 
 ## stable_knowledge
 
-- Core intent pattern for `CHAT-CHATGPT-0015` is reusable in distillation pipeline.
-- Slice mapping candidates: SLICE-0004, SLICE-0003, SLICE-0002.
-- Stable conceptual anchors: SDLC, Traceability, State Machine.
+- Core intent pattern for `CHAT-CHATGPT-0015` is reusable in distillation pipeline. [slice: SLICE-0004]
+- Slice mapping candidates: SLICE-0004, SLICE-0003, SLICE-0002. [slice: SLICE-0003]
+- Stable conceptual anchors: State Machine, Workflow, Traceability, SDLC. [slice: SLICE-0002]
 
 ## volatile_knowledge
 
-- No additional volatile flags detected beyond routine drift risk.
+- Some contextual statements may drift over time and require periodic re-verification.
 
 ## artifacts_and_ids
 
 - requirement_ids: -
 - chat_refs: CHAT-CHATGPT-0015
-- mentioned_md_files: docs/_meta/process/compiler.md, docs/_meta/process/process-doc.template.md, docs/_meta/process/sdlc-task-flow.md, docs/iterations/.../acceptance.md, docs/iterations/<ITER>/reviews.md, process-doc.template.md
+- mentioned_md_files: /reviews.md, docs/_meta/process/compiler.md, docs/_meta/process/process-doc.template.md, docs/_meta/process/sdlc-task-flow.md, docs/iterations/.../acceptance.md, process-doc.template.md, reviews.md
 
 ## quality_risks
 
 - unsupported_content_count: 0
 - has_thoughts_block: false
+- thoughts_evidence: -
 - request_extraction_mode: explicit_markers
 - request_confidence: high
+- full_read: true
 
 ## slice_candidates
 

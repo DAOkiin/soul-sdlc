@@ -7,33 +7,35 @@
 ## atomic_claims
 
 - Source is parsed as `chat` within `iteration-02` (evidence: `raw-exports/sdlc-discovery-iteration-02/CHAT-CHATGPT-0030.md:1`).
-- Primary user intent is captured as: "Проверь консистентность документации по w-model SDLC. Проверь корректность рассуждений и выводов." (evidence: `raw-exports/sdlc-discovery-iteration-02/CHAT-CHATGPT-0030.md:4`).
-- Dominant concepts include: SDLC, AJTBD, W-Model, ISO/IEC/IEEE 12207, Traceability (evidence: `raw-exports/sdlc-discovery-iteration-02/CHAT-CHATGPT-0030.md:4`).
-- Quality signal: `[Unsupported Content]` count = `0`; thoughts block present = `false` (evidence: `raw-exports/sdlc-discovery-iteration-02/CHAT-CHATGPT-0030.md:4`).
-- Requirement/artifact IDs and references are extracted for traceability update (evidence: `raw-exports/sdlc-discovery-iteration-02/CHAT-CHATGPT-0030.md:4`).
+- User request extraction produced `2` block(s), mode=`explicit_markers`, confidence=`high` (evidence: `raw-exports/sdlc-discovery-iteration-02/CHAT-CHATGPT-0030.md:4`).
+- Quality signal: `[Unsupported Content]` count = `0`; thoughts/meta present = `false` (evidence: `raw-exports/sdlc-discovery-iteration-02/CHAT-CHATGPT-0030.md:4`).
+- Dominant concepts observed in source include: W-Model, SDLC, ISO/IEC/IEEE 12207, Traceability, AJTBD (evidence: `raw-exports/sdlc-discovery-iteration-02/CHAT-CHATGPT-0030.md:4`).
+- Reverse-pass full-read completed with line_coverage=`100%` and `full_read=true` (evidence: `raw-exports/sdlc-discovery-iteration-02/CHAT-CHATGPT-0030.md:337`).
 
 ## stable_knowledge
 
-- Core intent pattern for `CHAT-CHATGPT-0030` is reusable in distillation pipeline.
-- Slice mapping candidates: SLICE-0002, SLICE-0004, SLICE-0003.
-- Stable conceptual anchors: SDLC, AJTBD, W-Model.
+- Core intent pattern for `CHAT-CHATGPT-0030` is reusable in distillation pipeline. [slice: SLICE-0002]
+- Slice mapping candidates: SLICE-0002, SLICE-0004, SLICE-0003. [slice: SLICE-0004]
+- Stable conceptual anchors: W-Model, SDLC, ISO/IEC/IEEE 12207, Traceability, AJTBD. [slice: SLICE-0003]
 
 ## volatile_knowledge
 
-- No additional volatile flags detected beyond routine drift risk.
+- Some contextual statements may drift over time and require periodic re-verification.
 
 ## artifacts_and_ids
 
 - requirement_ids: -
 - chat_refs: CHAT-CHATGPT-0030
-- mentioned_md_files: -
+- mentioned_md_files: AJTBD.md, _12207-18.md, _Synthesis.md, w-model.md
 
 ## quality_risks
 
 - unsupported_content_count: 0
 - has_thoughts_block: false
+- thoughts_evidence: -
 - request_extraction_mode: explicit_markers
 - request_confidence: high
+- full_read: true
 
 ## slice_candidates
 
