@@ -1,0 +1,1432 @@
+{
+  "meta": {
+    "dictionary_version": "1.0.0",
+    "generated_on": "2026-02-24",
+    "scope_dir": "docs/research/sdlc",
+    "source_files": [
+      "AJTBD-SDLC.md",
+      "AJTBD.md",
+      "CAN_CSA_ISO_IEC_IEEE_12207-18.md",
+      "SDLC_12207_Synthesis.md",
+      "w-model.md"
+    ],
+    "notes": "Термины объединены из явных словарных таблиц, аббревиатур и доменных понятий AJTBD/W-model."
+  },
+  "terms": [
+    {
+      "term": "(d)",
+      "definition": "Detailed",
+      "category": "abbreviation_symbols",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "(p)",
+      "definition": "Preliminary",
+      "category": "abbreviation_symbols",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "(sa)",
+      "definition": "Software Acceptance",
+      "category": "abbreviation_symbols",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "(sfc)",
+      "definition": "Software Functional Configuration Audit",
+      "category": "abbreviation_symbols",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "(si)",
+      "definition": "Software Integration",
+      "category": "abbreviation_symbols",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "(siu)",
+      "definition": "Software Integration Update",
+      "category": "abbreviation_symbols",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "(spc)",
+      "definition": "Software Physical Configuration Audit",
+      "category": "abbreviation_symbols",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "(sq)",
+      "definition": "Software Qualification",
+      "category": "abbreviation_symbols",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "(su)",
+      "definition": "Software Unit",
+      "category": "abbreviation_symbols",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "(t)",
+      "definition": "Top-Level",
+      "category": "abbreviation_symbols",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "(u)",
+      "definition": "Update",
+      "category": "abbreviation_symbols",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "(yfc)",
+      "definition": "System Functional Configuration Audit",
+      "category": "abbreviation_symbols",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "(yi)",
+      "definition": "System Integration",
+      "category": "abbreviation_symbols",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "(ypc)",
+      "definition": "System Physical Configuration Audit",
+      "category": "abbreviation_symbols",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "(yq)",
+      "definition": "System Qualification",
+      "category": "abbreviation_symbols",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "12-phase IEEE 12207 viewpoint",
+      "definition": "Инженерная интерпретация SDLC как 12 фаз с артефактами и гейтами; не заменяет процессную структуру стандарта 12207.",
+      "category": "sdlc_viewpoint",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "A1 Rationale",
+      "definition": "Атрибут требования: обоснование, зачем требование существует и какую ценность покрывает.",
+      "category": "requirement_attribute",
+      "sources": [
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "A12 Condition of Use",
+      "definition": "Атрибут требования: условия и контекст использования, при которых требование применимо.",
+      "category": "requirement_attribute",
+      "sources": [
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "A15 ReqID",
+      "definition": "Атрибут требования: стабильный идентификатор требования для трассируемости.",
+      "category": "requirement_attribute",
+      "sources": [
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "A2 Trace to Parent",
+      "definition": "Атрибут требования: ссылка на родительское требование или верхнеуровневый источник.",
+      "category": "requirement_attribute",
+      "sources": [
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "A26 Stability/Volatility",
+      "definition": "Атрибут требования: оценка устойчивости требования к изменениям во времени.",
+      "category": "requirement_attribute",
+      "sources": [
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "A3 Trace to Source",
+      "definition": "Атрибут требования: ссылка на первичный источник (evidence, интервью, наблюдение, данные).",
+      "category": "requirement_attribute",
+      "sources": [
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "A34 Priority",
+      "definition": "Атрибут требования: приоритет относительно других требований/работ.",
+      "category": "requirement_attribute",
+      "sources": [
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "A36 Risk",
+      "definition": "Атрибут требования: риск, связанный с невыполнением или неверной реализацией требования.",
+      "category": "requirement_attribute",
+      "sources": [
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "A6 Success Criteria",
+      "definition": "Атрибут требования: измеримые критерии, по которым считается достигнутым успешный результат.",
+      "category": "requirement_attribute",
+      "sources": [
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "A7 Strategy",
+      "definition": "Атрибут требования: стратегия верификации/валидации или достижения критерия успеха.",
+      "category": "requirement_attribute",
+      "sources": [
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "A8 Method",
+      "definition": "Атрибут требования: конкретный метод проверки (тест, анализ, инспекция, демонстрация).",
+      "category": "requirement_attribute",
+      "sources": [
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "AJTBD",
+      "definition": "Advanced Jobs To Be Done: практический фреймворк Ивана Замесина, расширяющий JTBD графом работ, сегментацией и алгоритмами создания/коммуникации ценности.",
+      "category": "ajtbd",
+      "sources": [
+        "AJTBD.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "Acquirer",
+      "alt_term_ru": "приобретатель / заказчик",
+      "definition": "Сторона, приобретающая продукт/услугу у поставщика; в 12207:1995 — один из ключевых участников первичных процессов.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Activity",
+      "alt_term_ru": "деятельность / работа (вид деятельности)",
+      "definition": "Уровень детализации внутри процесса: группировка связанных заданий; в ГОСТ/TR встречается также термин «работа (вид деятельности)».",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Agreement process",
+      "alt_term_ru": "процессы соглашений",
+      "definition": "Группа процессов (в 2008/2017) для формализации отношений приобретатель–поставщик: acquisition и supply.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Allocated baseline",
+      "alt_term_ru": "распределённая (allocated) базовая линия",
+      "definition": "Базовая линия, фиксирующая распределение системных требований по компонентам/подсистемам (архитектурный уровень).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Architecture definition",
+      "alt_term_ru": "определение архитектуры",
+      "definition": "Процесс выработки архитектурного решения: компоненты, интерфейсы, распределение требований, ограничения.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Barrier",
+      "definition": "Фактор, мешающий выполнить работу или достичь ожидаемого прогресса.",
+      "category": "ajtbd",
+      "sources": [
+        "AJTBD.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "Baseline",
+      "alt_term_ru": "базовая линия (конфигурации)",
+      "definition": "Фиксированный набор утверждённых элементов (документов/версий), служащий отправной точкой для дальнейшего изменения под управлением CM.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Build",
+      "alt_term_ru": "сборка (build)",
+      "definition": "Планируемый выпуск/пакет изменений продукта (в инкрементной модели определяется заранее и оценивается по «значимой функциональности»).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Change request",
+      "alt_term_ru": "запрос на изменение",
+      "definition": "Формализованная заявка на изменение требований/конфигурации; основа работы сопровождения.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Configuration audit",
+      "alt_term_ru": "аудит конфигурации",
+      "definition": "Проверка соответствия реализованной конфигурации утверждённым требованиям/документации (FCA/PCA).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Configuration management (CM)",
+      "alt_term_ru": "управление конфигурацией (УК)",
+      "definition": "Процесс поддержания целостности продуктов/изменений: идентификация КЕ, контроль изменений, учёт статусов, аудит.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Consideration Set",
+      "definition": "Набор решений, которые пользователь реально рассматривает при выборе.",
+      "category": "ajtbd",
+      "sources": [
+        "AJTBD.md"
+      ]
+    },
+    {
+      "term": "DDD",
+      "definition": "Database Design Description",
+      "category": "abbreviation_description",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "DDER",
+      "definition": "Detailed Design Evaluation Record",
+      "category": "abbreviation_record",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "DER",
+      "definition": "Documentation Evaluation Record",
+      "category": "abbreviation_record",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "Decision management",
+      "alt_term_ru": "управление решениями",
+      "definition": "Формализация значимых решений: критерии, альтернативы, обоснования, протоколирование.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Design definition",
+      "alt_term_ru": "определение дизайна (проектных решений)",
+      "definition": "Детализация архитектуры до проектных решений, пригодных для реализации и тестирования.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Developer",
+      "alt_term_ru": "разработчик",
+      "definition": "Роль/организация, выполняющая процессы разработки (requirements->design->implementation->integration->qualification).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Developmental configuration",
+      "alt_term_ru": "конфигурация разработки (developmental configuration)",
+      "definition": "Контрольная точка, фиксирующая согласованное состояние проектных решений/кода (в документах Rico — устанавливается несколько раз по мере детализации).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Disposal",
+      "alt_term_ru": "утилизация / вывод из эксплуатации",
+      "definition": "Завершение жизненного цикла: снятие с эксплуатации, архивирование, замена, утилизация компонентов и данных.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Double-V",
+      "definition": "Альтернативное название W-Model, подчёркивающее две V-структуры (разработка и тестовая деятельность).",
+      "category": "testing_model",
+      "sources": [
+        "w-model.md"
+      ]
+    },
+    {
+      "term": "Dynamic testing",
+      "definition": "Проверка поведения выполняемой системы/кода на уровнях unit/integration/system/acceptance.",
+      "category": "testing_practice",
+      "sources": [
+        "w-model.md"
+      ]
+    },
+    {
+      "term": "EOCR",
+      "definition": "Executable Object Code Record",
+      "category": "abbreviation_record",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "Energy efficiency (value)",
+      "definition": "Определение ценности в AJTBD: выполнение работы с меньшими затратами энергии/усилий/ресурсов.",
+      "category": "ajtbd",
+      "sources": [
+        "AJTBD.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "Evolutionary model",
+      "alt_term_ru": "эволюционная модель",
+      "definition": "Модель, полезная при невозможности заранее полностью определить требования; продукт уточняется через последовательные итерации и обратную связь.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "FCA",
+      "definition": "Functional Configuration Audit",
+      "category": "abbreviation_audits",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "FCA / Functional Configuration Audit",
+      "alt_term_ru": "ФКА / функциональный аудит конфигурации",
+      "definition": "Аудит соответствия функциональным требованиям (обычно: доказательство, что функции реализованы и проверены).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Firmware",
+      "alt_term_ru": "программно-аппаратные средства (firmware)",
+      "definition": "ПО, реализованное техническими средствами; в 2017 также подчёркнуто, что стандарт охватывает программную часть firmware.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Functional baseline",
+      "alt_term_ru": "функциональная базовая линия",
+      "definition": "Базовая линия, фиксирующая функциональные требования и условия их проверки (обычно на системном уровне требований).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Graph of jobs",
+      "definition": "Иерархия и связи работ пользователя; ключевая дополнительная единица анализа в AJTBD.",
+      "category": "ajtbd",
+      "sources": [
+        "AJTBD.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "Hire a solution",
+      "definition": "Логика выбора, в которой пользователь \"нанимает\" продукт/сервис на выполнение работы.",
+      "category": "ajtbd",
+      "sources": [
+        "AJTBD.md"
+      ]
+    },
+    {
+      "term": "Human resource management",
+      "alt_term_ru": "управление персоналом",
+      "definition": "Планирование и обеспечение компетенций: роли, обучение, назначение ресурсов, развитие квалификации.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Incremental model / planned product improvement",
+      "alt_term_ru": "инкрементная модель / плановое улучшение продукта",
+      "definition": "Разработка ведётся серией заранее спланированных сборок (builds), каждая из которых добавляет функциональность.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Information management",
+      "alt_term_ru": "управление информацией",
+      "definition": "Организация информационных потоков и артефактов: доступ, актуальность, хранение, публикация.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Infrastructure management",
+      "alt_term_ru": "управление инфраструктурой",
+      "definition": "Обеспечение инструментов, сред, процедур и сервисов, необходимых для выполнения работ и управления проектами.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Inspection",
+      "alt_term_ru": "инспекция / inspection",
+      "definition": "Более формальная проверка продукта с подготовкой и регистрацией дефектов; обычно строже, чем walkthrough.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Integration",
+      "alt_term_ru": "интеграция / комплексирование",
+      "definition": "Сборка компонентов в более крупные единицы и проверка взаимодействия (software integration / system integration).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Iteration",
+      "alt_term_ru": "итерация",
+      "definition": "Повторяющийся цикл выполнения части работ с уточнением результата; не тождественен «инкременту», но часто используется совместно.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "JTBD",
+      "definition": "Jobs To Be Done: подход, в котором продукт \"нанимается\" пользователем для выполнения конкретной работы.",
+      "category": "ajtbd",
+      "sources": [
+        "AJTBD.md"
+      ]
+    },
+    {
+      "term": "Job (работа)",
+      "definition": "Цель/задача пользователя, описываемая как переход из точки A в точку B.",
+      "category": "ajtbd",
+      "sources": [
+        "AJTBD.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "Knowledge management",
+      "alt_term_ru": "управление знаниями",
+      "definition": "Сбор, хранение и использование знаний/уроков, баз знаний, типовых решений и практик.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Life cycle model management",
+      "alt_term_ru": "управление моделью ЖЦ",
+      "definition": "Организационный процесс выбора/поддержания применяемой модели жизненного цикла и правил её использования в проектах.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Maintainer",
+      "alt_term_ru": "сопровождающая сторона / сопровождающий",
+      "definition": "Роль, выполняющая сопровождение: анализ запросов на изменения, исправления дефектов, релизы обновлений.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Measurement",
+      "alt_term_ru": "измерения / метрики",
+      "definition": "Определение и применение метрик для процессов и продуктов; сбор и анализ данных.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Once-through strategy",
+      "alt_term_ru": "одноразовая (once-through) стратегия / каскад",
+      "definition": "Стратегия, при которой все требования определяются «сразу», а этапы выполняются последовательно; типично — «waterfall».",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Operator",
+      "alt_term_ru": "эксплуатирующая сторона / оператор",
+      "definition": "Роль, отвечающая за эксплуатацию ПО/системы в рабочей среде.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Organizational process",
+      "alt_term_ru": "организационный процесс",
+      "definition": "Процесс уровня организации (управление, инфраструктура, улучшение, обучение).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Organizational project-enabling processes",
+      "alt_term_ru": "организационные процессы, обеспечивающие проекты",
+      "definition": "Процессы, создающие среду для проектов (управление жизненным циклом, инфраструктурой, портфелем, компетенциями, качеством и знаниями).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Outcome",
+      "alt_term_ru": "ожидаемый результат",
+      "definition": "Наблюдаемое состояние/выход процесса, используемое для оценки выполнения (в новых редакциях 12207 используются purpose/outcome формулировки).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "PCA",
+      "definition": "Physical Configuration Audit",
+      "category": "abbreviation_audits",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "PCA / Physical Configuration Audit",
+      "alt_term_ru": "ФизКА / физический аудит конфигурации",
+      "definition": "Аудит соответствия физической (реальной) комплектации/версий утверждённой продуктовой конфигурации.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Portfolio management",
+      "alt_term_ru": "управление портфелем",
+      "definition": "Управление набором проектов/инициатив на уровне организации: приоритизация, балансировка ресурсов, контроль ценности.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Problem resolution",
+      "alt_term_ru": "решение проблем / устранение дефектов",
+      "definition": "Процесс регистрации, анализа, устранения и контроля проблем/дефектов, включая причинно-следственный анализ.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Process",
+      "alt_term_ru": "процесс",
+      "definition": "Набор взаимосвязанных действий, трансформирующих входы в выходы (продукты/результаты), организованный для достижения цели.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Process view",
+      "alt_term_ru": "представление процесса (process view)",
+      "definition": "Выбранный «срез» описания процессов, позволяющий рассматривать их под специфическим углом (например, software assurance, interface management и др.).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Product baseline",
+      "alt_term_ru": "продуктовая базовая линия",
+      "definition": "Базовая линия, фиксирующая конфигурацию поставляемого продукта (ПО/система) перед/после квалификационных испытаний.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Project assessment and control",
+      "alt_term_ru": "оценка и контроль проекта",
+      "definition": "Мониторинг статуса проекта и управление отклонениями относительно плана (сроки, стоимость, содержание, качество).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Purpose",
+      "alt_term_ru": "назначение / цель процесса",
+      "definition": "Краткое описание того, зачем процесс существует и какую ценность создаёт.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Quality assurance (QA)",
+      "alt_term_ru": "обеспечение качества (ОК)",
+      "definition": "Набор плановых и систематических действий, дающих уверенность, что процессы и продукты соответствуют требованиям качества.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Quality gate",
+      "definition": "Контрольная точка готовности артефакта/фазы с явными entry/exit критериями.",
+      "category": "testing_practice",
+      "sources": [
+        "w-model.md"
+      ]
+    },
+    {
+      "term": "Quality management",
+      "alt_term_ru": "управление качеством",
+      "definition": "Организационные правила и цели качества, метрики и улучшение, включая взаимодействие с QA.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Reengineering model",
+      "alt_term_ru": "модель реинжиниринга",
+      "definition": "Подход, при котором создаётся новый продукт на основе (или с учётом) существующей системы: перенос функций, миграция, модернизация.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Retest loop",
+      "definition": "Цикл повторной проверки после исправления: test -> debug/change -> re-test.",
+      "category": "testing_practice",
+      "sources": [
+        "w-model.md"
+      ]
+    },
+    {
+      "term": "Reuse",
+      "alt_term_ru": "повторное использование",
+      "definition": "Использование ранее созданных активов (компонентов, требований, тестов, документации) в новых продуктах/проектах.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Review",
+      "alt_term_ru": "обзор / ревью / формальный обзор",
+      "definition": "Формальная оценка артефактов/решений на контрольных точках проекта (SRR, PDR, CDR, TRR и т.д.).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Risk management",
+      "alt_term_ru": "управление рисками",
+      "definition": "Идентификация, анализ, планирование реагирования и мониторинг рисков.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "SAD",
+      "definition": "Software Architecture Description",
+      "category": "abbreviation_description",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SARAD",
+      "definition": "System Architecture and Requirements Allocation Description",
+      "category": "abbreviation_description",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SCR",
+      "definition": "Source Code Record",
+      "category": "abbreviation_record",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SCTRER",
+      "definition": "Software Code and Test Results Evaluation Record",
+      "category": "abbreviation_record",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SDD",
+      "definition": "Software Design Description",
+      "category": "abbreviation_description",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SDLC / Software Development Life Cycle",
+      "alt_term_ru": "ЖЦРПО / жизненный цикл разработки ПО",
+      "definition": "Совокупность процессов и работ по созданию, поставке, эксплуатации и сопровождению ПО на всём протяжении его жизни; в стандартах ISO/IEC 12207 описывается через процессы, виды деятельности и задания.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "SER",
+      "definition": "System Evaluation Record",
+      "category": "abbreviation_record",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SIAR",
+      "definition": "Software Integration Audit Report",
+      "category": "abbreviation_report",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SIDD",
+      "definition": "Software Interface Design Description",
+      "category": "abbreviation_description",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SIER",
+      "definition": "Software Integration Evaluation Record",
+      "category": "abbreviation_record",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SIP",
+      "definition": "Software Installation Plan",
+      "category": "abbreviation_plan",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SIRR",
+      "definition": "Software Installation Results Record",
+      "category": "abbreviation_record",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SOAER",
+      "definition": "Software Architecture Evaluation Record",
+      "category": "abbreviation_record",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SOIP",
+      "definition": "Software Integration Plan",
+      "category": "abbreviation_plan",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SORER",
+      "definition": "Software Requirements Evaluation Record",
+      "category": "abbreviation_record",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SQTARR",
+      "definition": "System Qualification Test Audit Results Record",
+      "category": "abbreviation_record",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SQTER",
+      "definition": "System Qualification Test Evaluation Record",
+      "category": "abbreviation_record",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SRD",
+      "definition": "Software Requirements Description",
+      "category": "abbreviation_description",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SRS",
+      "definition": "System Requirements Specification",
+      "category": "abbreviation_specification",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SYAER",
+      "definition": "System Architecture Evaluation Record",
+      "category": "abbreviation_record",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "SYRER",
+      "definition": "System Requirements Evaluation Record",
+      "category": "abbreviation_record",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "Shift-left testing",
+      "definition": "Практика раннего запуска тестовой деятельности (обзоры, анализ, дизайн тестов) до завершения кодирования.",
+      "category": "testing_practice",
+      "sources": [
+        "w-model.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "Software Acceptance Support",
+      "definition": "Фаза 12-фазного инженерного представления SDLC (User_Provided_Summary viewpoint).",
+      "category": "phase_12_viewpoint",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "Software Architectural Design",
+      "definition": "Фаза 12-фазного инженерного представления SDLC (User_Provided_Summary viewpoint).",
+      "category": "phase_12_viewpoint",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "Software Coding and Testing",
+      "definition": "Фаза 12-фазного инженерного представления SDLC (User_Provided_Summary viewpoint).",
+      "category": "phase_12_viewpoint",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "Software Detailed Design",
+      "definition": "Фаза 12-фазного инженерного представления SDLC (User_Provided_Summary viewpoint).",
+      "category": "phase_12_viewpoint",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "Software Installation",
+      "definition": "Фаза 12-фазного инженерного представления SDLC (User_Provided_Summary viewpoint).",
+      "category": "phase_12_viewpoint",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "Software Integration",
+      "definition": "Фаза 12-фазного инженерного представления SDLC (User_Provided_Summary viewpoint).",
+      "category": "phase_12_viewpoint",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "Software Qualification Testing",
+      "definition": "Фаза 12-фазного инженерного представления SDLC (User_Provided_Summary viewpoint).",
+      "category": "phase_12_viewpoint",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "Software Requirements Analysis",
+      "definition": "Фаза 12-фазного инженерного представления SDLC (User_Provided_Summary viewpoint).",
+      "category": "phase_12_viewpoint",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "Software life cycle process",
+      "alt_term_ru": "процесс жизненного цикла ПО",
+      "definition": "Процесс (process) стандарта, имеющий цель (purpose) и ожидаемые результаты (outcomes); может декомпозироваться до activities и tasks.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Software support",
+      "alt_term_ru": "поддержка ПО",
+      "definition": "Группа процессов (2008) для эксплуатации и сопровождения, включая приём обращений, исправления и релизы.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Stakeholder",
+      "alt_term_ru": "заинтересованная сторона",
+      "definition": "Лицо/организация, затронутые системой или влияющие на неё (заказчик, пользователи, поставщики, регуляторы и др.).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Static testing",
+      "definition": "Проверка артефактов без исполнения кода: review, walkthrough, inspection, static analysis.",
+      "category": "testing_practice",
+      "sources": [
+        "w-model.md"
+      ]
+    },
+    {
+      "term": "Supplier",
+      "alt_term_ru": "поставщик / исполнитель",
+      "definition": "Сторона, поставляющая продукт/услугу приобретателю; может быть разработчиком или интегратором.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Supporting process",
+      "alt_term_ru": "вспомогательный процесс",
+      "definition": "Процесс, поддерживающий другие процессы для управляемости и качества (напр., управление конфигурацией, качество, информация). Примечание: в 12207:1995/2008 supporting‑процессы выделялись как группа; в 12207:2017 эти функции в основном входят в Technical Management и задачи других процессов.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "System Architectural Design",
+      "definition": "Фаза 12-фазного инженерного представления SDLC (User_Provided_Summary viewpoint).",
+      "category": "phase_12_viewpoint",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "System Integration",
+      "definition": "Фаза 12-фазного инженерного представления SDLC (User_Provided_Summary viewpoint).",
+      "category": "phase_12_viewpoint",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "System Qualification Testing",
+      "definition": "Фаза 12-фазного инженерного представления SDLC (User_Provided_Summary viewpoint).",
+      "category": "phase_12_viewpoint",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "System Requirements Analysis",
+      "definition": "Фаза 12-фазного инженерного представления SDLC (User_Provided_Summary viewpoint).",
+      "category": "phase_12_viewpoint",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "System analysis",
+      "alt_term_ru": "системный анализ",
+      "definition": "Анализ поведения и свойств системы/ПО, включая компромиссы, ограничения и проверки согласованности.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "TVPL",
+      "definition": "Test or Validation Plan",
+      "category": "abbreviation_plan",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "TVPR",
+      "definition": "Test or Validation Procedures",
+      "category": "abbreviation_procedure",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "TVRR",
+      "definition": "Test or Validation Results Report",
+      "category": "abbreviation_report",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "Tailoring",
+      "alt_term_ru": "адаптация / tailoring",
+      "definition": "Выбор и настройка процессов/деятельностей/заданий под проект и контекст. В 12207:2017 требования по tailoring вынесены в Annex A (normative) и применяются при заявлении «tailored conformance».",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Task",
+      "alt_term_ru": "задание (task)",
+      "definition": "Атомарная единица требований стандарта: то, что «делается» в рамках деятельности. Важно: задачи не обязаны быть шагами последовательности и часто являются постоянными обязанностями, а их порядок не предписан.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Technical management processes",
+      "alt_term_ru": "процессы технического управления",
+      "definition": "Процессы управления на уровне проекта/технических аспектов (планирование, контроль, решения, риски, конфигурация, информация, измерения, качество).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Technical processes",
+      "alt_term_ru": "технические процессы",
+      "definition": "Процессы инженерии требований/архитектуры/дизайна/реализации/интеграции/верификации/валидации/перехода/эксплуатации/сопровождения/утилизации (2017).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Technical support (L1/L2/L3)",
+      "alt_term_ru": "техническая поддержка (1/2/3 линия)",
+      "definition": "Организационная модель сопровождения: 1 линия — приём/триаж; 2 линия — анализ и воспроизведение; 3 линия — разработка исправлений/экспертиза и релизы.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Test baseline",
+      "alt_term_ru": "тестовая базовая линия",
+      "definition": "Базовая линия, фиксирующая комплект тестов/планов/процедур для конкретного уровня интеграции/квалификации.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Testability review",
+      "definition": "Ревью требований/дизайна с фокусом на проверяемость и раннюю подготовку тестов.",
+      "category": "testing_practice",
+      "sources": [
+        "w-model.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "Testing vs Debugging",
+      "definition": "Разделение ролей и целей: тестирование выявляет дефекты, отладка локализует и устраняет причины.",
+      "category": "testing_practice",
+      "sources": [
+        "w-model.md"
+      ]
+    },
+    {
+      "term": "Transition",
+      "alt_term_ru": "переход (ввод в эксплуатацию)",
+      "definition": "Перенос продукта в целевую среду: установка, настройка, обучение, миграция, подготовка эксплуатации.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "UDD",
+      "definition": "User Documentation Description",
+      "category": "abbreviation_description",
+      "sources": [
+        "SDLC_12207_Synthesis.md"
+      ]
+    },
+    {
+      "term": "V-Model",
+      "definition": "Классическая модель соответствия уровней разработки и тестирования; в W-model расширяется второй тестовой веткой.",
+      "category": "testing_model",
+      "sources": [
+        "w-model.md"
+      ]
+    },
+    {
+      "term": "VV-Model",
+      "definition": "Синоним W-Model в части усиленного фокуса на раннем тестировании.",
+      "category": "testing_model",
+      "sources": [
+        "w-model.md"
+      ]
+    },
+    {
+      "term": "Validation",
+      "alt_term_ru": "валидация",
+      "definition": "Проверка: «сделали правильный продукт?» — соответствие потребностям заинтересованных сторон и назначению.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Verification",
+      "alt_term_ru": "верификация",
+      "definition": "Проверка: «сделали продукт правильно?» — соответствие реализации спецификациям и требованиям.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Viewpoint",
+      "alt_term_ru": "точка зрения (viewpoint)",
+      "definition": "Способ описания процессов/системы, ориентированный на конкретные интересы и аудиторию (роль, объект, контракт, оценка и т.п.).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "W-Model",
+      "definition": "Модель SDLC, усиливающая V-модель ранним и параллельным планированием тестирования для каждого артефакта разработки.",
+      "category": "testing_model",
+      "sources": [
+        "w-model.md",
+        "AJTBD-SDLC.md"
+      ]
+    },
+    {
+      "term": "Walkthrough",
+      "alt_term_ru": "прохождение / walkthrough",
+      "definition": "Форма оценки, где автор «проводит» участников через продукт для выявления дефектов и достижения общего понимания.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Waterfall model",
+      "alt_term_ru": "каскадная модель",
+      "definition": "Классическая линейная модель, где результаты каждой стадии являются входом следующей; применима при стабильных требованиях.",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    },
+    {
+      "term": "Work product",
+      "alt_term_ru": "рабочий продукт / артефакт",
+      "definition": "Любой документ, программный компонент или запись, создаваемые процессом/деятельностью/заданием (спецификации, планы, отчёты, код, записи проверок и т.п.).",
+      "category": "sdlc_glossary",
+      "sources": [
+        "SDLC_12207_Synthesis.md",
+        "CAN_CSA_ISO_IEC_IEEE_12207-18.md"
+      ]
+    }
+  ]
+}
