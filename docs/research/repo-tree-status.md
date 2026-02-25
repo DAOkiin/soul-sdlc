@@ -8,7 +8,7 @@ Current lightweight snapshot after raw-export normalization, iteration split upd
 ## Iteration progression
 
 - Completed: `ITER-00`, `ITER-01`, `ITER-02`
-- Current: `ITER-03` primary distillation (`docs/research/distillation/*`)
+- Current: `ITER-03` intent-context + primary distillation (`docs/research/distillation/*`)
 - Canonical ledger: `docs/research/distillation/ITERATION_LEDGER.md`
 
 ## Scope snapshot
@@ -19,7 +19,7 @@ Current lightweight snapshot after raw-export normalization, iteration split upd
 | `raw-exports/sdlc-discovery-iteration-00/*.md` | 11 | 10 legacy chats (`I00`) + 1 README |
 | `raw-exports/sdlc-discovery-iteration-01/*.md` | 22 | IDs up to `CHAT-CHATGPT-0022` |
 | `raw-exports/sdlc-discovery-iteration-02/*.md` | 10 | IDs from `CHAT-CHATGPT-0023` |
-| `docs/**/*.md` | 19 | Curated docs/syntheses/research (includes distillation workspace) |
+| `docs/**/*.md` | 20 | Curated docs/syntheses/research (includes distillation workspace) |
 | `docs/research/artifacts/**/*` | 11 files | Canonical research artifacts (truth source) |
 
 ## Canonical truth zone

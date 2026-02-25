@@ -9,6 +9,7 @@
 
 ## Итерация дистилляции (ITER-03)
 - [Итерационный реестр](distillation/ITERATION_LEDGER.md): статус и границы итераций 00/01/02/03.
+- [Intent context итерации](distillation/ITERATION-03-INTENT.md): зачем выполняется ITER-03 и как проходит цикл дистилляции/нарезки/передистилляции.
 - [Runbook первичной дистилляции](distillation/ITERATION-03-PRIMARY-DISTILLATION.md): правила первого прохода.
 - [Реестр первичного прохода](distillation/PRIMARY_PASS_REGISTRY.md): очередь источников для дистилляции.
 - [Карта контекстных слайсов](distillation/CONTEXT_SLICE_MAP.md): нарезка полного контекста на переиспользуемые блоки.
