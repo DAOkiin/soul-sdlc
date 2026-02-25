@@ -83,11 +83,11 @@ Entities, attributes, relations, documents, statuses—everything manifests thro
 
 The digest highlights these key fields:
 
-- `id` — unique event identifier  
-- `base: type: value` — semantic “core” (a triplet: type + value)  
-- `cause` — links to causal predecessor events (what this event depends on)  
-- `model` — a link to the model/template that produced the event (the corresponding model event)  
-- `actor` — who initiated/recorded the event  
+- `id` — unique event identifier
+- `base: type: value` — semantic “core” (a triplet: type + value)
+- `cause` — links to causal predecessor events (what this event depends on)
+- `model` — a link to the model/template that produced the event (the corresponding model event)
+- `actor` — who initiated/recorded the event
 - `date` — timestamp of recording
 
 Example record (illustrative YAML):
@@ -141,8 +141,8 @@ flowchart LR
 Instead of a hard-coded algorithmic order of steps, the principle is:
 
 - an event can be created/executed when:
-  - required **input/cause events** exist (`cause`),
-  - specified **conditions** evaluate to true.
+   - required **input/cause events** exist (`cause`),
+   - specified **conditions** evaluate to true.
 
 This makes the system resemble:
 
@@ -343,14 +343,14 @@ An event is worth adding if (in the spirit of the early formalization):
 
 - Concepts and key individuals are clearly separated.
 - For properties you defined:
-  - kind (attribute/relation),
-  - allowed range (`Range`/`SetRange`),
-  - uniqueness where needed (`Unique`, `UniqueIdentifier`).
+   - kind (attribute/relation),
+   - allowed range (`Range`/`SetRange`),
+   - uniqueness where needed (`Unique`, `UniqueIdentifier`).
 - For acts you defined:
-  - permissions (`Permission`),
-  - conditions (`Condition`).
+   - permissions (`Permission`),
+   - conditions (`Condition`).
 - For computed fields:
-  - `SetValue`, and it is clear which events the formula depends on.
+   - `SetValue`, and it is clear which events the formula depends on.
 
 ### 10.3 Template: minimal document lifecycle
 
@@ -368,13 +368,13 @@ Document: Model: "ModelDocument"
 
 ### 10.4 Mapping to familiar terms (to explain it to a team)
 
-| Boldsea | Closest analogy | The key difference |
-|---|---|---|
-| Event | event in event sourcing | event carries semantics and causality links as part of the model |
-| Event Graph (DAG) | event store + causal graph | causality is first-class, not an external log |
-| Model events | schema / metamodel | schema itself is also expressed as events |
-| Condition / Permission | business rules / RBAC | rules are executed by the engine as part of dataflow |
-| Query | DB/graph query | may incorporate model + causal links, not only “current state” |
+| Boldsea                | Closest analogy            | The key difference                                               |
+|------------------------|----------------------------|------------------------------------------------------------------|
+| Event                  | event in event sourcing    | event carries semantics and causality links as part of the model |
+| Event Graph (DAG)      | event store + causal graph | causality is first-class, not an external log                    |
+| Model events           | schema / metamodel         | schema itself is also expressed as events                        |
+| Condition / Permission | business rules / RBAC      | rules are executed by the engine as part of dataflow             |
+| Query                  | DB/graph query             | may incorporate model + causal links, not only “current state”   |
 
 ---
 
@@ -420,7 +420,7 @@ https://www.researchgate.net/publication/347897044_Blockchain_black_magic_and_ev
 
 ---
 
-> [!todo] Ideas for a Version 3 (optional)  
-> - Split into atomic notes (MOC + dedicated notes: “Constraints”, “Event Graph”, “Examples”).  
-> - Add a section “How to relate this to BPMN/EPC and where the applicability boundaries are”.  
+> [!todo] Ideas for a Version 3 (optional)
+> - Split into atomic notes (MOC + dedicated notes: “Constraints”, “Event Graph”, “Examples”).
+> - Add a section “How to relate this to BPMN/EPC and where the applicability boundaries are”.
 > - Add one end-to-end example (e.g., “document workflow”): genesis → model → facts → queries.

@@ -101,41 +101,41 @@ Below is a practical responsibility model that matches the W-Model intent.
 
 * **Customer / Business stakeholders**
 
-  * Provide domain rules and acceptance expectations.
-  * Participate in acceptance criteria definition and acceptance testing sign-off.
+   * Provide domain rules and acceptance expectations.
+   * Participate in acceptance criteria definition and acceptance testing sign-off.
 
 * **Product Owner / Business Analyst**
 
-  * Own requirements quality (clarity, completeness, testability).
-  * Co-own acceptance criteria with stakeholders and QA.
-  * Maintain requirements traceability and change impact analysis.
+   * Own requirements quality (clarity, completeness, testability).
+   * Co-own acceptance criteria with stakeholders and QA.
+   * Maintain requirements traceability and change impact analysis.
 
 * **System Architect**
 
-  * Own architecture decisions affecting testability (interfaces, observability, modularity).
-  * Supports integration strategy and integration environment definition.
+   * Own architecture decisions affecting testability (interfaces, observability, modularity).
+   * Supports integration strategy and integration environment definition.
 
 * **Developers**
 
-  * Implement code + developer tests (unit/component tests).
-  * Fix defects (debugging) and support root-cause analysis.
-  * Participate in reviews, but don’t “grade their own exam” for higher-level validation.
+   * Implement code + developer tests (unit/component tests).
+   * Fix defects (debugging) and support root-cause analysis.
+   * Participate in reviews, but don’t “grade their own exam” for higher-level validation.
 
 * **Test Analyst / QA Engineer**
 
-  * Derive test conditions early from requirements/design.
-  * Plan test coverage models and design tests at each level.
-  * Execute system/integration tests (depending on org) and report quality status.
+   * Derive test conditions early from requirements/design.
+   * Plan test coverage models and design tests at each level.
+   * Execute system/integration tests (depending on org) and report quality status.
 
 * **Test Manager / QA Lead**
 
-  * Define test strategy, resources, schedule, entry/exit criteria.
-  * Own test reporting, test risk management, and release recommendation.
+   * Define test strategy, resources, schedule, entry/exit criteria.
+   * Own test reporting, test risk management, and release recommendation.
 
 * **Configuration / Release / DevOps**
 
-  * Own builds, environments, deployment automation.
-  * Ensure “build system / install system” steps are reproducible (these appear explicitly in many W-model diagrams).
+   * Own builds, environments, deployment automation.
+   * Ensure “build system / install system” steps are reproducible (these appear explicitly in many W-model diagrams).
 
 ### 6.2 The key W-model responsibility split: Testing vs Debugging
 
@@ -372,10 +372,17 @@ Below is a curated set that balances **primary sources**, **expert essays**, and
 
 
 [1]: https://dl.gi.de/bitstreams/e7bfdb42-3020-48c5-9306-a66f6ae586e6/download "https://dl.gi.de/bitstreams/e7bfdb42-3020-48c5-9306-a66f6ae586e6/download"
+
 [2]: https://www.researchgate.net/publication/229035206_The_W-MODEL-Strengthening_the_Bond_Between_Development_and_Test "https://www.researchgate.net/publication/229035206_The_W-MODEL-Strengthening_the_Bond_Between_Development_and_Test"
+
 [3]: https://www.theseus.fi/bitstream/10024/3431/1/Kankola_Janne.pdf "https://www.theseus.fi/bitstream/10024/3431/1/Kankola_Janne.pdf"
+
 [4]: https://riskbasedtesting.com/content/pref.pdf "https://riskbasedtesting.com/content/pref.pdf"
+
 [5]: https://docs.broadcom.com/doc/surviving-shift-left-as-a-tester-paul-gerrard "https://docs.broadcom.com/doc/surviving-shift-left-as-a-tester-paul-gerrard"
+
 [6]: https://repositum.tuwien.at/bitstream/20.500.12708/14457/2/Hametner%20Reinhard%20-%202013%20-%20Test%20driven%20software%20development%20for%20improving%20the...pdf "https://repositum.tuwien.at/bitstream/20.500.12708/14457/2/Hametner%20Reinhard%20-%202013%20-%20Test%20driven%20software%20development%20for%20improving%20the...pdf"
+
 [7]: https://ischieferdecker.bplaced.net/publications/2010/Schieferdecker2010d%20-%20Model%20Based%20Testing.pdf "https://ischieferdecker.bplaced.net/publications/2010/Schieferdecker2010d%20-%20Model%20Based%20Testing.pdf"
+
 [8]: https://en.wikipedia.org/wiki/EuroSTAR_Conference "https://en.wikipedia.org/wiki/EuroSTAR_Conference"

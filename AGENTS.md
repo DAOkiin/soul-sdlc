@@ -44,21 +44,25 @@ Primary objective: keep repository knowledge legible, traceable, and dedup-ready
 ## ID policy
 
 ### Chat IDs
+
 - Standard: `CHAT-<PROVIDER>-XXXX`
 - Deep research variant: `CHAT-<PROVIDER>-DR-XXXX`
 - Current providers: `CHATGPT`, `GEMINI`
 
 ### Legacy iteration-00 IDs
+
 - Standard: `CHAT-CHATGPT-I00-XXXX`
 - Managed in `CHAT_REGISTRY_ITERATION_00.md`
 
 ### Requirement IDs
+
 - Canonical format in synthesis docs: `US-XXXX`, `UC-XXXX`, `NFR-XXXX`, `AT-XXXX`, `ADR-XXXX`
 - If source transcript uses `US-###` style, keep source untouched and map via aliases in derived artifacts.
 
 ## CHAT_REGISTRY contract
 
 Table columns:
+
 - `order`: manual canonical order.
 - `chat_id`: stable identifier.
 - `provider`: chat source provider.
@@ -71,6 +75,7 @@ Table columns:
 - `notes`: anomalies, dedup hints, quality flags.
 
 ### Status values
+
 - `raw`: not processed yet.
 - `indexed`: indexed and classified.
 - `parsed`: key entities extracted.
