@@ -1,9 +1,9 @@
 # Repo Tree Status (Post-Migration)
 
-Date: 2026-02-25
+Date: 2026-02-26
 
 ## Why this file exists
-Current lightweight snapshot after raw-export normalization, iteration split update, and exact dedup pass.
+Current lightweight snapshot after raw-export normalization, iteration split update, and full-pass distillation sync.
 
 ## Iteration progression
 
@@ -15,12 +15,12 @@ Current lightweight snapshot after raw-export normalization, iteration split upd
 
 | Area | Count | Notes |
 |---|---:|---|
-| `raw-exports/**/*.md` | 44 | Exported chats and readmes after migration |
+| `raw-exports/**/*.md` | 44 | Canonical exported chats/readmes (evidence zone) |
 | `raw-exports/sdlc-discovery-iteration-00/*.md` | 11 | 10 legacy chats (`I00`) + 1 README |
 | `raw-exports/sdlc-discovery-iteration-01/*.md` | 22 | IDs up to `CHAT-CHATGPT-0022` |
 | `raw-exports/sdlc-discovery-iteration-02/*.md` | 10 | IDs from `CHAT-CHATGPT-0023` |
-| `raw-exports/sdlc-discovery-iteration-03/*.md` | 1 | Intake export: `CHAT-GEMINI-DR-0033` |
-| `docs/**/*.md` | 20 | Curated docs/syntheses/research (includes distillation workspace) |
+| `raw-exports/sdlc-discovery-iteration-03/*.md` | 1 | Canonical intake export: `CHAT-GEMINI-DR-0033` |
+| `docs/**/*.md` | 74 | Curated docs/syntheses/research (includes generated distillation artifacts) |
 | `docs/research/artifacts/**/*` | 11 files | Canonical research artifacts (truth source) |
 
 ## Canonical truth zone
@@ -44,6 +44,11 @@ Files under `docs/research/artifacts` remain the truth source for standards/view
 - `CHAT-CHATGPT-0023` is the first file of `iteration-02`.
 - `CHAT-GEMINI-DR-0033` is currently the first file of `iteration-03`.
 
+## Derived working artifacts
+
+- Mutable working brief moved from raw zone to `docs/research/distillation/workbench/iteration-03-codex-working-brief.md`.
+- Canonical source linkage is documented in `docs/research/distillation/SOURCE_DERIVATION_MAP.md`.
+
 ## Dedup status
 
 - Removed exact duplicate:
@@ -61,8 +66,8 @@ Top files by `[Unsupported Content]` markers (after migration):
 | `raw-exports/sdlc-discovery-iteration-01/CHAT-CHATGPT-0019.md` | 68 |
 | `raw-exports/sdlc-discovery-iteration-01/CHAT-CHATGPT-0022.md` | 56 |
 | `raw-exports/sdlc-discovery-iteration-01/CHAT-CHATGPT-0021.md` | 44 |
+| `raw-exports/sdlc-discovery-iteration-00/CHAT-CHATGPT-I00-0009.md` | 13 |
 | `raw-exports/sdlc-discovery-iteration-02/CHAT-CHATGPT-0023.md` | 8 |
-| `raw-exports/sdlc-discovery-iteration-01/CHAT-CHATGPT-0007.md` | 5 |
 
 ## Migration evidence
 
