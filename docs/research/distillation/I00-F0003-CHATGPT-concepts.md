@@ -1,7 +1,5 @@
 # I00-F0003-CHATGPT Concepts (Draft)
 
-[Analyzed source: I00-F0003-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I00-F0003-CHATGPT`
@@ -12,15 +10,24 @@
 
 ## User Prompts Summary
 
-1. Пользователь попросил объяснить основные концепции AJTBD (`raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:4`).
-2. Пользователь попросил повторно объяснить AJTBD на практическом кейсе поиска событий в Бангкоке/Таиланде с опорой на контекст parsing-проекта (`raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:90`).
-3. Пользователь попросил помочь определить набор артефактов для итерационного цикла разработки (MVP), заменить персоны на AJTBD-артефакты, усилить трассируемость и перепроверить структуру документов без глубокого внешнего исследования (`raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:272`).
+1. [request] [U01] Пользователь попросил объяснить основные концепции AJTBD.
+2. [request] [U02] Пользователь попросил повторно объяснить AJTBD на практическом кейсе поиска событий в Бангкоке/Таиланде с опорой на контекст parsing-проекта.
+3. [request] [U03] Пользователь попросил помочь определить набор артефактов для итерационного цикла разработки (MVP), заменить персоны на AJTBD-артефакты, усилить трассируемость и перепроверить структуру документов без глубокого внешнего исследования.
 
 ## AI Response Summary
 
-1. Агент дал компактный каркас AJTBD: jobs as progress, job map, outcomes, forces of progress, segmentation by unmet outcomes (`C01`, `C02`, `C03`, `C04`).
-2. На кейсе Thailand events AJTBD был приземлён в конкретный pipeline и сущностную модель (canonical events, source mentions, validation/monitoring) (`C05`, `C06`).
-3. Для SDLC-контуров предложена AJTBD-first документационная архитектура: job catalog, iteration job pack, ADR слой, evidence-aware traceability chain (`C07`, `C08`, `C09`, `C10`).
+1. [proposal] [A01] Агент дал компактный каркас AJTBD: jobs as progress, job map, outcomes, forces of progress, segmentation by unmet outcomes.
+2. [proposal] [A02] На кейсе Thailand events AJTBD был приземлён в конкретный pipeline и сущностную модель (canonical events, source mentions, validation/monitoring).
+3. [proposal] [A03] Для SDLC-контуров предложена AJTBD-first документационная архитектура: job catalog, iteration job pack, ADR слой, evidence-aware traceability chain.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:90`
+- U03: `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:272`
+- A01: `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:8`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:12`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:14`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:25`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:29`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:36`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:38`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:142`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:40`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:47`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:160`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:166`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:181`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:49`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:53`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:58`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:183`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:189`
+- A02: `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:90`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:102`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:104`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:148`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:263`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:212`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:216`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:227`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:232`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:238`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:242`
+- A03: `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:372`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:382`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:386`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:390`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:397`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:403`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:417`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:432`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:446`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:466`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:300`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:303`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:481`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:487`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:500`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:551`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:557`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:562`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:566`, `raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md:577`
 
 ## Extracted Concepts
 
