@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate docs/research/distillation/*-concepts.md against v2.1 contract."""
+"""Validate docs/research/distillation/*-concepts.md against v2.2 contract."""
 
 from __future__ import annotations
 
@@ -9,13 +9,14 @@ import re
 from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Set, Tuple
 
 
 SECTION_ORDER = [
     "Source",
     "User Prompts Summary",
     "AI Response Summary",
+    "Summary Evidence Map",
     "Extracted Concepts",
     "Unresolved Ambiguities",
 ]
@@ -44,11 +45,13 @@ SECTION_RE = re.compile(r"^##\s+(.+?)\s*$")
 SOURCE_KEY_RE = re.compile(r"^-\s+([a-z_]+):")
 DATE_RE = re.compile(r"^-\s+processed_on:\s+`?(\d{4}-\d{2}-\d{2})`?\s*$")
 NUMBERED_ITEM_RE = re.compile(r"^\s*(\d+)\.\s+(.+?)\s*$")
-TYPED_SUMMARY_RE = re.compile(
-    r"^\[(goal|constraint|request|proposal|decision|risk|next_step)\]\s+\S.+$"
+SUMMARY_PAYLOAD_RE = re.compile(
+    r"^\[(goal|constraint|request|proposal|decision|risk|next_step)\]\s+\[([UA]\d{2})\]\s+(.+)$"
 )
 MARKDOWN_LINK_RE = re.compile(r"\[[^\]]+\]\([^)]+\)")
 ANCHOR_RE = re.compile(r"raw-exports/.+:\d+")
+SUMMARY_MAP_LINE_RE = re.compile(r"^-\s+([UA]\d{2}):\s+(.+?)\s*$")
+MAP_ANCHOR_TOKEN_RE = re.compile(r"`?(raw-exports/.+?:\d+)`?")
 CONCEPT_HEADING_RE = re.compile(r"^###\s+C(\d{2})\.\s+.+$")
 UNRESOLVED_ITEM_RE = re.compile(r"^\s*\d+\.\s+\S.+$")
 EVIDENCE_ITEM_RE = re.compile(r"^\s*-\s+`raw-exports/.+:\d+`\s*$")
@@ -115,10 +118,7 @@ def section_slice(
     start_line = section_positions[name]
     start_idx = start_line
     next_positions = [v for v in section_positions.values() if v > start_line]
-    if next_positions:
-        end_idx = min(next_positions) - 1
-    else:
-        end_idx = len(lines)
+    end_idx = min(next_positions) - 1 if next_positions else len(lines)
     return lines[start_idx:end_idx], start_line + 1
 
 
@@ -127,17 +127,18 @@ def validate_summary_section(
     lines: List[str],
     section_positions: Dict[str, int],
     section_name: str,
+    id_prefix: str,
     violations: List[Violation],
-) -> None:
+) -> Set[str]:
     body, first_line = section_slice(lines, section_positions, section_name)
     items: List[Tuple[int, int, str]] = []
+    seen_ids: Set[str] = set()
+    ids: Set[str] = set()
 
     for i, line in enumerate(body):
         m = NUMBERED_ITEM_RE.match(line)
         if m:
-            number = int(m.group(1))
-            text = m.group(2).strip()
-            items.append((number, first_line + i, text))
+            items.append((int(m.group(1)), first_line + i, m.group(2).strip()))
 
     if not 1 <= len(items) <= 7:
         add_violation(
@@ -159,27 +160,52 @@ def validate_summary_section(
             first_line,
         )
 
-    for _, line_no, text in items:
-        if not TYPED_SUMMARY_RE.match(text):
+    for _, line_no, payload in items:
+        fmt = SUMMARY_PAYLOAD_RE.match(payload)
+        if not fmt:
             add_violation(
                 violations,
                 path,
                 "summary.item.format",
-                f"{section_name}: item must match 'N. [type] text' with allowed enum",
+                f"{section_name}: item must match 'N. [type] [{id_prefix}xx] text'",
                 line_no,
             )
-        else:
-            type_name = text.split("]", 1)[0].lstrip("[")
-            if type_name not in SUMMARY_TYPES:
-                add_violation(
-                    violations,
-                    path,
-                    "summary.item.type",
-                    f"{section_name}: unsupported type '{type_name}'",
-                    line_no,
-                )
+            continue
 
-        if MARKDOWN_LINK_RE.search(text):
+        item_type = fmt.group(1)
+        item_id = fmt.group(2)
+        item_text = fmt.group(3).strip()
+
+        if item_type not in SUMMARY_TYPES:
+            add_violation(
+                violations,
+                path,
+                "summary.item.type",
+                f"{section_name}: unsupported type '{item_type}'",
+                line_no,
+            )
+
+        if not item_id.startswith(id_prefix):
+            add_violation(
+                violations,
+                path,
+                "summary.item.id.prefix",
+                f"{section_name}: item id '{item_id}' must start with '{id_prefix}'",
+                line_no,
+            )
+
+        if item_id in seen_ids:
+            add_violation(
+                violations,
+                path,
+                "summary.item.id.duplicate",
+                f"{section_name}: duplicate item id '{item_id}'",
+                line_no,
+            )
+        seen_ids.add(item_id)
+        ids.add(item_id)
+
+        if MARKDOWN_LINK_RE.search(item_text):
             add_violation(
                 violations,
                 path,
@@ -187,13 +213,88 @@ def validate_summary_section(
                 f"{section_name}: markdown links are not allowed",
                 line_no,
             )
-        if ANCHOR_RE.search(text):
+        if ANCHOR_RE.search(item_text):
             add_violation(
                 violations,
                 path,
                 "summary.no_anchors",
                 f"{section_name}: source anchors are not allowed",
                 line_no,
+            )
+
+    return ids
+
+
+def validate_summary_evidence_map(
+    path: Path,
+    lines: List[str],
+    section_positions: Dict[str, int],
+    expected_ids: Set[str],
+    violations: List[Violation],
+) -> None:
+    body, first_line = section_slice(lines, section_positions, "Summary Evidence Map")
+    mapped_ids: Set[str] = set()
+
+    for i, raw_line in enumerate(body):
+        line_no = first_line + i
+        line = raw_line.strip()
+        if not line:
+            continue
+        if not line.startswith("- "):
+            continue
+
+        m = SUMMARY_MAP_LINE_RE.match(line)
+        if not m:
+            add_violation(
+                violations,
+                path,
+                "summary_map.line.format",
+                "Summary Evidence Map lines must match '- <ID>: <anchors>'",
+                line_no,
+            )
+            continue
+
+        item_id = m.group(1)
+        refs_blob = m.group(2)
+
+        if item_id in mapped_ids:
+            add_violation(
+                violations,
+                path,
+                "summary_map.id.duplicate",
+                f"Duplicate map id '{item_id}'",
+                line_no,
+            )
+        mapped_ids.add(item_id)
+
+        anchors = MAP_ANCHOR_TOKEN_RE.findall(refs_blob)
+        if not anchors:
+            add_violation(
+                violations,
+                path,
+                "summary_map.anchor.missing",
+                f"Map entry '{item_id}' must include one or more raw anchors",
+                line_no,
+            )
+
+    for item_id in sorted(expected_ids):
+        if item_id not in mapped_ids:
+            add_violation(
+                violations,
+                path,
+                "summary_map.id.missing",
+                f"Missing map entry for summary id '{item_id}'",
+                section_positions["Summary Evidence Map"],
+            )
+
+    for item_id in sorted(mapped_ids):
+        if item_id not in expected_ids:
+            add_violation(
+                violations,
+                path,
+                "summary_map.id.unknown",
+                f"Map id '{item_id}' does not exist in summary sections",
+                section_positions["Summary Evidence Map"],
             )
 
 
@@ -243,16 +344,12 @@ def validate_concepts_section(
 
     block_bounds: List[Tuple[int, int, int]] = []
     for idx, (_, start) in enumerate(heading_positions):
-        if idx + 1 < len(heading_positions):
-            end = heading_positions[idx + 1][1]
-        else:
-            end = len(body)
-        block_bounds.append((idx, start, end))
+        end = heading_positions[idx + 1][1] if idx + 1 < len(heading_positions) else len(body)
+        block_bounds.append((start, end))
 
-    for _, start, end in block_bounds:
+    for start, end in block_bounds:
         block = body[start:end]
         base_line = first_line + start
-
         has_concept = any(line.strip().startswith("- Concept:") for line in block)
         has_why = any(line.strip().startswith("- Why it matters:") for line in block)
         evidence_idx = next(
@@ -356,7 +453,7 @@ def validate_file(path: Path) -> List[Violation]:
     if "Source" in found_map:
         source_lines, source_start = section_slice(lines, found_map, "Source")
         keys_in_order: List[str] = []
-        for i, line in enumerate(source_lines):
+        for line in source_lines:
             m = SOURCE_KEY_RE.match(line.strip())
             if m:
                 keys_in_order.append(m.group(1))
@@ -402,10 +499,29 @@ def validate_file(path: Path) -> List[Violation]:
                 source_start,
             )
 
+    user_ids: Set[str] = set()
+    ai_ids: Set[str] = set()
+
     if "User Prompts Summary" in found_map:
-        validate_summary_section(path, lines, found_map, "User Prompts Summary", violations)
+        user_ids = validate_summary_section(
+            path,
+            lines,
+            found_map,
+            "User Prompts Summary",
+            "U",
+            violations,
+        )
     if "AI Response Summary" in found_map:
-        validate_summary_section(path, lines, found_map, "AI Response Summary", violations)
+        ai_ids = validate_summary_section(
+            path,
+            lines,
+            found_map,
+            "AI Response Summary",
+            "A",
+            violations,
+        )
+    if "Summary Evidence Map" in found_map:
+        validate_summary_evidence_map(path, lines, found_map, user_ids | ai_ids, violations)
     if "Extracted Concepts" in found_map:
         validate_concepts_section(path, lines, found_map, violations)
 
@@ -457,6 +573,11 @@ def render_text(
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
+        "--file",
+        type=Path,
+        help="Validate a single concepts file",
+    )
+    parser.add_argument(
         "--root",
         type=Path,
         default=Path("docs/research/distillation"),
@@ -476,7 +597,10 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    files = collect_files(args.root)
+    if args.file:
+        files = [args.file]
+    else:
+        files = collect_files(args.root)
     all_violations: List[Violation] = []
     file_has_violation: Dict[str, bool] = {}
 

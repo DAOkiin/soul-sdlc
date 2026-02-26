@@ -4,7 +4,7 @@ Canonical contract for `docs/research/distillation/*-concepts.md`.
 
 ## Status
 
-- Version: `v2.1`
+- Version: `v2.2`
 - Effective date: `2026-02-26`
 - Scope: all current and future `*-concepts.md` files
 - Migration note: existing legacy files can remain in prior format until dedicated migration pass
@@ -13,6 +13,7 @@ Canonical contract for `docs/research/distillation/*-concepts.md`.
 
 - Keep concept artifacts human-readable and machine-parseable.
 - Preserve evidence traceability to raw exports.
+- Separate concise summaries from evidence anchors.
 - Standardize inputs for future aggregation (`Markdown+XML`) and parser code.
 
 ## Canonical section order
@@ -21,8 +22,9 @@ Canonical contract for `docs/research/distillation/*-concepts.md`.
 2. `## Source`
 3. `## User Prompts Summary`
 4. `## AI Response Summary`
-5. `## Extracted Concepts`
-6. `## Unresolved Ambiguities`
+5. `## Summary Evidence Map`
+6. `## Extracted Concepts`
+7. `## Unresolved Ambiguities`
 
 ## Prohibited top block
 
@@ -47,7 +49,7 @@ Rules:
 ## `## User Prompts Summary` schema
 
 - Number of items: `1..7`.
-- Each item must use the typed format: `N. [type] text`.
+- Each item must use typed and tagged format: `N. [type] [Uxx] text`.
 - Allowed `type` values:
 - `goal`
 - `constraint`
@@ -60,6 +62,10 @@ Rules:
 Item creation rule:
 - Add a new item only when there is a semantic delta (for example: objective change, new constraint/preference, new explicit request/output format, proposal/decision change, new risk, or new next step).
 
+ID rules:
+- `Uxx` values are unique within the section.
+- Recommended sequence is `U01..U0N`.
+
 Rules:
 - Do not include source anchors (`source_path:line`) in this section.
 - Do not include Markdown links in this section.
@@ -68,7 +74,7 @@ Rules:
 ## `## AI Response Summary` schema
 
 - Number of items: `1..7`.
-- Each item must use the typed format: `N. [type] text`.
+- Each item must use typed and tagged format: `N. [type] [Axx] text`.
 - Allowed `type` values:
 - `goal`
 - `constraint`
@@ -81,10 +87,34 @@ Rules:
 Item creation rule:
 - Add a new item only when there is a semantic delta (for example: response direction shift, proposal/structure change, explicit decision, newly surfaced risk, or next action update).
 
+ID rules:
+- `Axx` values are unique within the section.
+- Recommended sequence is `A01..A0N`.
+
 Rules:
 - Do not include source anchors (`source_path:line`) in this section.
 - Do not include Markdown links in this section.
 - Keep each item concise and descriptive.
+
+## `## Summary Evidence Map` schema
+
+Purpose:
+- Store source anchors for summary items without placing anchors inside summary text.
+
+Line format:
+- `- <item_id>: <anchor_1>, <anchor_2>, ...`
+
+ID format:
+- `Uxx` for `User Prompts Summary` items.
+- `Axx` for `AI Response Summary` items.
+
+Anchor format:
+- ``raw-exports/.../<file>.md:<line>``
+
+Rules:
+- Every summary item ID must be present in `Summary Evidence Map`.
+- IDs in map must refer to existing summary items.
+- Each map entry must contain one or more anchors.
 
 ## `## Extracted Concepts` schema
 
@@ -116,11 +146,18 @@ source_path: string
 processed_on: date
 draft_status: string
 user_summary:
-  - type: string
+  - id: string
+    type: string
     text: string
 ai_summary:
-  - type: string
+  - id: string
+    type: string
     text: string
+summary_evidence_map:
+  Uxx:
+    - string
+  Axx:
+    - string
 concepts:
   - id: string
     title: string
@@ -137,21 +174,26 @@ Derivation rules:
 - `concepts[].id` maps to `CNN`.
 - `user_summary` and `ai_summary` lengths must be `1..7`.
 - `user_summary[].type` and `ai_summary[].type` must be in the allowed enum.
+- `summary_evidence_map` must be complete and consistent with summary IDs.
 
 ## Aggregated export policy (`Markdown+XML`, next iteration)
 
 The aggregated output should include:
 - document metadata
+- summary items (without anchors in text)
 - concepts with `concept` and `why_it_matters`
 - unresolved ambiguities
 
-The aggregated output should exclude:
-- `Evidence` payload (while evidence remains mandatory in source concept files)
+The aggregated output may include:
+- summary-level anchors via `summary_evidence_map` when requested by consumer
+
+The aggregated output should exclude by default:
+- concept-level `Evidence` payload (while evidence remains mandatory in source concept files)
 
 ## Allowed deviations
 
 - `draft_status` value is free text.
-- Summary arrays can use `N/A` item text when source dialog does not provide enough information.
+- Summary text can use `N/A` when source dialog does not provide enough information.
 - No other structural deviations are allowed.
 
 ## Acceptance criteria for this contract
@@ -160,4 +202,5 @@ The aggregated output should exclude:
 - Contract includes formal structure (required sections, required fields, allowed deviations).
 - Contract explicitly states:
 - `Evidence` is required in concept files.
-- `Evidence` is optional to omit in aggregated output.
+- Summary anchors are kept in `Summary Evidence Map`, not inside summary text.
+- Concept `Evidence` may be omitted from default aggregated output.
