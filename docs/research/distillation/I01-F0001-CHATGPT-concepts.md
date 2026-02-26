@@ -1,5 +1,7 @@
 # I01-F0001-CHATGPT Concepts (Draft)
 
+[Analyzed source: I01-F0001-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md)
+
 ## Source
 
 - chat_id: `I01-F0001-CHATGPT`
