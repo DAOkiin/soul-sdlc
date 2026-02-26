@@ -35,3 +35,4 @@ Primary tracker for incremental micro-pass distillation.
 | 0029 | I02-F0007-CHATGPT | CHAT_REGISTRY.md | raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md | indexed | concepts + user/agent summaries extracted; awaiting concept approval |
 | 0030 | I02-F0008-CHATGPT | CHAT_REGISTRY.md | raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md | indexed | concepts + user/agent summaries extracted; awaiting concept approval |
 | 0031 | I02-F0009-CHATGPT | CHAT_REGISTRY.md | raw-exports/sdlc-discovery-iteration-02/I02-F0009-CHATGPT.md | indexed | concepts + user/agent summaries extracted; awaiting concept approval |
+| 0032 | I02-F0010-CHATGPT | CHAT_REGISTRY.md | raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md | indexed | concepts + user/agent summaries extracted; awaiting concept approval |
