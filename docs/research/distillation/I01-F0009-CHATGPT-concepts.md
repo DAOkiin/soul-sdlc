@@ -1,7 +1,5 @@
 # I01-F0009-CHATGPT Concepts (Draft)
 
-[Analyzed source: I01-F0009-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I01-F0009-CHATGPT`
@@ -12,16 +10,26 @@
 
 ## User Prompts Summary
 
-1. Пользователь предложил идею: фиксировать запросы репозиториев как отдельные артефакты с пояснениями, назначением и трассировкой использования (`raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:4`).
-2. Затем пользователь запросил исследование: есть ли устоявшийся концепт и название для такого подхода (`raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:59`).
-3. Далее пользователь последовательно попросил: сложное эссе, выверку, переход к двухуровневой модели документации (стандарт + skill), разработку `STANDARD.md`, валидацию + `SKILL.md`, и prompt для Codex по интеграции (с фиксированным стандартом `docs/_meta/QC-STANDARD.md`) (`raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:161`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:537`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:913`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:1480`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:1642`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:2723`).
+1. [proposal] [U01] Пользователь предложил идею: фиксировать запросы репозиториев как отдельные артефакты с пояснениями, назначением и трассировкой использования.
+2. [request] [U02] Затем пользователь запросил исследование: есть ли устоявшийся концепт и название для такого подхода.
+3. [request] [U03] Далее пользователь последовательно попросил: сложное эссе, выверку, переход к двухуровневой модели документации (стандарт + skill), разработку `STANDARD.md`, валидацию + `SKILL.md`, и prompt для Codex по интеграции (с фиксированным стандартом `docs/_meta/QC-STANDARD.md`).
 
 ## AI Response Summary
 
-1. AI определил ближайшую терминологию: `Named Queries`, `Query Catalog/Registry`, `SQL-as-code`, `living documentation + lineage`, и runtime-корреляция через sqlcommenter/OTel (`C01`, `C03`).
-2. AI оформил концепт Query Catalog как архитектурный слой операций над данными (не data dictionary), с требованиями к контракту, безопасности, транзакционности, ownership и lifecycle (`C02`, `C04`).
-3. AI предложил двухуровневую документацию: нормативный стандарт + короткий operational skill, связанных атомарными правилами `QC-xx` (`C04`, `C05`).
-4. AI добавил механический контур внедрения: schema + semantic rules + drift checks, CI-gates и map-first entrypoints; затем сформировал интеграционный prompt для Codex с привязкой к `docs/_meta/QC-STANDARD.md` (`C05`, `C06`, `C07`).
+1. [proposal] [A01] AI определил ближайшую терминологию: `Named Queries`, `Query Catalog/Registry`, `SQL-as-code`, `living documentation + lineage`, и runtime-корреляция через sqlcommenter/OTel.
+2. [proposal] [A02] AI оформил концепт Query Catalog как архитектурный слой операций над данными (не data dictionary), с требованиями к контракту, безопасности, транзакционности, ownership и lifecycle.
+3. [proposal] [A03] AI предложил двухуровневую документацию: нормативный стандарт + короткий operational skill, связанных атомарными правилами `QC-xx`.
+4. [proposal] [A04] AI добавил механический контур внедрения: schema + semantic rules + drift checks, CI-gates и map-first entrypoints; затем сформировал интеграционный prompt для Codex с привязкой к `docs/_meta/QC-STANDARD.md`.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:59`
+- U03: `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:161`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:537`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:913`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:1480`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:1642`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:2723`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:67`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:81`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:100`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:117`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:121`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:473`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:485`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:197`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:205`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:208`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:547`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:563`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:579`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:547`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:563`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:579`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:583`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:621`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:1102`
+- A04: `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:583`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:621`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:1102`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:1506`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:1515`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:1525`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:1586`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:2658`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:2691`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:2735`, `raw-exports/sdlc-discovery-iteration-01/I01-F0009-CHATGPT.md:2783`
 
 ## Extracted Concepts
 
