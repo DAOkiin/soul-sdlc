@@ -1,29 +1,10 @@
 # Исследование гит-флоу с ИИ
 
-#### You:
+<user>
 И сделай исследование статей на Medium и на Dev.to и в каких-нибудь профессиональных блогах вроде Anthropic, OpenAI, Microsoft или каких-то других крупных корпораций. То есть мне нужно, чтобы ты нашел минимум 5 качественных статей на Medium, минимум 5 качественных, ну или сколько их найдется на Dev.to, и проверил крупные корпоративные блоги там за минимум 10 различных компаний крупных айтишных. Мне нужно, чтобы ты исследовал вопрос того, как люди описывают хороший гит-флоу для разработки при помощи агентских систем с искусственным интеллектом вроде codex cli, Claude cli, Gemini cli.
 
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
+</user>
+<agent>
 Ниже — выжимка по тому, **как люди описывают “хороший Git-flow” для разработки с агентами** (Codex CLI / Claude Code / Gemini CLI и похожие), с подборкой материалов **(≥5 Medium, ≥5 Dev.to)** и **обзором корпоративных блогов ≥10 компаний**. Я специально искал тексты, где затрагиваются *ветки/PR, проверки, параллельная работа, worktrees, безопасность и “human-in-the-loop”*.
 
 ---
@@ -169,10 +150,12 @@ Dev.to-посты про “без хаоса” и “долгие агенты
 - и “как запускать несколько агентов безопасно” (worktrees + очереди задач).
 
 
-#### You:
+</agent>
+<user>
 сделай git flow playbook на английском.
 
-#### ChatGPT:
+</user>
+<agent>
 # Git Flow Playbook for Agentic Development (Codex CLI / Claude Code / Gemini CLI)
 
 This playbook defines a **safe, repeatable Git workflow** for teams using **AI coding agents** (CLI-based or IDE-based). It prioritizes **small diffs, strong review gates, reproducibility, and least privilege**.
@@ -229,7 +212,7 @@ This playbook defines a **safe, repeatable Git workflow** for teams using **AI c
 Use a format that makes branch purpose and ownership obvious:
 
 ```
-<type>/<ticket-or-issue>-<short-slug>[-<agent>]
+<type>/<ticket-or-issue>-<short-slug>[-<agent-name>]
 ```
 
 Examples:
@@ -578,3 +561,4 @@ Tell me (one line each is enough):
 - do you deploy continuously or via releases?
 
 …and I’ll produce a repo-ready version: branch protection settings, CI job checklist, CODEOWNERS pattern, and a finalized PR template tuned to your stack.
+</agent>

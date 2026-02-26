@@ -1,6 +1,6 @@
 # Синтез знаний SDLC из документов
 
-#### 👤 User:
+<user>
 Мне нужно синтезировать из этих материалов один объёмный markdown документ с диаграммами и таблицами. Суть в том, что в документах описываются различные позиции(viewpoints) на процесс SDLC, какие-то документы в чём-то устарели. Мне нужно извлечь знания без их искажения и скомпоновать один документ. Знания частично пересекаются. Особенно важны небольшие документы, в которых знания компактно уложены и ясно показывают как устроена та или иная модель с той или иной точки зрения.
 
 Вот примерный план:
@@ -666,19 +666,22 @@ GOST_R_ISO-IEC_12207_Meganorm_6430.pdf
 
 ---
 
-#### 🤖 Assistant:
+</user>
+<agent>
 Вот какой получился план. Если вы хотите что-то изменить, прежде чем я начну исследование, сообщите мне.
 
 ---
 
-#### 👤 User:
+</agent>
+<user>
 Начать исследование
 
 *Attached files: User_Provided_Summary.pdf, BSI_ISO-IEC-IEEE_12207_2017_Preview_ANSI.pdf, AMS_Software_Lifecycle_GetLab.pdf, GOST_R_ISO-IEC_12207_Meganorm_6430.pdf, IEEE-EIA_12207.2-1997_Implementation_Considerations.pdf, IEEE_Std_12207_ETS_MTL_Laporte.pdf, An_Overview_of_IEEE_Software_Engineering_Standards_Croll.pdf, A3-2_IEEE-EIA-12207_Unit2_JamesWMoore.pdf, international-standard-iso-iec-12207-software-life-cycle-2vke9fu8gz.pdf, incose_rwg_gtwr_v4_summary_sheet.pdf*
 
 ---
 
-## Thoughts
+</user>
+<agent-thoughs>
 
 **Структурный анализ иерархии процессов**
 
@@ -1167,6 +1170,7 @@ GOST_R_ISO-IEC_12207_Meganorm_6430.pdf
 
 ---
 
+</agent-thoughs>
 #### 📄 Синтез знаний о SDLC из документов:
 
 # Архитектура и эволюция процессов жизненного цикла программных средств: Многоаспектный анализ методологий и стандартов SDLC

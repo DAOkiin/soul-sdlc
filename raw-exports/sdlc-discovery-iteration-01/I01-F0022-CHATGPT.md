@@ -1,49 +1,15 @@
 # Альтернативы Microsoft Agent Framework
 
-#### You:
+<user>
 Какая сейчас есть реальная альтарнатива Microsoft Agent Framework? Кажется что это беспроигрышный выбор. Например, если я хочу построить систему автоматизации разработки, я обязан создать управление рабочими процессами через FSM. И FSM должна быть написана при участии DSL по моему SDLC.
 
-#### ChatGPT:
+</user>
+<agent>
 Понял: я кратко сравню реальные альтернативы Agent Framework (по экосистемам и сценариям), и затем предложу архитектуру для “автоматизации разработки” с FSM + DSL, включая какие инструменты лучше подходят и почему.
 
 
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
+</agent>
+<agent>
 Если под **Microsoft Agent Framework (MAF)** вы имеете в виду новый open‑source SDK/runtime из экосистемы Azure AI Foundry (преемник Semantic Kernel + AutoGen), то да — это сейчас очень сильный вариант. Причём **на 19 февраля 2026** он уже в статусе **Release Candidate** для **.NET и Python** (API стабилизирован, фичи для 1.0 завершены). citeturn13view0\
 Но «беспроигрышность» зависит от того, что именно вы строите: **agent SDK** или **движок процессов (FSM/Workflow engine)**.
 
@@ -219,7 +185,8 @@ states:
 navlistСвежие материалы про платформы для AI‑агентов и их эксплуатациюturn9news39,turn2news38,turn12news42,turn12news41
 
 
-#### You:
+</agent>
+<user>
 если поставить workflow engine в центр, то какие отвественности я должен реализовать и в каком порядке?
 
 Суть заключается в следующем:
@@ -240,19 +207,13 @@ states:
 ### Human Attention
 - Nick: Owner, Architect, Evangelist, Developer; 4h per day;
 
-#### ChatGPT:
+</user>
+<agent>
 Понял: я предложу практичную схему “workflow engine в центре” именно для вашего кейса (Codex‑агент, macOS, 4 часа внимания в день): разложу ответственности по слоям, дам порядок внедрения (MVP → production), и покажу как организовать циклы SDLC с точками вашего вмешательства.
 
 
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
+</agent>
+<agent>
 Если **workflow engine** в центре, то вы строите “контур управления” (deterministic control‑plane), а **Codex** становится **исполнителем шагов** (agent/worker). Тогда SDLC‑автоматизация получается устойчивой: LLM может ошибаться, но **процесс**, **гейты**, **ретраи**, **аудит**, **лимиты** — детерминированы.
 
 Ниже — какие ответственности вам реально надо реализовать (вокруг движка) и **в каком порядке**. Я буду опираться на то, что вы хотите “зациклить” разработку через Codex (локально на macOS), и что у вас есть 4 часа внимания в день.
@@ -558,26 +519,17 @@ Codex уже изначально осторожен с сетью и песоч
 Если хотите, я могу в следующем сообщении предложить **конкретный минимальный DSL** (YAML) под ваш SDLC (states + transitions + policies + schemas) так, чтобы Codex шаги вызывались через `codex exec` и возвращали структурированные результаты.
 
 
-#### You:
+</agent>
+<user>
 Идея верная, но текущий вектор чуть другой. На текущем этапе я буду сам создавать workspaces и запускать агентов codex. Мне нужно чтобы у меня появился DSL, который поможет агенту и мне видеть состояние одинаково. Это то, что должно появиться в первой итерации.
 
-#### ChatGPT:
+</user>
+<agent>
 Понял: в первой итерации делаем не движок, а **минимальный DSL “общего состояния”** для вас и Codex: единый формат задачи, текущего шага SDLC, артефактов, гейтов и следующих действий. Дам практичный YAML/JSON‑спек, примеры, правила переходов и шаблон AGENTS.md/промпта, чтобы Codex обновлял состояние.
 
 
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
+</agent>
+<agent>
 Понял. Тогда в **итерации №1** вам нужен не “движок”, а **один канонический файл‑реестр (ledger)**: *DSL, который одновременно*
 
 1. задаёт **ваш SDLC как FSM**, и
@@ -818,15 +770,15 @@ Codex читает `AGENTS.md` перед началом работы, так ч
 дам **второй файл** `process.yaml` (описание FSM отдельно) + `run.yaml` (инстанс), чтобы Codex **никогда** не трогал определение процесса, а правил только состояние. Это ещё сильнее снижает риск “агент случайно поменял правила SDLC”.
 
 
-#### You:
+</agent>
+<user>
 Спланируй заново, я подготовил исследование по ландшафту решений.
 
-#### ChatGPT:
+</user>
+<agent>
 Ок — сейчас перечитаю ваш PDF и перепланирую “итерацию №1” вокруг DSL/IR так, чтобы он был future‑proof (plan/run/apply), но работал уже при ручных workspaces и ручном запуске Codex.
 
 
-#### Plugin (file_search):
-Make sure to include fileciteturn0file0 in your response to cite this file, or to surface it as a link.
 <PARSED TEXT FOR PAGE: 1 / 16>
 OSS экосистема для SDLC‑оркестрации в
 репозитории и агентного development workflow
@@ -2125,15 +2077,8 @@ https://github.com/anderseknert/pre-commit-opa
 116
 16
 
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
+</agent>
+<agent>
 Ок, пересобираю план **от вашего исследования**: вы сами хорошо зафиксировали, что “одного OSS, закрывающего всё из коробки” почти нет, поэтому **правильная первая итерация — стабильный промежуточный контракт (IR/DSL) + plan/run/apply вокруг него**, а бэкенды (Temporal/Tekton/Jenkins/агенты) подключаются адаптерами. fileciteturn0file0
 
 Ниже — новый план, где **Итерация №1 = DSL, который делает “состояние одинаковым” для вас и Codex**, при том что workspaces и запуск Codex вы делаете руками.
@@ -2462,22 +2407,17 @@ agent_results:
 Если вы согласны с этой рамкой, то следующий практический шаг: я могу **предложить v0.1 схемы (JSON Schema)** для `process.yaml`, `state.yaml`, `plan.yaml`, `report.yaml` + список валидируемых инвариантов (10–15 правил), чтобы Codex не “ломал формат” и вы могли автоматом проверять консистентность.
 
 
-#### You:
+</agent>
+<user>
 Да, подготовь всё кроме кода для первой итерации.
 
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
+</user>
+<agent>
 Сейчас заново соберу “пакет первой итерации”: структуру `.sdlc/`, форматы файлов DSL (ProcessSpec/State/Plan/Report/Events), инварианты и правила переходов, шаблоны `AGENTS.md`, ритуал работы Nick↔Codex и критерии готовности — без реализации кода.
 
 
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
+</agent>
+<agent>
 Готово: собрал **полный пакет Iteration 1** (DSL/IR, формальные схемы, инварианты, протокол для Codex, шаблоны файлов, примеры, gitignore) — **без реализации CLI/валидатора/раннера**.
 
 [Скачать пакет nick-sdlc-iter1.zip](sandbox:/mnt/data/nick-sdlc-iter1.zip)
@@ -2701,166 +2641,17 @@ nick-sdlc-iter1/
 - и **минимальный “чек-лист reviewer packet”**, который Codex обязан заполнять перед `waiting_human` (чтобы ваш 4h/day бюджет тратился максимально эффективно).
 
 
-#### You:
+</agent>
+<user>
 да, подготовь.
 
-#### ChatGPT:
+</user>
+<agent>
 Сделаю “Iteration 1.1” поверх уже подготовленного DSL: зафиксирую канонические типы событий и их схемы, конвенции для `data`, и шаблон reviewer‑packet, который Codex обязан формировать перед `waiting_human`.
 
 
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
+</agent>
+<agent>
 Готово — подготовил “Iteration 1.1” пакет **без кода**, который добавляет:
 
 1. **канонические типы событий** (decision/execution history)
@@ -2962,10 +2753,12 @@ nick-sdlc-iter1/
 Если хотите, следующим шагом (тоже без кода) могу подготовить **“каталог policy decisions”** (типовые `needs_human` для network/deps/scope/merge/deploy) + готовые формулировки вопросов/опций/рекомендаций, чтобы Codex не придумывал их каждый раз заново.
 
 
-#### You:
+</agent>
+<user>
 а ты не начал уже перераздувать DSL? Разве он не должен формироваться под проект за счёт встреченных задач?
 
-#### ChatGPT:
+</user>
+<agent>
 Да — вы правы, и вы вовремя это поймали.
 
 Я действительно начал **структурировать “на вырост”**, и это легко превращается в “мини‑стандарт”, который начинает жить своей жизнью. А для вашей текущей стадии (ручные workspaces + ручной запуск Codex) DSL должен быть **тонкой талией (thin waist)** и **расти от встреченных задач**, а не “сверху вниз”.
@@ -3137,10 +2930,12 @@ JSON Schema в ранних итерациях должна:
 Главное: вы абсолютно правильно мыслите — **DSL должен “отливаться” по факту реальных кейсов**, а не быть заранее идеальным.
 
 
-#### You:
+</agent>
+<user>
 перед этим просмотри документ по схожей теме и подумай не надо ли что-то позаимствовать. заимствование необязательно, мне нужна простота и надёжность.
 
-#### ChatGPT:
+</user>
+<agent>
 Посмотрел документ. Он описывает классический GPS/STRIPS‑подход: **состояние = множество булевых фактов**, а “шаг/оператор” задаётся как `preconds` → применимость, и эффект как `add/delete` над множеством фактов (closed‑world: чего нет в списке — считается ложным). Плюс там же даны простые инварианты (например, `add` не пересекается с `delete`, без дублей, нормализовать имена фактов) и замечание про “трейс действий” как отдельную сущность. fileciteturn1file0
 
 ### Что стоит позаимствовать, чтобы было **проще и надёжнее**
@@ -3213,10 +3008,12 @@ JSON Schema в ранних итерациях должна:
 Если хотите, следующим шагом я могу “обратно сократить” ваш текущий Iter 1.1 (с event types / packet) до **модульных “плагинов”**, чтобы core оставался тонким, а всё строгое включалось только когда реально заболит.
 
 
-#### You:
+</agent>
+<user>
 я не понял как должны работать facts. в документации для агента это достаточно понятно объяснено? я ещё не читал
 
-#### ChatGPT:
+</user>
+<agent>
 `facts` — это **не “ещё один слой статусов”**, а максимально простой механизм: **множество булевых утверждений** (строк), которые “истинны сейчас”.
 
 Идея из того документа ровно такая:
@@ -3362,12 +3159,14 @@ facts:
 Если хотите, я предложу **стартовый минимальный набор фактов (10–15 штук)** именно под ваш ручной режим “workspaces + Codex”, чтобы не изобретать каждый раз, но без раздувания “словаря”.
 
 
-#### You:
+</agent>
+<user>
 получается что нужно поддерживать набор фактов и переходы между ними? ну это звучит вроде бы надёжно, осталось найти то, какие факты могут быть и их переходы.
 
 и это тоже звучит как fsm.
 
-#### ChatGPT:
+</user>
+<agent>
 Да — **в математическом смысле** “множество фактов + правила, которые их добавляют/удаляют” действительно описывает **систему переходов состояний**, то есть *по сути FSM*. Разница в том, **что вы не храните FSM “явно”** (узлы/рёбра), а задаёте её **компактно** через *факторизованное состояние* (набор булевых признаков) и *операторы* `preconds/add/delete`. Именно так это и описано в вашем документе про GPS/STRIPS: состояние = множество фактов, оператор применим если `preconds ⊆ S`, а новое состояние `S’ = (S − delete) ∪ add`. fileciteturn1file0
 
 Но из этого **не следует**, что вам теперь нужно “поддерживать переходы между фактами” как граф. Вам **не нужно** перечислять переходы между *всеми комбинациями* фактов — это было бы 2^N состояний. Надёжность как раз достигается тем, что вы **не моделируете всё явно**, а держите:
@@ -3529,3 +3328,4 @@ facts:
    - авто-подсказке next\_actions
 
 Если вы захотите — я могу предложить **минимальный файл `operators.yaml` всего из 6–8 операторов** (clone repo, create branch, commit, run lint, run tests, open PR, ask human) — но только если вы скажете “да, пора”, чтобы не раздувать DSL раньше времени.
+</agent>
