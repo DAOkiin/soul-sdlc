@@ -1,7 +1,5 @@
 # I01-F0020-CHATGPT-DR Concepts (Draft)
 
-[Analyzed source: I01-F0020-CHATGPT-DR.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md)
-
 ## Source
 
 - chat_id: `I01-F0020-CHATGPT-DR`
@@ -12,13 +10,20 @@
 
 ## User Prompts Summary
 
-1. В этом DR-файле нет отдельного диалога; он представляет итоговый исследовательский отчет по OSS-экосистеме для SDLC-оркестрации, agent workflow и plan/run/apply архитектуры (`raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:1`).
+1. [request] [U01] В этом DR-файле нет отдельного диалога; он представляет итоговый исследовательский отчет по OSS-экосистеме для SDLC-оркестрации, agent workflow и plan/run/apply архитектуры.
 
 ## AI Response Summary
 
-1. Отчет фиксирует, что единого OSS-инструмента, полностью закрывающего весь стек Process DSL + Policy + Triggers + Exec + State/History + Render, практически нет; нужен composable stack и адаптерная архитектура (`C01`, `C02`).
-2. Даны два приоритетных стека: durable workflow-first (Temporal) и k8s CI-first (Tekton + Triggers + Results), плюс pragmatic CI-first вариант (Jenkins + OPA/Conftest + pre-commit) (`C03`, `C04`, `C05`).
-3. Исследование предлагает стабильный IR-контракт (`ProcessSpec`, `CheckSpec`, `CheckResult`, `Event`, `StateSnapshot`) и migration path через plan/run/apply с adapter backends (`C06`, `C07`, `C08`, `C09`).
+1. [proposal] [A01] Отчет фиксирует, что единого OSS-инструмента, полностью закрывающего весь стек Process DSL + Policy + Triggers + Exec + State/History + Render, практически нет; нужен composable stack и адаптерная архитектура.
+2. [proposal] [A02] Даны два приоритетных стека: durable workflow-first (Temporal) и k8s CI-first (Tekton + Triggers + Results), плюс pragmatic CI-first вариант (Jenkins + OPA/Conftest + pre-commit).
+3. [proposal] [A03] Исследование предлагает стабильный IR-контракт (`ProcessSpec`, `CheckSpec`, `CheckResult`, `Event`, `StateSnapshot`) и migration path через plan/run/apply с adapter backends.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:1`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:5`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:12`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:18`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:25`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:7`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:8`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:100`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:9`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:77`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:101`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:11`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:12`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:91`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:68`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:158`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:165`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:108`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:109`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:112`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:181`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:156`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:173`, `raw-exports/sdlc-discovery-iteration-01/I01-F0020-CHATGPT-DR.md:183`
 
 ## Extracted Concepts
 
