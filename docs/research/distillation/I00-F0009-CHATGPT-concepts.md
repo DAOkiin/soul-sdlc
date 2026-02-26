@@ -1,7 +1,5 @@
 # I00-F0009-CHATGPT Concepts (Draft)
 
-[Analyzed source: I00-F0009-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I00-F0009-CHATGPT`
@@ -12,15 +10,24 @@
 
 ## User Prompts Summary
 
-1. Пользователь попросил разобраться в системных требованиях Temporal Server (self-hosted) (`raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:4`).
-2. Пользователь запросил точные цифры скорости на сложном pipeline-кейсе (сбор твитов, NER, тренды, аналитика) (`raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:85`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:87`).
-3. Пользователь попросил сравнить скоростные метрики Temporal и Dagster (`raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:212`).
+1. [request] [U01] Пользователь попросил разобраться в системных требованиях Temporal Server (self-hosted).
+2. [request] [U02] Пользователь запросил точные цифры скорости на сложном pipeline-кейсе (сбор твитов, NER, тренды, аналитика).
+3. [request] [U03] Пользователь попросил сравнить скоростные метрики Temporal и Dagster.
 
 ## AI Response Summary
 
-1. Агент описал системные зависимости и эксплуатационные требования Temporal: persistence/visibility, сетевую изоляцию и масштабируемые серверные сервисы (`C01`-`C06`).
-2. Агент дал практическую модель latency/throughput и пример расчёта для сложного workflow с акцентом на вклад оркестрации и activity-runtime (`C07`, `C08`).
-3. Агент предложил benchmarking-подход для точных цифр и выполнил сравнительное позиционирование Temporal vs Dagster по классу задержек и единице оркестрации (`C09`, `C10`).
+1. [proposal] [A01] Агент описал системные зависимости и эксплуатационные требования Temporal: persistence/visibility, сетевую изоляцию и масштабируемые серверные сервисы (-).
+2. [proposal] [A02] Агент дал практическую модель latency/throughput и пример расчёта для сложного workflow с акцентом на вклад оркестрации и activity-runtime.
+3. [proposal] [A03] Агент предложил benchmarking-подход для точных цифр и выполнил сравнительное позиционирование Temporal vs Dagster по классу задержек и единице оркестрации.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:85`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:87`
+- U03: `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:212`
+- A01: `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:10`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:12`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:14`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:16`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:19`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:43`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:45`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:48`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:50`
+- A02: `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:91`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:97`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:101`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:116`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:170`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:121`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:123`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:127`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:206`
+- A03: `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:129`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:131`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:181`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:185`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:188`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:189`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:216`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:218`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:241`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:245`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:253`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:285`, `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md:286`
 
 ## Extracted Concepts
 

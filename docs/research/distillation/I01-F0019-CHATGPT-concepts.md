@@ -1,7 +1,5 @@
 # I01-F0019-CHATGPT Concepts (Draft)
 
-[Analyzed source: I01-F0019-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I01-F0019-CHATGPT`
@@ -12,16 +10,26 @@
 
 ## User Prompts Summary
 
-1. Пользователь запросил исследование проверенных и готовых решений для управления состоянием SDLC-процесса в agentic-разработке перед фиксацией процесса и полной имплементацией (`raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4`).
-2. Позже пользователь задал архитектурный вопрос о появляющемся DSL (Policy Evaluator, Trigger/Runners, states/transitions) (`raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4899`).
-3. В конце пользователь отдельно спросил, существуют ли уже готовые открытые решения для агентной SDLC-разработки или верифицированные человеческие SDLC-процессы (`raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:5191`).
+1. [request] [U01] Пользователь запросил исследование проверенных и готовых решений для управления состоянием SDLC-процесса в agentic-разработке перед фиксацией процесса и полной имплементацией.
+2. [request] [U02] Позже пользователь задал архитектурный вопрос о появляющемся DSL (Policy Evaluator, Trigger/Runners, states/transitions).
+3. [request] [U03] В конце пользователь отдельно спросил, существуют ли уже готовые открытые решения для агентной SDLC-разработки или верифицированные человеческие SDLC-процессы.
 
 ## AI Response Summary
 
-1. Ответ собрал карту проверенных подходов и инструментов: hooks, CI enforcement, policy-as-code, FSM/workflow стандарты, durable execution паттерны и их маппинг на `DDL/state/guards` (`C01`-`C06`).
-2. Агент предложил конкретный интеграционный каркас: v1-basis + `pre-commit`/`lefthook` + CI required checks + Conftest policy backend + Mermaid/state artifacts (`C07`, `C08`, `C09`).
-3. Отдельно развернут DSL-дизайн как IR с компиляторами/адаптерами, разделением на Process/Checks/Bindings/Toolchain, декларативной моделью и extension points для будущих инструментов (`C10`, `C11`, `C12`).
-4. Финальный пользовательский вопрос о готовых open solutions в этом файле без ответа агента.
+1. [proposal] [A01] Ответ собрал карту проверенных подходов и инструментов: hooks, CI enforcement, policy-as-code, FSM/workflow стандарты, durable execution паттерны и их маппинг на `DDL/state/guards` (-).
+2. [proposal] [A02] Агент предложил конкретный интеграционный каркас: v1-basis + `pre-commit`/`lefthook` + CI required checks + Conftest policy backend + Mermaid/state artifacts.
+3. [proposal] [A03] Отдельно развернут DSL-дизайн как IR с компиляторами/адаптерами, разделением на Process/Checks/Bindings/Toolchain, декларативной моделью и extension points для будущих инструментов.
+4. [proposal] [A04] Финальный пользовательский вопрос о готовых open solutions в этом файле без ответа агента.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4899`
+- U03: `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:5191`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:33`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:35`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:37`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4748`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4755`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4765`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:235`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:243`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:254`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4553`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4561`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4608`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4727`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4733`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4739`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4952`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4958`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4965`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4968`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4974`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4979`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:4920`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:5127`, `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:5135`
+- A04: `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md:1`
 
 ## Extracted Concepts
 

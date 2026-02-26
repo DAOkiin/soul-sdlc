@@ -1,7 +1,5 @@
 # I01-F0003-CHATGPT Concepts (Draft)
 
-[Analyzed source: I01-F0003-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0003-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I01-F0003-CHATGPT`
@@ -12,14 +10,22 @@
 
 ## User Prompts Summary
 
-1. Пользователь поставил задачу проверить `SDLC_12207_Synthesis.md` по документу стандарта (`raw-exports/sdlc-discovery-iteration-01/I01-F0003-CHATGPT.md:4`).
-2. Фокус запроса: верификация корректности синтеза относительно актуальной нормативной базы (`C01`, `C02`).
+1. [request] [U01] Пользователь поставил задачу проверить `SDLC_12207_Synthesis.md` по документу стандарта.
+2. [request] [U02] Фокус запроса: верификация корректности синтеза относительно актуальной нормативной базы (`C01`, `C02`).
 
 ## AI Response Summary
 
-1. AI дал общий вывод о высокой корректности синтеза и отсутствии критических противоречий с 12207:2017 (`C01`).
-2. AI проверил совпадение по структуре процесса: 4 группы, 30 процессов, иерархия process/activity/task, ненормативность фиксированной фазовой модели (`C02`, `C03`).
-3. AI разделил strict conformance и полезные расширения синтеза (исторические сравнения, baseline-термины, L1/L2/L3, 12-фазная схема), отмечая что они практические, а не обязательные нормы стандарта (`C04`, `C05`).
+1. [proposal] [A01] AI дал общий вывод о высокой корректности синтеза и отсутствии критических противоречий с 12207:2017.
+2. [proposal] [A02] AI проверил совпадение по структуре процесса: 4 группы, 30 процессов, иерархия process/activity/task, ненормативность фиксированной фазовой модели.
+3. [proposal] [A03] AI разделил strict conformance и полезные расширения синтеза (исторические сравнения, baseline-термины, L1/L2/L3, 12-фазная схема), отмечая что они практические, а не обязательные нормы стандарта.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0003-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-01/I01-F0003-CHATGPT.md:1`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0003-CHATGPT.md:10`, `raw-exports/sdlc-discovery-iteration-01/I01-F0003-CHATGPT.md:12`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0003-CHATGPT.md:18`, `raw-exports/sdlc-discovery-iteration-01/I01-F0003-CHATGPT.md:19`, `raw-exports/sdlc-discovery-iteration-01/I01-F0003-CHATGPT.md:20`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0003-CHATGPT.md:21`, `raw-exports/sdlc-discovery-iteration-01/I01-F0003-CHATGPT.md:30`, `raw-exports/sdlc-discovery-iteration-01/I01-F0003-CHATGPT.md:32`, `raw-exports/sdlc-discovery-iteration-01/I01-F0003-CHATGPT.md:33`, `raw-exports/sdlc-discovery-iteration-01/I01-F0003-CHATGPT.md:34`, `raw-exports/sdlc-discovery-iteration-01/I01-F0003-CHATGPT.md:35`
 
 ## Extracted Concepts
 

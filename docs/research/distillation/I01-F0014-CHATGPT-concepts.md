@@ -1,7 +1,5 @@
 # I01-F0014-CHATGPT Concepts (Draft)
 
-[Analyzed source: I01-F0014-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I01-F0014-CHATGPT`
@@ -12,14 +10,22 @@
 
 ## User Prompts Summary
 
-1. Пользователь попросил оценить идею управления разработкой через state machine по шкалам инновационности, оправданности и приоритетности фокуса (`raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:4`).
-2. После первой оценки пользователь запросил сформулировать задачу для агента: реализовать guards, pre-push блокирующую проверку, визуализацию графа и markdown-шаблон с диаграммой и пояснениями, плюс предложить дизайн решения (`raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:191`).
+1. [request] [U01] Пользователь попросил оценить идею управления разработкой через state machine по шкалам инновационности, оправданности и приоритетности фокуса.
+2. [proposal] [U02] После первой оценки пользователь запросил сформулировать задачу для агента: реализовать guards, pre-push блокирующую проверку, визуализацию графа и markdown-шаблон с диаграммой и пояснениями, плюс предложить дизайн решения.
 
 ## AI Response Summary
 
-1. Агент оценил саму идею как не новую, но отметил высокую прикладную ценность repo-first реализации с process-as-code, quality gates и автоматизацией (`C01`, `C02`, `C03`).
-2. В ответе выделены риски: дублирование источника истины, merge-конфликты общего state-файла, избыточная ручная рутина и слишком линейная модель (`C04`, `C05`).
-3. Агент выдал полный implementation task для SDLC guard-подсистемы: отдельный guards config, guard runner CLI, обновление pre-push hook, Mermaid-рендер, sync docs script, tests и DoD (`C06`, `C07`, `C08`, `C09`, `C10`).
+1. [proposal] [A01] Агент оценил саму идею как не новую, но отметил высокую прикладную ценность repo-first реализации с process-as-code, quality gates и автоматизацией.
+2. [risk] [A02] В ответе выделены риски: дублирование источника истины, merge-конфликты общего state-файла, избыточная ручная рутина и слишком линейная модель.
+3. [proposal] [A03] Агент выдал полный implementation task для SDLC guard-подсистемы: отдельный guards config, guard runner CLI, обновление pre-push hook, Mermaid-рендер, sync docs script, tests и DoD.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:191`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:8`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:70`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:72`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:54`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:58`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:60`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:94`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:100`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:111`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:122`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:127`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:130`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:131`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:145`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:224`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:236`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:245`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:225`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:345`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:473`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:266`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:270`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:295`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:372`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:396`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:430`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:445`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:458`, `raw-exports/sdlc-discovery-iteration-01/I01-F0014-CHATGPT.md:467`
 
 ## Extracted Concepts
 

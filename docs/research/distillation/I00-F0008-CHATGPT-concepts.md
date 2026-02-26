@@ -1,7 +1,5 @@
 # I00-F0008-CHATGPT Concepts (Draft)
 
-[Analyzed source: I00-F0008-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I00-F0008-CHATGPT`
@@ -12,16 +10,26 @@
 
 ## User Prompts Summary
 
-1. Пользователь запросил исследование актуальных open-source решений для сервиса парсинга в формате data pipelines с адаптерами под разные источники (`raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:4`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:8`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:10`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:12`).
-2. Пользователь уточнил предпочтения: open-source, желательно свежие решения, желательно Python (`raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:28`).
-3. Пользователь запросил отдельный поиск архитектурных материалов (Medium/dev.to и др.) про Python-системы сбора информации с Temporal и парсерами (`raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:120`).
-4. Пользователь попросил структурированные компонентные описания найденных сервисов, затем запросил гайды по применению Temporal в агентских сценариях у OpenAI и других успешных компаний (`raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:280`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:387`).
+1. [request] [U01] Пользователь запросил исследование актуальных open-source решений для сервиса парсинга в формате data pipelines с адаптерами под разные источники.
+2. [constraint] [U02] Пользователь уточнил предпочтения: open-source, желательно свежие решения, желательно Python.
+3. [request] [U03] Пользователь запросил отдельный поиск архитектурных материалов (Medium/dev.to и др.) про Python-системы сбора информации с Temporal и парсерами.
+4. [request] [U04] Пользователь попросил структурированные компонентные описания найденных сервисов, затем запросил гайды по применению Temporal в агентских сценариях у OpenAI и других успешных компаний.
 
 ## AI Response Summary
 
-1. Агент собрал широкий обзор OSS-экосистемы (scraping frameworks, ingestion/connectors, orchestrators) и вывел композиционный подход вместо “единого продукта” (`C01`-`C05`).
-2. Затем подготовил структурные разборы reference-архитектур из статей с выделением компонентов и ответственности (`C06`, `C07`, `C08`).
-3. В финале дан curated набор ресурсов по Temporal для agentic workflows (OpenAI docs, Temporal cookbook, community demos, case studies, observability), с акцентом на long-running/HITL use cases (`C10`).
+1. [proposal] [A01] Агент собрал широкий обзор OSS-экосистемы (scraping frameworks, ingestion/connectors, orchestrators) и вывел композиционный подход вместо “единого продукта” (-).
+2. [proposal] [A02] Затем подготовил структурные разборы reference-архитектур из статей с выделением компонентов и ответственности.
+3. [proposal] [A03] В финале дан curated набор ресурсов по Temporal для agentic workflows (OpenAI docs, Temporal cookbook, community demos, case studies, observability), с акцентом на long-running/HITL use cases.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:4`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:8`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:10`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:12`
+- U02: `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:28`
+- U03: `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:120`
+- U04: `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:280`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:387`
+- A01: `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:4`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:8`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:10`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:41`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:95`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:99`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:103`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:107`
+- A02: `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:280`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:284`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:292`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:307`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:322`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:338`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:349`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:355`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:358`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:379`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:390`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:405`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:408`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:463`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:467`
+- A03: `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:391`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:396`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:404`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:413`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:523`, `raw-exports/sdlc-discovery-iteration-00/I00-F0008-CHATGPT.md:531`
 
 ## Extracted Concepts
 

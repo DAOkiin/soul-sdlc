@@ -1,7 +1,5 @@
 # I01-F0005-CHATGPT Concepts (Draft)
 
-[Analyzed source: I01-F0005-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I01-F0005-CHATGPT`
@@ -12,16 +10,26 @@
 
 ## User Prompts Summary
 
-1. Пользователь попросил выявить неконсистентности в документации по AJTBD, W-Model и ISO 12207 (`raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:4`).
-2. Пользователь уточнил целевой контекст: автономная самоулучшающаяся система, которая строит другие системы (`raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:48`).
-3. Пользователь предложил архитектурную гипотезу про "душу" системы в репозитории, семантический слой ограничений и ядро на модели Болдачева (`raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:86`, `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:87`).
+1. [request] [U01] Пользователь попросил выявить неконсистентности в документации по AJTBD, W-Model и ISO 12207.
+2. [request] [U02] Пользователь уточнил целевой контекст: автономная самоулучшающаяся система, которая строит другие системы.
+3. [constraint] [U03] Пользователь предложил архитектурную гипотезу про "душу" системы в репозитории, семантический слой ограничений и ядро на модели Болдачева.
 
 ## AI Response Summary
 
-1. AI выделил 5 ключевых неконсистентностей: фазовость vs процессность, поздний старт тестов vs W-model shift-left, пропуск stakeholder layer, тестирование vs отладка, риск устаревших интерпретаций (`C01`-`C05`).
-2. AI предложил переход к графовой механике SDLC: асинхронные воркеры, триггеры от артефактов, debt flags и PR-циклы (`C06`).
-3. AI дал правило двухслойной трассируемости Intent -> System Requirements и роль семантического enforcement (`C07`).
-4. AI поддержал идею "души" и оформил ее через event graph, actors, permissions, causes и строгий semantic compiler перед записью событий в DAG (`C08`).
+1. [risk] [A01] AI выделил 5 ключевых неконсистентностей: фазовость vs процессность, поздний старт тестов vs W-model shift-left, пропуск stakeholder layer, тестирование vs отладка, риск устаревших интерпретаций (-).
+2. [proposal] [A02] AI предложил переход к графовой механике SDLC: асинхронные воркеры, триггеры от артефактов, debt flags и PR-циклы.
+3. [proposal] [A03] AI дал правило двухслойной трассируемости Intent -> System Requirements и роль семантического enforcement.
+4. [proposal] [A04] AI поддержал идею "души" и оформил ее через event graph, actors, permissions, causes и строгий semantic compiler перед записью событий в DAG.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:48`
+- U03: `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:86`, `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:87`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:17`, `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:18`, `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:19`, `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:40`, `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:42`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:58`, `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:60`, `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:61`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:62`, `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:65`, `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:67`
+- A04: `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:99`, `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:103`, `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:111`, `raw-exports/sdlc-discovery-iteration-01/I01-F0005-CHATGPT.md:116`
 
 ## Extracted Concepts
 

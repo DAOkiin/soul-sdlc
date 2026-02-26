@@ -1,7 +1,5 @@
 # I01-F0017-CHATGPT Concepts (Draft)
 
-[Analyzed source: I01-F0017-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I01-F0017-CHATGPT`
@@ -12,14 +10,22 @@
 
 ## User Prompts Summary
 
-1. Пользователь запросил план действий на основе уже подготовленных материалов (`agent-task-v1`, `agent-task-v2`, comparison, analysis, deep research, текущая сырая реализация) с логикой "зафиксировать процесс -> имплементировать код управления состоянием" (`raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:4`).
-2. Далее пользователь попросил зафиксировать принятые артефакты и перечислить критичные вопросы/решения, которые нужно закрыть сейчас; отдельно зафиксировал решение по runtime state: вариант A, один фиксированный путь, merge-конфликт как часть дизайна (`raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:3978`).
+1. [request] [U01] Пользователь запросил план действий на основе уже подготовленных материалов (`agent-task-v1`, `agent-task-v2`, comparison, analysis, deep research, текущая сырая реализация) с логикой "зафиксировать процесс -> имплементировать код управления состоянием".
+2. [request] [U02] Далее пользователь попросил зафиксировать принятые артефакты и перечислить критичные вопросы/решения, которые нужно закрыть сейчас; отдельно зафиксировал решение по runtime state: вариант A, один фиксированный путь, merge-конфликт как часть дизайна.
 
 ## AI Response Summary
 
-1. Агент собрал unified roadmap: закрепить архитектурные принципы, выбрать v1-базу для guards subsystem, внедрить pre-push enforcement, Mermaid-рендер и синхронизируемую документацию (`C01`, `C02`, `C03`, `C04`).
-2. В ответе зафиксированы принятые SoT-артефакты (DDL, runtime state A, guards config), исполняемый tooling-контур (compiler/runner/hooks/just/docs/tests) и контрольные DoD (`C05`, `C06`).
-3. Агент выделил "дыры", требующие немедленных решений: state schema, merge policy для фиксированного state-файла, semantics `branch`, strict advance rules, version contract, command-guard policy, bypass policy, CI authority (`C07`, `C08`, `C09`, `C10`).
+1. [proposal] [A01] Агент собрал unified roadmap: закрепить архитектурные принципы, выбрать v1-базу для guards subsystem, внедрить pre-push enforcement, Mermaid-рендер и синхронизируемую документацию.
+2. [proposal] [A02] В ответе зафиксированы принятые SoT-артефакты (DDL, runtime state A, guards config), исполняемый tooling-контур (compiler/runner/hooks/just/docs/tests) и контрольные DoD.
+3. [decision] [A03] Агент выделил "дыры", требующие немедленных решений: state schema, merge policy для фиксированного state-файла, semantics `branch`, strict advance rules, version contract, command-guard policy, bypass policy, CI authority.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:3978`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:11`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:16`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:22`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:3776`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:3829`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:3868`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:3964`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:3780`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:3806`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:3814`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:3831`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:3840`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:3848`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:3983`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:4000`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:4002`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:3996`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:4003`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:4006`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:4062`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:4068`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:4124`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:4133`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:4139`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:4144`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:4155`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:4159`, `raw-exports/sdlc-discovery-iteration-01/I01-F0017-CHATGPT.md:4169`
 
 ## Extracted Concepts
 

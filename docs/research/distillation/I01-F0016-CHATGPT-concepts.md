@@ -1,7 +1,5 @@
 # I01-F0016-CHATGPT Concepts (Draft)
 
-[Analyzed source: I01-F0016-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I01-F0016-CHATGPT`
@@ -12,13 +10,20 @@
 
 ## User Prompts Summary
 
-1. Пользователь попросил сравнить `agent-task-v1.md` и `agent-task-v2.md` по сходствам и различиям (`raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:4`).
-2. Далее пользователь запросил практический выбор для быстрого развития, сослался на принципы OpenAI harness engineering и попросил понять, какой вариант лучше и что стоит заимствовать (`raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:234`).
+1. [request] [U01] Пользователь попросил сравнить `agent-task-v1.md` и `agent-task-v2.md` по сходствам и различиям.
+2. [request] [U02] Далее пользователь запросил практический выбор для быстрого развития, сослался на принципы OpenAI harness engineering и попросил понять, какой вариант лучше и что стоит заимствовать.
 
 ## AI Response Summary
 
-1. Первая часть ответа раскладывает архитектурные различия v1/v2: где хранить guards, насколько богатая модель, где исполнять логику, детализация pre-push, тип Mermaid-рендера, подход к docs и тестам (`C01`-`C07`).
-2. Во второй части агент рекомендует v1 как базу для скорости итераций и низкой связности, а из v2 взять отдельные усиливающие механики (`must/should`, templating, JSON output, strict advance gating) (`C08`, `C09`, `C10`, `C11`).
+1. [proposal] [A01] Первая часть ответа раскладывает архитектурные различия v1/v2: где хранить guards, насколько богатая модель, где исполнять логику, детализация pre-push, тип Mermaid-рендера, подход к docs и тестам (-).
+2. [proposal] [A02] Во второй части агент рекомендует v1 как базу для скорости итераций и низкой связности, а из v2 взять отдельные усиливающие механики (`must/should`, templating, JSON output, strict advance gating).
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:234`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:17`, `raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:20`, `raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:22`, `raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:188`, `raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:193`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:241`, `raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:253`, `raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:269`, `raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:294`, `raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:302`, `raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:308`, `raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:333`, `raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:339`, `raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:380`, `raw-exports/sdlc-discovery-iteration-01/I01-F0016-CHATGPT.md:383`
 
 ## Extracted Concepts
 

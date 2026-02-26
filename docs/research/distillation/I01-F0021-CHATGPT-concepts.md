@@ -1,7 +1,5 @@
 # I01-F0021-CHATGPT Concepts (Draft)
 
-[Analyzed source: I01-F0021-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I01-F0021-CHATGPT`
@@ -12,17 +10,28 @@
 
 ## User Prompts Summary
 
-1. Пользователь спросил про реальные альтернативы Microsoft Agent Framework и зафиксировал требование FSM+DSL для SDLC-автоматизации (`raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:4`).
-2. Затем пользователь уточнил workflow-engine-centered подход и попросил разложить ответственности/порядок внедрения под мир "Nick + Codex agent", ограниченный human attention (`raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:190`).
-3. Пользователь дал на анализ внешний проект и попросил определить прямую релевантность его целям (`raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1348`).
-4. Финально пользователь запросил описать DSL для General Problem Solver (`raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1469`).
+1. [request] [U01] Пользователь спросил про реальные альтернативы Microsoft Agent Framework и зафиксировал требование FSM+DSL для SDLC-автоматизации.
+2. [constraint] [U02] Затем пользователь уточнил workflow-engine-centered подход и попросил разложить ответственности/порядок внедрения под мир "Nick + Codex agent", ограниченный human attention.
+3. [request] [U03] Пользователь дал на анализ внешний проект и попросил определить прямую релевантность его целям.
+4. [request] [U04] Финально пользователь запросил описать DSL для General Problem Solver.
 
 ## AI Response Summary
 
-1. Агент подтвердил силу MAF, но предложил оценивать по роли: agent SDK vs workflow engine; перечислил рабочие альтернативы по категориям (`C01`, `C02`, `C03`).
-2. В workflow-first ответе агент описал слой ответственности: DSL/FSM, policy/autonomy, idempotent activities, Codex integration contract, state/event protocol и phased adoption (`C04`, `C05`, `C06`, `C07`).
-3. По внешнему `paip-python` проекту дан вывод: прямого SDLC-фундамента нет, но `gps.py` и `emycin.py` полезны как референсы планирования и explainable policy (`C08`, `C09`).
-4. Отдельно зафиксирован формальный GPS DSL (facts/state/goals/operators, transition semantics, invariants, STRIPS-like model) и возможные расширения для SDLC-case (`C10`, `C11`, `C12`).
+1. [proposal] [A01] Агент подтвердил силу MAF, но предложил оценивать по роли: agent SDK vs workflow engine; перечислил рабочие альтернативы по категориям.
+2. [proposal] [A02] В workflow-first ответе агент описал слой ответственности: DSL/FSM, policy/autonomy, idempotent activities, Codex integration contract, state/event protocol и phased adoption.
+3. [proposal] [A03] По внешнему `paip-python` проекту дан вывод: прямого SDLC-фундамента нет, но `gps.py` и `emycin.py` полезны как референсы планирования и explainable policy.
+4. [goal] [A04] Отдельно зафиксирован формальный GPS DSL (facts/state/goals/operators, transition semantics, invariants, STRIPS-like model) и возможные расширения для SDLC-case.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:190`
+- U03: `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1348`
+- U04: `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1469`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:13`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:14`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:16`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:22`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:33`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:66`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:80`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:107`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:111`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:179`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:217`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:233`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:227`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:229`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:230`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:237`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:241`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:259`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:276`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1284`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1289`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1318`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1352`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1357`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1361`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1369`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1387`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1404`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1416`
+- A04: `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1475`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1507`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1522`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1548`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1555`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1558`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1657`, `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md:1658`
 
 ## Extracted Concepts
 
