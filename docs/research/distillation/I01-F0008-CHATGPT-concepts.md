@@ -1,7 +1,5 @@
 # I01-F0008-CHATGPT Concepts (Draft)
 
-[Analyzed source: I01-F0008-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I01-F0008-CHATGPT`
@@ -12,15 +10,24 @@
 
 ## User Prompts Summary
 
-1. Пользователь попросил спроектировать простой, но достаточный SDLC-процесс для агентской разработки и стартовать процесс с текущими материалами (`raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:6`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:8`).
-2. Пользователь уточнил желаемый план: meta-документация (`SDLC.md`, `AGENTS.md`, `README.md`), приложение с итерационной документацией и запуск MVP (`raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:18`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:20`).
+1. [request] [U01] Пользователь попросил спроектировать простой, но достаточный SDLC-процесс для агентской разработки и стартовать процесс с текущими материалами.
+2. [request] [U02] Пользователь уточнил желаемый план: meta-документация (`SDLC.md`, `AGENTS.md`, `README.md`), приложение с итерационной документацией и запуск MVP.
 
 ## AI Response Summary
 
-1. AI предложил не строить SDLC с нуля, а взять Lean-адаптацию IEEE 12207 с легкими baseline-контрольными точками в git (`C01`, `C02`).
-2. AI оформил итерационный цикл в стиле V-подхода: scope -> design -> implementation/integration -> verification -> validation -> learnings (`C03`).
-3. AI зафиксировал агентский governance-контур: `AGENTS.md` как instruction chain, one-task-one-branch, draft PR для долгих задач, интегратор как единственная точка merge (`C04`, `C05`).
-4. AI дал boot-sequence и шаблоны для `README/SDLC/AGENTS` и Iteration Pack (`C06`, `C07`).
+1. [proposal] [A01] AI предложил не строить SDLC с нуля, а взять Lean-адаптацию IEEE 12207 с легкими baseline-контрольными точками в git.
+2. [proposal] [A02] AI оформил итерационный цикл в стиле V-подхода: scope -> design -> implementation/integration -> verification -> validation -> learnings.
+3. [proposal] [A03] AI зафиксировал агентский governance-контур: `AGENTS.md` как instruction chain, one-task-one-branch, draft PR для долгих задач, интегратор как единственная точка merge.
+4. [proposal] [A04] AI дал boot-sequence и шаблоны для `README/SDLC/AGENTS` и Iteration Pack.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:6`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:8`
+- U02: `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:18`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:20`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:49`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:51`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:58`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:64`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:65`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:82`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:127`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:135`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:137`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:140`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:148`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:150`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:152`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:166`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:168`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:170`
+- A04: `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:219`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:226`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:230`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:194`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:200`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:204`, `raw-exports/sdlc-discovery-iteration-01/I01-F0008-CHATGPT.md:207`
 
 ## Extracted Concepts
 
