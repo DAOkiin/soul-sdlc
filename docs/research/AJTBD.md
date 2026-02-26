@@ -113,10 +113,17 @@ https://ajtbd.ru/
 ---
 
 [1]: https://zamesin.ru/producthowto/book/about-jobs-to-be-done/ "Главное про Jobs To Be Done"
+
 [2]: https://zamesin.ru/producthowto/book/introduction-to-advanced-jobs-to-be-done/ "Введение в Advanced Jobs To Be Done"
+
 [3]: https://zamesin.ru/producthowto/free-lecture/ "Как делать продукт: бесплатная лекция по Advanced Jobs To Be Done от Вани Замесина"
+
 [4]: https://t.me/s/zamesin "Ваня Замесин – Telegram"
+
 [5]: https://ajtbd.com/ "Build category-defining products with Advanced JTBD"
+
 [6]: https://ajtbd.substack.com/?utm_source=chatgpt.com "AJTBD: Clarity Over Guesswork | Ivan Zamesin | Substack"
+
 [7]: https://ajtbd.ru/ "AURA Framework - Навигатор механик и стратегий AJTBD"
+
 [8]: https://zamesin.ru/books/product-howto/jtbd-101/ "Jobs To Be Done на пальцах"
