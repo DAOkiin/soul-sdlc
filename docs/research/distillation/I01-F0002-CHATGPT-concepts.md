@@ -1,7 +1,5 @@
 # I01-F0002-CHATGPT Concepts (Draft)
 
-[Analyzed source: I01-F0002-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I01-F0002-CHATGPT`
@@ -12,17 +10,28 @@
 
 ## User Prompts Summary
 
-1. Пользователь запросил синтез одного большого markdown-документа по SDLC из набора разнотипных источников без искажения смысла и с объединением пересекающихся знаний (`raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:4`).
-2. Пользователь задал структурированный план: словарь терминов, сравнение версий стандартов (1995 vs 2017), извлечение таблиц артефактов/оценок, описание моделей ЖЦ, практический кейс и проектирование диаграмм Mermaid (`raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:8`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:16`).
-3. Приоритет пользовательского запроса: одновременно полнота, точность и наглядная форма (таблицы + диаграммы) (`C03`, `C04`, `C06`).
+1. [request] [U01] Пользователь запросил синтез одного большого markdown-документа по SDLC из набора разнотипных источников без искажения смысла и с объединением пересекающихся знаний.
+2. [request] [U02] Пользователь задал структурированный план: словарь терминов, сравнение версий стандартов (1995 vs 2017), извлечение таблиц артефактов/оценок, описание моделей ЖЦ, практический кейс и проектирование диаграмм Mermaid.
+3. [request] [U03] Приоритет пользовательского запроса: одновременно полнота, точность и наглядная форма (таблицы + диаграммы) (`C03`, `C04`, `C06`).
 
 ## AI Response Summary
 
-1. AI собрал единую теоретическую рамку: объектное представление (customer/project/product/process/resource) и историческая эволюция ISO 12207 (`C01`, `C02`).
-2. AI выделил современную нормативную архитектуру: 30 процессов в 4 группах с акцентом на гармонизацию системной и программной инженерии (`C02`).
-3. AI добавил микроуровень исполнения: 12 фаз, 35 артефактов, систему оценок/аудитов/baselines и связь с управлением изменениями (`C03`).
-4. AI включил выбор моделей ЖЦ (waterfall/incremental/evolutionary), tailoring и правила качества требований (INCOSE) (`C04`, `C05`).
-5. AI связал стандартную модель с эксплуатацией через трехуровневую техподдержку L1/L2/L3 в практическом кейсе (`C06`).
+1. [proposal] [A01] AI собрал единую теоретическую рамку: объектное представление (customer/project/product/process/resource) и историческая эволюция ISO 12207.
+2. [proposal] [A02] AI выделил современную нормативную архитектуру: 30 процессов в 4 группах с акцентом на гармонизацию системной и программной инженерии.
+3. [proposal] [A03] AI добавил микроуровень исполнения: 12 фаз, 35 артефактов, систему оценок/аудитов/baselines и связь с управлением изменениями.
+4. [proposal] [A04] AI включил выбор моделей ЖЦ (waterfall/incremental/evolutionary), tailoring и правила качества требований (INCOSE).
+5. [proposal] [A05] AI связал стандартную модель с эксплуатацией через трехуровневую техподдержку L1/L2/L3 в практическом кейсе.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:8`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:16`
+- U03: `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1184`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1197`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1221`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1224`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1231`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1221`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1224`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1231`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1237`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1242`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1263`
+- A04: `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1274`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1278`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1281`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1283`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1287`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1290`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1296`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1301`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1307`
+- A05: `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1348`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1351`, `raw-exports/sdlc-discovery-iteration-01/I01-F0002-CHATGPT.md:1353`
 
 ## Extracted Concepts
 
