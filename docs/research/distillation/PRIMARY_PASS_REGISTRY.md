@@ -39,3 +39,4 @@ Primary tracker for incremental micro-pass distillation.
 | 0033 | I03-F0001-GEMINI-DR | CHAT_REGISTRY.md | raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md | indexed | concepts + user/agent summaries extracted; awaiting concept approval |
 | 0034 | I00-F0001-CHATGPT | CHAT_REGISTRY_ITERATION_00.md | raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md | indexed | concepts + user/agent summaries extracted; awaiting concept approval |
 | 0035 | I00-F0002-CHATGPT | CHAT_REGISTRY_ITERATION_00.md | raw-exports/sdlc-discovery-iteration-00/I00-F0002-CHATGPT.md | indexed | concepts + user/agent summaries extracted; awaiting concept approval |
+| 0036 | I00-F0003-CHATGPT | CHAT_REGISTRY_ITERATION_00.md | raw-exports/sdlc-discovery-iteration-00/I00-F0003-CHATGPT.md | indexed | concepts + user/agent summaries extracted; awaiting concept approval |
