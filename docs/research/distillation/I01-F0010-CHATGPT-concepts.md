@@ -1,7 +1,5 @@
 # I01-F0010-CHATGPT Concepts (Draft)
 
-[Analyzed source: I01-F0010-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I01-F0010-CHATGPT`
@@ -12,14 +10,22 @@
 
 ## User Prompts Summary
 
-1. Пользователь запросил инструкцию по `git worktree` для работы с Codex на macOS и параллельного запуска нескольких агентов в одном проекте (`raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:4`).
-2. Пользователь уточнил, что нужны рекомендации и от официальных источников/опытных разработчиков (`raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:344`).
+1. [request] [U01] Пользователь запросил инструкцию по `git worktree` для работы с Codex на macOS и параллельного запуска нескольких агентов в одном проекте.
+2. [request] [U02] Пользователь уточнил, что нужны рекомендации и от официальных источников/опытных разработчиков.
 
 ## AI Response Summary
 
-1. AI дал базовый `git worktree` workflow: создание/листинг/удаление worktree, one-agent-one-branch и изоляция директорий (`C01`, `C02`).
-2. AI дополнил это официальной моделью Codex app: режим Worktree, detached HEAD по умолчанию, `Create branch here` vs `Sync with local (Overwrite/Apply)`, хранение в `$CODEX_HOME/worktrees` (`C03`, `C04`).
-3. AI зафиксировал operational guardrails: нельзя одновременно checkout одной ветки в двух worktree, нужен контроль cleanup/space, и выбор workflow зависит от локальной верификации (`C05`, `C06`).
+1. [proposal] [A01] AI дал базовый `git worktree` workflow: создание/листинг/удаление worktree, one-agent-one-branch и изоляция директорий.
+2. [proposal] [A02] AI дополнил это официальной моделью Codex app: режим Worktree, detached HEAD по умолчанию, `Create branch here` vs `Sync with local (Overwrite/Apply)`, хранение в `$CODEX_HOME/worktrees`.
+3. [proposal] [A03] AI зафиксировал operational guardrails: нельзя одновременно checkout одной ветки в двух worktree, нужен контроль cleanup/space, и выбор workflow зависит от локальной верификации.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:344`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:16`, `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:21`, `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:31`, `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:177`, `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:182`, `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:281`, `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:283`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:358`, `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:362`, `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:433`, `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:366`, `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:373`, `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:378`, `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:441`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:371`, `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:463`, `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:487`, `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:252`, `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:264`, `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:384`, `raw-exports/sdlc-discovery-iteration-01/I01-F0010-CHATGPT.md:389`
 
 ## Extracted Concepts
 
