@@ -1,7 +1,5 @@
 # I01-F0013-CHATGPT-DR Concepts (Draft)
 
-[Analyzed source: I01-F0013-CHATGPT-DR.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md)
-
 ## Source
 
 - chat_id: `I01-F0013-CHATGPT-DR`
@@ -12,15 +10,24 @@
 
 ## User Prompts Summary
 
-1. В этом экспорте нет явных пользовательских сообщений; файл содержит готовый русскоязычный deep research отчет (`raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:1`).
+1. [request] [U01] В этом экспорте нет явных пользовательских сообщений; файл содержит готовый русскоязычный deep research отчет.
 
 ## AI Response Summary
 
-1. Ответ фиксирует многослойную модель state (process, history, memory, artifact) и связывает ее с lifecycle `work3` (`C01`, `C02`).
-2. Для надежных переходов предложены графовые/типизированные workflow-подходы с checkpointing, pause/resume и queryable history (`C03`, `C04`, `C05`).
-3. Durable execution (Temporal и аналоги) описан как инфраструктурный источник истины для replay, retries и recovery (`C06`, `C07`).
-4. Во фреймворках отдельно подчеркнуто различие process-state и memory; message-centric схемы без durable state обозначены как ограниченные (`C08`, `C09`).
-5. Для coding agents рекомендован Git/PR lifecycle с явными guard conditions и security controls поверх персистентного состояния (`C10`, `C11`, `C12`).
+1. [proposal] [A01] Ответ фиксирует многослойную модель state (process, history, memory, artifact) и связывает ее с lifecycle `work3`.
+2. [proposal] [A02] Для надежных переходов предложены графовые/типизированные workflow-подходы с checkpointing, pause/resume и queryable history.
+3. [proposal] [A03] Durable execution (Temporal и аналоги) описан как инфраструктурный источник истины для replay, retries и recovery.
+4. [risk] [A04] Во фреймворках отдельно подчеркнуто различие process-state и memory; message-centric схемы без durable state обозначены как ограниченные.
+5. [proposal] [A05] Для coding agents рекомендован Git/PR lifecycle с явными guard conditions и security controls поверх персистентного состояния.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:1`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:5`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:9`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:15`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:20`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:38`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:42`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:46`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:47`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:49`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:53`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:55`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:61`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:79`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:81`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:86`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:92`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:97`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:99`
+- A04: `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:109`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:117`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:123`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:130`
+- A05: `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:134`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:139`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:150`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:163`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:175`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:182`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:184`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:190`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:197`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:199`, `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md:203`
 
 ## Extracted Concepts
 
