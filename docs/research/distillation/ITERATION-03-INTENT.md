@@ -16,6 +16,8 @@ It explains what we are trying to achieve and how the current iteration should r
 - Набор первичных заметок в `docs/research/distillation/primary-notes/<SOURCE_ID>.md`.
 - Карта контекстных слайсов в `docs/research/distillation/CONTEXT_SLICE_MAP.md`.
 - Очередь точечных задач передистилляции в `docs/research/distillation/TARGETED_REDISTILL_BACKLOG.md`.
+- Операционная память концептов в `docs/research/distillation/CONCEPT_REGISTRY.md`.
+- Операционная память индексации файлов в `docs/research/distillation/FILE_CONCEPT_MAP.md`.
 - Подготовленная база для следующей итерации (`ITER-04`) с узкими, хорошо ограниченными задачами.
 
 ### Критерий успеха
@@ -44,15 +46,18 @@ It explains what we are trying to achieve and how the current iteration should r
 - `CHAT_REGISTRY.md` (основной корпус iteration-01/02).
 - `CHAT_REGISTRY_ITERATION_00.md` (legacy prehistory корпус).
 - `Harring.md` (выделенные harness engineering цитаты).
+- `docs/research/distillation/CONCEPT_REGISTRY.md` (операционный реестр концептов Iteration-03).
+- `docs/research/distillation/FILE_CONCEPT_MAP.md` (операционный индекс «файл ↔ концепт»).
 - `docs/research/artifacts/**/*` (truth zone для стандартов и viewpoints).
 
 ### Конвейер работ
 
-1. Выполнить primary distillation по порядку `PRIMARY_PASS_REGISTRY.md`.
-2. Для каждого источника зафиксировать `intent`, `atomic_claims`, `stable/volatile` и риски в `primary-notes`.
-3. Агрегировать повторяемые claims в `CONTEXT_SLICE_MAP.md`.
-4. Сформировать узкие задачи в `TARGETED_REDISTILL_BACKLOG.md` с ожидаемыми артефактами.
-5. Выпускать структурированные artifacts по слайсам только после явной трассировки на источники.
+1. Считать `CONCEPT_REGISTRY.md` и `FILE_CONCEPT_MAP.md` как обязательные артефакты памяти перед стартом и на каждом переходе между шагами.
+2. Выполнить primary distillation по порядку `PRIMARY_PASS_REGISTRY.md`.
+3. Для каждого источника зафиксировать `intent`, `atomic_claims`, `stable/volatile` и риски в `primary-notes`.
+4. Агрегировать повторяемые claims в `CONTEXT_SLICE_MAP.md`.
+5. Сформировать узкие задачи в `TARGETED_REDISTILL_BACKLOG.md` с ожидаемыми артефактами.
+6. Выпускать структурированные artifacts по слайсам только после явной трассировки на источники.
 
 ### Правила нарезки (context slicing)
 
@@ -79,4 +84,3 @@ It explains what we are trying to achieve and how the current iteration should r
 - Layer 1 читается за 2-3 минуты и дает полную картину цели итерации.
 - Layer 2 достаточно детален, чтобы другой агент продолжил работу без принятия новых архитектурных решений.
 - Процесс дистилляции, нарезки и передистилляции согласован с `ITERATION_LEDGER` и текущими реестрами.
-

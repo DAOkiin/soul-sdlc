@@ -14,10 +14,12 @@ Primary objective: keep repository knowledge legible, traceable, and dedup-ready
 4. `docs/research/repo-tree-status.md` (latest tree audit snapshot)
 5. `docs/research/distillation/ITERATION_LEDGER.md` (iteration progression)
 6. `docs/research/distillation/ITERATION-03-INTENT.md` (context anchor for current iteration intent)
-7. `docs/research/distillation/ITERATION-03-PRIMARY-DISTILLATION.md` (current distillation runbook)
-8. `docs/research/distillation/PRIMARY_PASS_REGISTRY.md` (primary-pass queue)
-9. `Harring.md` (selected harness engineering quotes)
-10. `docs/README.md` and `docs/research/README.md` (for artifact definitions and research scope)
+7. `docs/research/distillation/CONCEPT_REGISTRY.md` (operational concept memory)
+8. `docs/research/distillation/FILE_CONCEPT_MAP.md` (persistent file↔concept index)
+9. `docs/research/distillation/ITERATION-03-PRIMARY-DISTILLATION.md` (current distillation runbook)
+10. `docs/research/distillation/PRIMARY_PASS_REGISTRY.md` (primary-pass queue)
+11. `Harring.md` (selected harness engineering quotes)
+12. `docs/README.md` and `docs/research/README.md` (for artifact definitions and research scope)
 
 ## Source-of-truth hierarchy
 
@@ -29,29 +31,29 @@ Primary objective: keep repository knowledge legible, traceable, and dedup-ready
 ## Iteration model
 
 - `raw-exports/sdlc-discovery-iteration-00`: pre-SDLC-automation history (data collection/discovery).
-- `raw-exports/sdlc-discovery-iteration-01`: chats up to `CHAT-CHATGPT-0022` (inclusive).
-- `raw-exports/sdlc-discovery-iteration-02`: chats from `CHAT-CHATGPT-0023` to `CHAT-CHATGPT-0032`.
-- `raw-exports/sdlc-discovery-iteration-03`: chats from `CHAT-GEMINI-DR-0033` and later.
+- `raw-exports/sdlc-discovery-iteration-01`: chats up to `I01-F0022-CHATGPT` (inclusive).
+- `raw-exports/sdlc-discovery-iteration-02`: chats from `I02-F0001-CHATGPT` to `I02-F0010-CHATGPT`.
+- `raw-exports/sdlc-discovery-iteration-03`: chats from `I03-F0001-GEMINI-DR` and later.
 - `docs/research/distillation/*` (`ITER-03`): primary distillation of all sources, followed by slice-based targeted redistillation.
 
 ## Hard constraints
 
 - Do not rewrite semantic content inside `raw-exports/` to "clean" it.
 - File path/filename normalization inside `raw-exports/` is allowed only by ID policies below.
-- Do not renumber existing `chat_id` values in `CHAT_REGISTRY.md` (`0001..0033` are stable).
+- Do not renumber existing `order` values in `CHAT_REGISTRY.md` (`0001..0033` are stable).
 - Keep lineage explicit: every dedup or move must preserve provenance to prior path(s).
 
 ## ID policy
 
 ### Chat IDs
 
-- Standard: `CHAT-<PROVIDER>-XXXX`
-- Deep research variant: `CHAT-<PROVIDER>-DR-XXXX`
+- Standard: `Ixx-Fxxxx-PROVIDER`
+- Deep research variant: `Ixx-Fxxxx-PROVIDER-DR`
 - Current providers: `CHATGPT`, `GEMINI`
 
 ### Legacy iteration-00 IDs
 
-- Standard: `CHAT-CHATGPT-I00-XXXX`
+- Standard: `I00-Fxxxx-CHATGPT`
 - Managed in `CHAT_REGISTRY_ITERATION_00.md`
 
 ### Requirement IDs
@@ -98,11 +100,13 @@ Allowed transition direction: `raw -> indexed -> parsed -> synthesized -> verifi
 ## Iteration-03 distillation workflow
 
 1. Read `docs/research/distillation/ITERATION-03-INTENT.md` as context anchor before taking tasks.
-2. Take next `pending` row in `docs/research/distillation/PRIMARY_PASS_REGISTRY.md`.
-3. Create/update `docs/research/distillation/primary-notes/<SOURCE_ID>.md`.
-4. Extract atomic claims with explicit evidence references (`source_path:line`).
-5. Propose/adjust slice placement in `docs/research/distillation/CONTEXT_SLICE_MAP.md`.
-6. Add focused follow-up work into `docs/research/distillation/TARGETED_REDISTILL_BACKLOG.md`.
+2. Read `docs/research/distillation/CONCEPT_REGISTRY.md` as mandatory operational memory.
+3. Read `docs/research/distillation/FILE_CONCEPT_MAP.md` as mandatory operational memory.
+4. Take next `pending` row in `docs/research/distillation/PRIMARY_PASS_REGISTRY.md`.
+5. Create/update `docs/research/distillation/primary-notes/<SOURCE_ID>.md`.
+6. Extract atomic claims with explicit evidence references (`source_path:line`) and register new concepts in `CONCEPT_REGISTRY.md`.
+7. Propose/adjust slice placement in `docs/research/distillation/CONTEXT_SLICE_MAP.md` and update file→concept coverage in `FILE_CONCEPT_MAP.md`.
+8. Add focused follow-up work into `docs/research/distillation/TARGETED_REDISTILL_BACKLOG.md`.
 
 ## Scope currently tracked by CHAT_REGISTRY
 
@@ -115,11 +119,11 @@ Allowed transition direction: `raw -> indexed -> parsed -> synthesized -> verifi
 Run from repository root:
 
 - `rg -n "^\| [0-9]{4} \|" CHAT_REGISTRY.md | wc -l`
-- `rg -n "CHAT-[A-Z0-9]+(-DR)?-[0-9]{4}" CHAT_REGISTRY.md`
-- `rg -n "CHAT-CHATGPT-I00-[0-9]{4}" CHAT_REGISTRY_ITERATION_00.md`
-- `find raw-exports/sdlc-discovery-iteration-01 raw-exports/sdlc-discovery-iteration-02 -maxdepth 1 -type f -name '*.md' | sed 's#.*/##' | rg -v '^CHAT-(CHATGPT|GEMINI)(-DR)?-[0-9]{4}\.md$'`
-- `find raw-exports/sdlc-discovery-iteration-03 -maxdepth 1 -type f -name '*.md' | sed 's#.*/##' | rg -v '^CHAT-(CHATGPT|GEMINI)(-DR)?-[0-9]{4}\.md$'`
-- `find raw-exports/sdlc-discovery-iteration-00 -maxdepth 1 -type f -name '*.md' | sed 's#.*/##' | rg -v '^(CHAT-CHATGPT-I00-[0-9]{4}\.md|README\.md)$'`
+- `rg -n "I0[1-3]-F[0-9]{4}-(CHATGPT|GEMINI)(-DR)?" CHAT_REGISTRY.md`
+- `rg -n "I00-F[0-9]{4}-CHATGPT" CHAT_REGISTRY_ITERATION_00.md`
+- `find raw-exports/sdlc-discovery-iteration-01 raw-exports/sdlc-discovery-iteration-02 -maxdepth 1 -type f -name '*.md' | sed 's#.*/##' | rg -v '^I0[1-2]-F[0-9]{4}-(CHATGPT|GEMINI)(-DR)?\.md$'`
+- `find raw-exports/sdlc-discovery-iteration-03 -maxdepth 1 -type f -name '*.md' | sed 's#.*/##' | rg -v '^I03-F[0-9]{4}-(CHATGPT|GEMINI)(-DR)?\.md$'`
+- `find raw-exports/sdlc-discovery-iteration-00 -maxdepth 1 -type f -name '*.md' | sed 's#.*/##' | rg -v '^(I00-F[0-9]{4}-CHATGPT\.md|README\.md)$'`
 
 ## Dedup preparation rule
 

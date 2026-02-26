@@ -18,9 +18,9 @@ Current lightweight snapshot after raw-export normalization, iteration split upd
 |------------------------------------------------|---------:|-----------------------------------------------------------------------------|
 | `raw-exports/**/*.md`                          |       44 | Canonical exported chats/readmes (evidence zone)                            |
 | `raw-exports/sdlc-discovery-iteration-00/*.md` |       11 | 10 legacy chats (`I00`) + 1 README                                          |
-| `raw-exports/sdlc-discovery-iteration-01/*.md` |       22 | IDs up to `CHAT-CHATGPT-0022`                                               |
-| `raw-exports/sdlc-discovery-iteration-02/*.md` |       10 | IDs from `CHAT-CHATGPT-0023`                                                |
-| `raw-exports/sdlc-discovery-iteration-03/*.md` |        1 | Canonical intake export: `CHAT-GEMINI-DR-0033`                              |
+| `raw-exports/sdlc-discovery-iteration-01/*.md` |       22 | IDs up to `I01-F0022-CHATGPT`                                               |
+| `raw-exports/sdlc-discovery-iteration-02/*.md` |       10 | IDs from `I02-F0001-CHATGPT`                                                |
+| `raw-exports/sdlc-discovery-iteration-03/*.md` |        1 | Canonical intake export: `I03-F0001-GEMINI-DR`                              |
 | `docs/**/*.md`                                 |       74 | Curated docs/syntheses/research (includes generated distillation artifacts) |
 | `docs/research/artifacts/**/*`                 | 11 files | Canonical research artifacts (truth source)                                 |
 
@@ -38,13 +38,13 @@ Files under `docs/research/artifacts` remain the truth source for standards/view
 - Legacy prehistory registry: `CHAT_REGISTRY_ITERATION_00.md`
    - Scope: `iteration-00`
    - Rows: 10
-   - ID family: `CHAT-CHATGPT-I00-XXXX`
+   - ID family: `I00-Fxxxx-CHATGPT`
 
 ## Iteration boundary rule
 
-- `CHAT-CHATGPT-0022` belongs to `iteration-01`.
-- `CHAT-CHATGPT-0023` is the first file of `iteration-02`.
-- `CHAT-GEMINI-DR-0033` is currently the first file of `iteration-03`.
+- `I01-F0022-CHATGPT` belongs to `iteration-01`.
+- `I02-F0001-CHATGPT` is the first file of `iteration-02`.
+- `I03-F0001-GEMINI-DR` is currently the first file of `iteration-03`.
 
 ## Derived working artifacts
 
@@ -56,7 +56,7 @@ Files under `docs/research/artifacts` remain the truth source for standards/view
 - Removed exact duplicate:
    - `raw-exports/sdlc-discovery-iteration-00/ChatGPT-agents-state-management.md`
 - Kept canonical:
-   - `raw-exports/sdlc-discovery-iteration-01/CHAT-CHATGPT-DR-0013.md`
+   - `raw-exports/sdlc-discovery-iteration-01/I01-F0013-CHATGPT-DR.md`
 - Current exact hash duplicates in `raw-exports`: none.
 
 ## Source quality markers
@@ -65,12 +65,12 @@ Top files by `[Unsupported Content]` markers (after migration):
 
 | File                                                               | Unsupported |
 |--------------------------------------------------------------------|------------:|
-| `raw-exports/sdlc-discovery-iteration-01/CHAT-CHATGPT-0018.md`     |          90 |
-| `raw-exports/sdlc-discovery-iteration-01/CHAT-CHATGPT-0019.md`     |          68 |
-| `raw-exports/sdlc-discovery-iteration-01/CHAT-CHATGPT-0022.md`     |          56 |
-| `raw-exports/sdlc-discovery-iteration-01/CHAT-CHATGPT-0021.md`     |          44 |
-| `raw-exports/sdlc-discovery-iteration-00/CHAT-CHATGPT-I00-0009.md` |          13 |
-| `raw-exports/sdlc-discovery-iteration-02/CHAT-CHATGPT-0023.md`     |           8 |
+| `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md`     |          90 |
+| `raw-exports/sdlc-discovery-iteration-01/I01-F0019-CHATGPT.md`     |          68 |
+| `raw-exports/sdlc-discovery-iteration-01/I01-F0022-CHATGPT.md`     |          56 |
+| `raw-exports/sdlc-discovery-iteration-01/I01-F0021-CHATGPT.md`     |          44 |
+| `raw-exports/sdlc-discovery-iteration-00/I00-F0009-CHATGPT.md` |          13 |
+| `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md`     |           8 |
 
 ## Migration evidence
 
