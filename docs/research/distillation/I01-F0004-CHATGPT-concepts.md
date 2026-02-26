@@ -1,7 +1,5 @@
 # I01-F0004-CHATGPT Concepts (Draft)
 
-[Analyzed source: I01-F0004-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0004-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I01-F0004-CHATGPT`
@@ -12,14 +10,22 @@
 
 ## User Prompts Summary
 
-1. Пользователь попросил найти неочевидные, потенциально важные связи в документации, которые прямо не сформулированы (`raw-exports/sdlc-discovery-iteration-01/I01-F0004-CHATGPT.md:4`).
-2. Фокус запроса: скрытые инсайты на пересечении подходов, а не пересказ явных положений (`C01`, `C02`, `C03`).
+1. [request] [U01] Пользователь попросил найти неочевидные, потенциально важные связи в документации, которые прямо не сформулированы.
+2. [request] [U02] Фокус запроса: скрытые инсайты на пересечении подходов, а не пересказ явных положений (`C01`, `C02`, `C03`).
 
 ## AI Response Summary
 
-1. AI предложил мета-фреймворк из трех слоев: AJTBD (ценность и мотивация), W-Model (ранний и непрерывный контроль качества), ISO 12207 (процессный инженерный каркас) (`C01`).
-2. AI вывел четыре прикладных механизма: автогенерация ранних тестов из графа работ, переопределение validation через экономику найма/увольнения решения, value-driven архитектура по оси стабильность/волатильность, и приоритизация дефектов по job friction (`C02`-`C05`).
-3. Итоговая линия ответа: полная трассируемость от пользовательского триггера до коммита/тест-кейса (`C06`).
+1. [proposal] [A01] AI предложил мета-фреймворк из трех слоев: AJTBD (ценность и мотивация), W-Model (ранний и непрерывный контроль качества), ISO 12207 (процессный инженерный каркас).
+2. [decision] [A02] AI вывел четыре прикладных механизма: автогенерация ранних тестов из графа работ, переопределение validation через экономику найма/увольнения решения, value-driven архитектура по оси стабильность/волатильность, и приоритизация дефектов по job friction (-).
+3. [proposal] [A03] Итоговая линия ответа: полная трассируемость от пользовательского триггера до коммита/тест-кейса.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0004-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-01/I01-F0004-CHATGPT.md:1`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0004-CHATGPT.md:10`, `raw-exports/sdlc-discovery-iteration-01/I01-F0004-CHATGPT.md:31`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0004-CHATGPT.md:14`, `raw-exports/sdlc-discovery-iteration-01/I01-F0004-CHATGPT.md:16`, `raw-exports/sdlc-discovery-iteration-01/I01-F0004-CHATGPT.md:27`, `raw-exports/sdlc-discovery-iteration-01/I01-F0004-CHATGPT.md:28`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0004-CHATGPT.md:31`
 
 ## Extracted Concepts
 
