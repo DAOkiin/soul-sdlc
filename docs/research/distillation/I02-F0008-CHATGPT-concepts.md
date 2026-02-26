@@ -1,7 +1,5 @@
 # I02-F0008-CHATGPT Concepts (Draft)
 
-[Analyzed source: I02-F0008-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I02-F0008-CHATGPT`
@@ -12,14 +10,22 @@
 
 ## User Prompts Summary
 
-1. Пользователь запросил проверку консистентности документации по W-model SDLC и корректности рассуждений/выводов (`raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:4`).
-2. Затем пользователь добавил набор нюансов из смежного исследования с пятью группами противоречий: фазность vs процессность, shift-left, stakeholder-level gap, терминология testing/debugging, риск устаревших интерпретаций (`raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:120`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:126`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:134`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:141`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:148`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:155`).
+1. [request] [U01] Пользователь запросил проверку консистентности документации по W-model SDLC и корректности рассуждений/выводов.
+2. [risk] [U02] Затем пользователь добавил набор нюансов из смежного исследования с пятью группами противоречий: фазность vs процессность, shift-left, stakeholder-level gap, терминология testing/debugging, риск устаревших интерпретаций.
 
 ## AI Response Summary
 
-1. Агент подтвердил, что базовый каркас (ISO как набор процессов + W-model как testing view) совместим, но требует строгого разведения уровней модели (`C01`, `C08`, `C10`).
-2. Подтверждены и разложены конфликтные зоны из смежного исследования: старт тест-планирования, stakeholder-to-system мост, терминология debugging, риск waterfall-переинтерпретации 12207 (`C05`, `C06`, `C07`, `C09`).
-3. Даны конкретные патчи: дисклеймеры для viewpoints, многослойный shift-left, trace AJTBD через stakeholder requirements, терминологический crosswalk и структурный чек-лист документации (`C04`, `C10`).
+1. [proposal] [A01] Агент подтвердил, что базовый каркас (ISO как набор процессов + W-model как testing view) совместим, но требует строгого разведения уровней модели.
+2. [risk] [A02] Подтверждены и разложены конфликтные зоны из смежного исследования: старт тест-планирования, stakeholder-to-system мост, терминология debugging, риск waterfall-переинтерпретации 12207.
+3. [proposal] [A03] Даны конкретные патчи: дисклеймеры для viewpoints, многослойный shift-left, trace AJTBD через stakeholder requirements, терминологический crosswalk и структурный чек-лист документации.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:120`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:126`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:134`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:141`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:148`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:155`
+- A01: `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:8`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:54`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:173`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:180`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:175`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:188`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:321`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:327`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:331`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:315`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:325`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:333`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:337`
+- A02: `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:198`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:210`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:224`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:232`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:239`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:247`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:252`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:258`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:262`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:336`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:271`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:275`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:278`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:289`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:297`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:301`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:302`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:303`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:307`
+- A03: `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:57`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:63`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:69`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:71`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:315`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:321`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:325`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:333`, `raw-exports/sdlc-discovery-iteration-02/I02-F0008-CHATGPT.md:337`
 
 ## Extracted Concepts
 

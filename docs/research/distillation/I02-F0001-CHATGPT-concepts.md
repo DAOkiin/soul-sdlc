@@ -1,7 +1,5 @@
 # I02-F0001-CHATGPT Concepts (Draft)
 
-[Analyzed source: I02-F0001-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I02-F0001-CHATGPT`
@@ -12,18 +10,30 @@
 
 ## User Prompts Summary
 
-1. Пользователь попросил найти практические мануалы по многочасовым сессиям Codex, поскольку агент "быстро выполняет задачи" и останавливается (`raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:4`).
-2. Пользователь затем зафиксировал собственную проектную идею: построить с нуля набор документов/структурных файлов и state-код для long-running Codex сессий по правилам SDLC и с компактным контекстом задачи (`raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:77`).
-3. После фиксации идеи пользователь запросил свежие материалы OpenAI/Anthropic/Google по AGENTS-style файлам и harness engineering, с целью создать новый репозиторий, где агент сам строит SDLC и ведет decision log, связанный с коммитами (`raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:133`).
-4. Далее пользователь попросил сразу создать готовую структуру репозитория (все файлы на английском) для мгновенного старта в Codex Desktop на macOS (`raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:242`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:246`).
-5. Финальный блок: уточнение semantics `facts` и связи с FSM (`raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:3013`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:3164`).
+1. [request] [U01] Пользователь попросил найти практические мануалы по многочасовым сессиям Codex, поскольку агент "быстро выполняет задачи" и останавливается.
+2. [request] [U02] Пользователь затем зафиксировал собственную проектную идею: построить с нуля набор документов/структурных файлов и state-код для long-running Codex сессий по правилам SDLC и с компактным контекстом задачи.
+3. [decision] [U03] После фиксации идеи пользователь запросил свежие материалы OpenAI/Anthropic/Google по AGENTS-style файлам и harness engineering, с целью создать новый репозиторий, где агент сам строит SDLC и ведет decision log, связанный с коммитами.
+4. [request] [U04] Далее пользователь попросил сразу создать готовую структуру репозитория (все файлы на английском) для мгновенного старта в Codex Desktop на macOS.
+5. [request] [U05] Финальный блок: уточнение semantics `facts` и связи с FSM.
 
 ## AI Response Summary
 
-1. Агент объяснил, что long-running режим в Codex чаще достигается process discipline (tmux, stop conditions, compaction/xhigh, app workflow), а не одной скрытой настройкой (`C01`, `C02`, `C03`).
-2. Агент корректно зафиксировал пользовательскую формулировку "как есть" без добавления новых концептов, затем привязал её к map-style repository idea (`C04`).
-3. Агент собрал источники по AGENTS-like context files и harness engineering, выделив принцип "AGENTS.md = map, docs = system of record" и plan-doc для многочасовых задач (`C05`, `C06`, `C07`).
-4. В ответе дан готовый repo scaffold с state/docs/tools/tests и протоколом decision logging, после чего выполнен переход к facts-based state model как factorized FSM (`C08`, `C09`, `C10`, `C11`, `C12`).
+1. [proposal] [A01] Агент объяснил, что long-running режим в Codex чаще достигается process discipline (tmux, stop conditions, compaction/xhigh, app workflow), а не одной скрытой настройкой.
+2. [proposal] [A02] Агент корректно зафиксировал пользовательскую формулировку "как есть" без добавления новых концептов, затем привязал её к map-style repository idea.
+3. [proposal] [A03] Агент собрал источники по AGENTS-like context files и harness engineering, выделив принцип "AGENTS.md = map, docs = system of record" и plan-doc для многочасовых задач.
+4. [decision] [A04] В ответе дан готовый repo scaffold с state/docs/tools/tests и протоколом decision logging, после чего выполнен переход к facts-based state model как factorized FSM.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:77`
+- U03: `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:133`
+- U04: `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:242`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:246`
+- U05: `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:3013`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:3164`
+- A01: `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:10`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:14`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:53`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:30`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:34`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:39`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:55`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:57`
+- A02: `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:88`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:96`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:107`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:112`
+- A03: `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:148`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:173`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:195`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:150`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:205`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:207`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:209`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:216`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:220`
+- A04: `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:257`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:265`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:287`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:293`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:3017`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:3034`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:3100`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:3211`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:3221`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:3223`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:3195`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:3252`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:3326`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:3106`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:3112`, `raw-exports/sdlc-discovery-iteration-02/I02-F0001-CHATGPT.md:3119`
 
 ## Extracted Concepts
 

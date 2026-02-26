@@ -1,7 +1,5 @@
 # I02-F0004-CHATGPT Concepts (Draft)
 
-[Analyzed source: I02-F0004-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I02-F0004-CHATGPT`
@@ -12,13 +10,20 @@
 
 ## User Prompts Summary
 
-1. Пользователь попросил подробно разобрать, как AJTBD Замесина стыкуется с SDLC, особенно в формировании требований и документации, и как это вписывается в цикл (`raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:4`).
+1. [request] [U01] Пользователь попросил подробно разобрать, как AJTBD Замесина стыкуется с SDLC, особенно в формировании требований и документации, и как это вписывается в цикл.
 
 ## AI Response Summary
 
-1. Агент связал AJTBD и SDLC через артефакты: job graph/value/barriers/outcomes превращаются в requirement rationale, traceability и V&V критерии (`C01`, `C02`, `C03`).
-2. Ответ детально маппит AJTBD на IEEE 12207 фазы и документы (SRS/SRD/SAD/UDD/TVPL), включая раннее shift-left планирование (`C04`, `C05`, `C06`).
-3. Подчеркнуты операционные практики: матрица следов, lightweight change handling, структурированное хранение knowledge в репозитории и seed-дизайн на базе доменных знаний (`C07`, `C08`, `C09`, `C10`).
+1. [proposal] [A01] Агент связал AJTBD и SDLC через артефакты: job graph/value/barriers/outcomes превращаются в requirement rationale, traceability и V&V критерии.
+2. [proposal] [A02] Ответ детально маппит AJTBD на IEEE 12207 фазы и документы (SRS/SRD/SAD/UDD/TVPL), включая раннее shift-left планирование.
+3. [proposal] [A03] Подчеркнуты операционные практики: матрица следов, lightweight change handling, структурированное хранение knowledge в репозитории и seed-дизайн на базе доменных знаний.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:4`
+- A01: `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:18`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:22`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:24`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:48`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:61`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:229`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:69`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:72`
+- A02: `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:93`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:113`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:144`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:207`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:38`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:165`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:183`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:4531`
+- A03: `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:154`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:4502`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:87`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:89`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:4434`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:257`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:261`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:4605`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:4326`, `raw-exports/sdlc-discovery-iteration-02/I02-F0004-CHATGPT.md:4336`
 
 ## Extracted Concepts
 

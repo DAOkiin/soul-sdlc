@@ -1,7 +1,5 @@
 # I02-F0002-CHATGPT Concepts (Draft)
 
-[Analyzed source: I02-F0002-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I02-F0002-CHATGPT`
@@ -12,13 +10,20 @@
 
 ## User Prompts Summary
 
-1. Пользователь запросил полный англоязычный разбор SDLC W-Model: устройство процесса, части, роли/ответственности, важные нюансы, с опорой на первоисточники и экспертные материалы (`raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:4`).
+1. [request] [U01] Пользователь запросил полный англоязычный разбор SDLC W-Model: устройство процесса, части, роли/ответственности, важные нюансы, с опорой на первоисточники и экспертные материалы.
 
 ## AI Response Summary
 
-1. Ответ определяет W-Model как усиление V-Model через раннюю и параллельную тестовую работу по каждому артефакту разработки (`C01`, `C02`, `C03`).
-2. Агент детализирует роли, гейты и циклы дефектов, подчеркивая разделение testing vs debugging и независимость проверки (`C04`, `C05`, `C06`).
-3. Отдельно разобраны ограничения и условия применимости: итеративность (multiple Ws), стоимость change churn, важность статических проверок и risk-based tailoring (`C07`, `C08`, `C09`, `C10`).
+1. [proposal] [A01] Ответ определяет W-Model как усиление V-Model через раннюю и параллельную тестовую работу по каждому артефакту разработки.
+2. [proposal] [A02] Агент детализирует роли, гейты и циклы дефектов, подчеркивая разделение testing vs debugging и независимость проверки.
+3. [risk] [A03] Отдельно разобраны ограничения и условия применимости: итеративность (multiple Ws), стоимость change churn, важность статических проверок и risk-based tailoring.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:4`
+- A01: `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:16`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:22`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:30`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:69`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:75`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:83`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:87`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:93`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:99`
+- A02: `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:105`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:153`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:142`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:144`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:157`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:163`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:185`
+- A03: `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:196`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:199`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:205`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:213`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:218`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:220`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:224`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:255`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:285`, `raw-exports/sdlc-discovery-iteration-02/I02-F0002-CHATGPT.md:298`
 
 ## Extracted Concepts
 

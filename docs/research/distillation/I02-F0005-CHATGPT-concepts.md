@@ -1,7 +1,5 @@
 # I02-F0005-CHATGPT Concepts (Draft)
 
-[Analyzed source: I02-F0005-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I02-F0005-CHATGPT`
@@ -12,15 +10,24 @@
 
 ## User Prompts Summary
 
-1. Пользователь попросил проверить и усилить документальную концепцию на базе файлов проекта, с приоритетом заполнения уже существующих разделов (`raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:4`).
-2. Дополнительное требование: изучить модель Болдачёва и встроить ее как неизменяемый слой архитектуры, поверх которого агенты смогут менять остальное (`raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:4`).
-3. В исходном тексте пользователь зафиксировал North Star, enforcement-principles, requirements-as-code/StrictDoc traceability, двойной граф (FSM + artifact graph), TODO и идеи SDLC simulation/open-garden стратегии (`raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:8`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:58`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:98`).
+1. [request] [U01] Пользователь попросил проверить и усилить документальную концепцию на базе файлов проекта, с приоритетом заполнения уже существующих разделов.
+2. [request] [U02] Дополнительное требование: изучить модель Болдачёва и встроить ее как неизменяемый слой архитектуры, поверх которого агенты смогут менять остальное.
+3. [request] [U03] В исходном тексте пользователь зафиксировал North Star, enforcement-principles, requirements-as-code/StrictDoc traceability, двойной граф (FSM + artifact graph), TODO и идеи SDLC simulation/open-garden стратегии.
 
 ## AI Response Summary
 
-1. Агент подтвердил согласованность core-концепции с harness engineering и ISO/IEEE 12207: human-steering, docs as SoR, remediable linting, traceability as operational control (`C01`, `C02`, `C03`).
-2. Предложено встроить Boldsea как immutable ontology/kernel (event DAG + constraints + engine/query/subscription), а policy/FSM/linters оставить mutable layer для агентной эволюции (`C04`, `C05`).
-3. В ответе даны точечные усиления существующих разделов: intent как артефакт, information-quality invariants, traceability invariants, W-model logic в PR-циклах, artifact catalog/glossary templates (`C06`, `C07`, `C08`, `C09`, `C10`).
+1. [proposal] [A01] Агент подтвердил согласованность core-концепции с harness engineering и ISO/IEEE 12207: human-steering, docs as SoR, remediable linting, traceability as operational control.
+2. [constraint] [A02] Предложено встроить Boldsea как immutable ontology/kernel (event DAG + constraints + engine/query/subscription), а policy/FSM/linters оставить mutable layer для агентной эволюции.
+3. [proposal] [A03] В ответе даны точечные усиления существующих разделов: intent как артефакт, information-quality invariants, traceability invariants, W-model logic в PR-циклах, artifact catalog/glossary templates.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:4`
+- U03: `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:8`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:58`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:98`
+- A01: `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:10`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:20`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:127`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:21`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:27`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:131`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:134`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:37`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:54`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:140`
+- A02: `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:60`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:66`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:70`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:117`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:163`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:165`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:177`
+- A03: `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:157`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:182`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:189`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:144`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:146`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:147`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:149`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:263`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:272`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:275`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:4326`, `raw-exports/sdlc-discovery-iteration-02/I02-F0005-CHATGPT.md:4336`
 
 ## Extracted Concepts
 

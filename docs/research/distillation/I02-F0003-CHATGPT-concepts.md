@@ -1,7 +1,5 @@
 # I02-F0003-CHATGPT Concepts (Draft)
 
-[Analyzed source: I02-F0003-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I02-F0003-CHATGPT`
@@ -12,14 +10,22 @@
 
 ## User Prompts Summary
 
-1. Пользователь попросил структурировать идею проекта, цели и ментальные модели на основе большого накопленного контекста (`raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:4`).
-2. В prompt встроен подробный материал по W-Model как методологической базе раннего тестирования, ролей и quality gates (`raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:6`).
+1. [request] [U01] Пользователь попросил структурировать идею проекта, цели и ментальные модели на основе большого накопленного контекста.
+2. [request] [U02] В prompt встроен подробный материал по W-Model как методологической базе раннего тестирования, ролей и quality gates.
 
 ## AI Response Summary
 
-1. Агент предложил каркас проекта как "map, not monolith": северная звезда, ментальные модели, процессы, артефакты и словарь терминов (`C01`, `C02`, `C03`).
-2. Ответ синтезирует три опоры: repo-as-system-of-record, W-Model SDLC discipline и event-centric ontology для state/policy reasoning (`C04`, `C05`, `C06`).
-3. Даны операционная модель ролей/циклов, минимальный набор артефактов истины и требуемые outcomes (traceability, scalability, guardrails) (`C07`, `C08`, `C09`, `C10`).
+1. [proposal] [A01] Агент предложил каркас проекта как "map, not monolith": северная звезда, ментальные модели, процессы, артефакты и словарь терминов.
+2. [proposal] [A02] Ответ синтезирует три опоры: repo-as-system-of-record, W-Model SDLC discipline и event-centric ontology для state/policy reasoning.
+3. [proposal] [A03] Даны операционная модель ролей/циклов, минимальный набор артефактов истины и требуемые outcomes (traceability, scalability, guardrails).
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:6`
+- A01: `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:395`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:399`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:414`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:418`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:420`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:391`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:412`
+- A02: `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:425`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:430`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:432`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:436`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:444`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:445`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:451`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:455`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:460`
+- A03: `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:469`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:471`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:509`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:512`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:516`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:523`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:529`, `raw-exports/sdlc-discovery-iteration-02/I02-F0003-CHATGPT.md:535`
 
 ## Extracted Concepts
 

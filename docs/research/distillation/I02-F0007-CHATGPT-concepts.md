@@ -1,7 +1,5 @@
 # I02-F0007-CHATGPT Concepts (Draft)
 
-[Analyzed source: I02-F0007-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I02-F0007-CHATGPT`
@@ -12,13 +10,20 @@
 
 ## User Prompts Summary
 
-1. Пользователь попросил проверить консистентность документации в связке W-model + SDLC + AJTBD и валидность рассуждений/выводов (`raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:4`).
+1. [request] [U01] Пользователь попросил проверить консистентность документации в связке W-model + SDLC + AJTBD и валидность рассуждений/выводов.
 
 ## AI Response Summary
 
-1. Агент подтвердил логическую совместимость базовых тезисов (AJTBD определения, ранний старт UDD/TVPL, shift-left и traceability) с SDLC/W-model/12207 (`C01`, `C02`, `C03`, `C04`).
-2. Найдены точечные несостыковки: источник тезиса про CJM, неединый минимум INCOSE-атрибутов (A7), риск смешения viewpoint и стандарта, терминологические разрывы (`C05`, `C06`, `C07`, `C08`).
-3. Финальный вывод: методология в целом корректна, требуется набор небольших правок формулировок и crosswalk между лексиконами гейтов (`C09`, `C10`).
+1. [proposal] [A01] Агент подтвердил логическую совместимость базовых тезисов (AJTBD определения, ранний старт UDD/TVPL, shift-left и traceability) с SDLC/W-model/12207.
+2. [risk] [A02] Найдены точечные несостыковки: источник тезиса про CJM, неединый минимум INCOSE-атрибутов (A7), риск смешения viewpoint и стандарта, терминологические разрывы.
+3. [proposal] [A03] Финальный вывод: методология в целом корректна, требуется набор небольших правок формулировок и crosswalk между лексиконами гейтов.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:4`
+- A01: `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:18`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:19`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:21`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:22`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:26`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:28`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:30`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:36`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:37`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:39`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:40`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:46`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:50`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:51`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:53`
+- A02: `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:65`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:67`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:68`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:73`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:82`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:83`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:85`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:87`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:97`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:99`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:101`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:103`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:105`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:109`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:119`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:125`
+- A03: `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:134`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:140`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:143`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:145`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:151`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:154`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:157`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:160`, `raw-exports/sdlc-discovery-iteration-02/I02-F0007-CHATGPT.md:162`
 
 ## Extracted Concepts
 
