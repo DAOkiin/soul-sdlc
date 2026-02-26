@@ -1,7 +1,5 @@
 # I03-F0001-GEMINI-DR Concepts (Draft)
 
-[Analyzed source: I03-F0001-GEMINI-DR.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md)
-
 ## Source
 
 - chat_id: `I03-F0001-GEMINI-DR`
@@ -12,15 +10,24 @@
 
 ## User Prompts Summary
 
-1. Пользователь задал цель новой итерации: дистиллировать знания, нарезать контекст, извлечь/упорядочить запросы и ответы, восстановить эволюцию идеи и подготовить новый трассируемый слой перед стартом разработки (`raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:4`).
-2. Пользователь задал строгий порядок изучения 13 файлов как основу анализа (`raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:6`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:9`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:22`).
-3. После предварительного плана пользователь дал команду начать исследование (`raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:33`).
+1. [goal] [U01] Пользователь задал цель новой итерации: дистиллировать знания, нарезать контекст, извлечь/упорядочить запросы и ответы, восстановить эволюцию идеи и подготовить новый трассируемый слой перед стартом разработки.
+2. [request] [U02] Пользователь задал строгий порядок изучения 13 файлов как основу анализа.
+3. [request] [U03] После предварительного плана пользователь дал команду начать исследование.
 
 ## AI Response Summary
 
-1. Ответ разворачивает архитектурный обзор AI-driven SDLC: multi-agent orchestration, distillation pipeline, context slicing, traceability and security governance (`C01`, `C02`, `C06`, `C09`, `C10`).
-2. Центральный контур описан как последовательная трансформация chat logs -> primary distillation -> intent -> implementation readiness (`C01`, `C08`, `C11`).
-3. Документ дополнительно насыщен внешними ссылками и повторяющимися рефлексивными блоками, что усиливает narrative, но оставляет отдельные пробелы в конкретике операционного исполнения (`C12`).
+1. [proposal] [A01] Ответ разворачивает архитектурный обзор AI-driven SDLC: multi-agent orchestration, distillation pipeline, context slicing, traceability and security governance.
+2. [proposal] [A02] Центральный контур описан как последовательная трансформация chat logs -> primary distillation -> intent -> implementation readiness.
+3. [proposal] [A03] Документ дополнительно насыщен внешними ссылками и повторяющимися рефлексивными блоками, что усиливает narrative, но оставляет отдельные пробелы в конкретике операционного исполнения.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:6`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:9`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:22`
+- U03: `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:33`
+- A01: `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:4`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:626`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:640`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:730`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:590`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:592`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:598`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:600`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:650`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:652`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:656`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:659`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:662`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:685`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:691`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:693`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:696`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:700`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:702`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:708`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:710`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:716`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:720`
+- A02: `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:4`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:626`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:640`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:730`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:677`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:681`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:683`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:684`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:726`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:728`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:732`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:734`
+- A03: `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:66`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:84`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:276`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:564`, `raw-exports/sdlc-discovery-iteration-03/I03-F0001-GEMINI-DR.md:570`
 
 ## Extracted Concepts
 
