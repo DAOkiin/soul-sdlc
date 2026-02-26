@@ -1,6 +1,6 @@
 # Проектирование SDLC процесса
 
-#### You:
+<user>
 ![image](sediment://file_00000000b89071fda30de1050fd86caf)
 ![image](sediment://file_0000000007b071fda3cd5ef3953c0fc2)
 мне нужно спроектировать SDLC для моего проекта. изучи мои материалы.
@@ -19,7 +19,8 @@ repomix-output.xml
 - подготовить описание первой версии итерационной документации как приложение к SDLC.md
 - начать первую итерацию(MVP).
 
-#### ChatGPT:
+</user>
+<agent>
 Я посмотрел два реально доступных здесь источника:
 
 - **`repomix-output.xml`** — в нём лежит ваш текущий «каркас» документации: `_meta/sdlc.md`, `product/global_vision.md`, `product/global_user_stories.md`, `product/global_use_cases.md` и выгрузки чатов в `research/raw/exports/*`.
@@ -423,3 +424,4 @@ Sign-off: @<you>  Date: YYYY-MM-DD
 ---
 
 Если вы хотите, следующим шагом я могу **встроить всё это прямо в ваш текущий `_meta/sdlc.md` как “раздел 14–16: Engineering + Agent Workflow”** (в виде готового текста), и предложить минимальную реорганизацию дерева папок так, чтобы `README/SDLC/AGENTS` и пути в документах перестали расходиться.
+</agent>

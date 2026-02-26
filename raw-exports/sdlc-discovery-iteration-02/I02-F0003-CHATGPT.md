@@ -1,10 +1,8 @@
 # Структура проекта и целей
 
-#### You:
+<user>
 Мне нужно структурировать идею проекта и моих целей. Я предоставил много контекста, помоги мне структурировать его. Мне нужно зафиксировать основные ментальные модели и процессы.
 
-#### Plugin (file_search):
-Make sure to include fileciteturn0file0 in your response to cite this file, or to surface it as a link.
 # The W-Model in SDLC
 
 *A source-anchored, practitioner-oriented guide (process, parts, responsibilities, and the “gotchas”)*
@@ -388,11 +386,8 @@ Below is a curated set that balances **primary sources**, **expert essays**, and
 [8]: https://en.wikipedia.org/wiki/EuroSTAR_Conference "https://en.wikipedia.org/wiki/EuroSTAR_Conference"
 
 
-#### ChatGPT:
-\[Unsupported Content]
-
-
-#### ChatGPT:
+</user>
+<agent>
 Ок — давай зафиксируем «скелет» твоего проекта так, чтобы он работал как **карта местности** (а не как монолитный трактат). Ниже — структура из **ментальных моделей**, **целей**, **процессов** и **артефактов**, которую можно прямо перенести в Vision/README/AGENTS.md.
 
 ---
@@ -548,3 +543,4 @@ Boldsea даёт тебе очень мощную рамку:\
 - 1 основной цикл работы
 - список артефактов и где они живут
 - минимальный “State/Policy” контракт для первой итерации
+</agent>
