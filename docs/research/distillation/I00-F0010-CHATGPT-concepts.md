@@ -1,7 +1,5 @@
 # I00-F0010-CHATGPT Concepts (Draft)
 
-[Analyzed source: I00-F0010-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I00-F0010-CHATGPT`
@@ -12,14 +10,22 @@
 
 ## User Prompts Summary
 
-1. Пользователь попросил найти существующие англоязычные категоризации веб-страниц (таксономии/онтологии/иерархии) для хранения категории страницы в БД, с примерами product page, media article, tweet/post, homepage/store pages (`raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:4`).
-2. Пользователь попросил продолжить исследование и найти дополнительные релевантные материалы (`raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:85`).
+1. [request] [U01] Пользователь попросил найти существующие англоязычные категоризации веб-страниц (таксономии/онтологии/иерархии) для хранения категории страницы в БД, с примерами product page, media article, tweet/post, homepage/store pages.
+2. [request] [U02] Пользователь попросил продолжить исследование и найти дополнительные релевантные материалы.
 
 ## AI Response Summary
 
-1. Агент предложил практическое ядро через Schema.org page/entity typing и отделил page-type от topic taxonomies (`C01`-`C04`).
-2. Агент расширил обзор академическими web-genre корпусами и register-schemes (KI-04, 7-Web, 20-Genre, CORE, FGC) с разной гранулярностью (`C05`-`C08`).
-3. Агент свёл это в многослойную модель хранения (page role + content/genre + optional topic) и отметил необходимость multi-label/гибридной обработки (`C09`, `C10`).
+1. [proposal] [A01] Агент предложил практическое ядро через Schema.org page/entity typing и отделил page-type от topic taxonomies (-).
+2. [proposal] [A02] Агент расширил обзор академическими web-genre корпусами и register-schemes (KI-04, 7-Web, 20-Genre, CORE, FGC) с разной гранулярностью (-).
+3. [proposal] [A03] Агент свёл это в многослойную модель хранения (page role + content/genre + optional topic) и отметил необходимость multi-label/гибридной обработки.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:85`
+- A01: `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:8`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:35`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:47`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:50`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:54`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:57`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:75`
+- A02: `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:37`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:39`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:97`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:100`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:166`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:169`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:171`
+- A03: `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:181`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:183`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:185`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:189`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:204`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:206`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:225`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:227`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:231`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:234`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:240`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:242`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:245`, `raw-exports/sdlc-discovery-iteration-00/I00-F0010-CHATGPT.md:250`
 
 ## Extracted Concepts
 
