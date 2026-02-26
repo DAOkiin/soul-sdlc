@@ -1,7 +1,5 @@
 # I02-F0010-CHATGPT Concepts (Draft)
 
-[Analyzed source: I02-F0010-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I02-F0010-CHATGPT`
@@ -12,15 +10,24 @@
 
 ## User Prompts Summary
 
-1. Пользователь предложил идею: добавлять к новостным событиям эмоциональную оценку агента в виде эмодзи-метаданных, чтобы потом анализировать эмоциональные паттерны (`raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:4`).
-2. Пользователь уточнил, что эмоция зависит от позиции агента (принципов/целей), и одну ситуацию разные агенты оценивают по-разному (`raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:8`).
-3. Далее пользователь попросил строить позицию не через абстрактные группы, а через конкретные “линзы” реальных людей (`raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:249`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:253`).
+1. [next_step] [U01] Пользователь предложил идею: добавлять к новостным событиям эмоциональную оценку агента в виде эмодзи-метаданных, чтобы потом анализировать эмоциональные паттерны.
+2. [request] [U02] Пользователь уточнил, что эмоция зависит от позиции агента (принципов/целей), и одну ситуацию разные агенты оценивают по-разному.
+3. [request] [U03] Далее пользователь попросил строить позицию не через абстрактные группы, а через конкретные “линзы” реальных людей.
 
 ## AI Response Summary
 
-1. Агент предложил формализацию: эмоция как структурные данные (valence/arousal/confidence/labels), а эмодзи - только визуальный рендер (`C02`, `C05`, `C06`).
-2. Введена связка stance profile -> appraisal -> emotion, где позиции хранятся как веса ценностей/целей и объясняют различие реакций (`C01`, `C03`, `C04`, `C10`).
-3. Даны практические элементы реализации: grammar эмодзи, JSON-схема хранения, антишумовые guardrails, быстрый прототип с несколькими персонами (`C06`, `C07`, `C08`, `C09`).
+1. [proposal] [A01] Агент предложил формализацию: эмоция как структурные данные (valence/arousal/confidence/labels), а эмодзи - только визуальный рендер.
+2. [proposal] [A02] Введена связка stance profile -> appraisal -> emotion, где позиции хранятся как веса ценностей/целей и объясняют различие реакций.
+3. [proposal] [A03] Даны практические элементы реализации: grammar эмодзи, JSON-схема хранения, антишумовые guardrails, быстрый прототип с несколькими персонами.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:8`
+- U03: `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:249`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:253`
+- A01: `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:23`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:31`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:35`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:37`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:42`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:104`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:108`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:110`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:111`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:217`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:166`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:173`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:179`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:181`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:187`
+- A02: `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:12`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:50`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:68`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:257`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:434`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:48`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:52`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:55`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:58`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:65`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:72`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:76`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:80`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:91`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:100`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:429`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:433`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:436`
+- A03: `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:166`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:173`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:179`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:181`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:187`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:204`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:209`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:210`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:214`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:217`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:224`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:225`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:231`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:233`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:259`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:291`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:293`, `raw-exports/sdlc-discovery-iteration-02/I02-F0010-CHATGPT.md:306`
 
 ## Extracted Concepts
 
