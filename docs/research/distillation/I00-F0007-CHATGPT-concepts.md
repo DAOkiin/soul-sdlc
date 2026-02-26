@@ -1,7 +1,5 @@
 # I00-F0007-CHATGPT Concepts (Draft)
 
-[Analyzed source: I00-F0007-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I00-F0007-CHATGPT`
@@ -12,15 +10,24 @@
 
 ## User Prompts Summary
 
-1. Пользователь попросил исследование open-source Python решений для multi-source parsing service в pipeline формате, с приоритетом Temporal (или легкой интеграции) и low overhead (`raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:4`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:14`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:31`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:39`).
-2. Пользователь попросил отдельный поиск архитектурных статей (Medium/dev.to и аналоги) про Python-системы сбора информации с Temporal и парсерами (`raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:120`).
-3. Пользователь попросил структурированно описать каждый найденный сервис по компонентам и зонам ответственности без лишней информации (`raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:280`).
+1. [request] [U01] Пользователь попросил исследование open-source Python решений для multi-source parsing service в pipeline формате, с приоритетом Temporal (или легкой интеграции) и low overhead.
+2. [request] [U02] Пользователь попросил отдельный поиск архитектурных статей (Medium/dev.to и аналоги) про Python-системы сбора информации с Temporal и парсерами.
+3. [request] [U03] Пользователь попросил структурированно описать каждый найденный сервис по компонентам и зонам ответственности без лишней информации.
 
 ## AI Response Summary
 
-1. Агент собрал landscape OSS-компонентов (scraping engines, connector/ingestion frameworks, orchestrators) и дал интеграционный вывод через Temporal-centric composition (`C02`, `C03`, `C04`, `C05`).
-2. Далее агент разобрал несколько reference-архитектур из статей и представил компонентные схемы и trade-offs по каждой (`C06`, `C07`, `C08`, `C09`, `C10`).
-3. В ответах явно закреплена мысль: “готового 1-box стека под все источники + Temporal нет; проект требует осознанной сборки из модулей” (`C02`, `C05`).
+1. [proposal] [A01] Агент собрал landscape OSS-компонентов (scraping engines, connector/ingestion frameworks, orchestrators) и дал интеграционный вывод через Temporal-centric composition.
+2. [proposal] [A02] Далее агент разобрал несколько reference-архитектур из статей и представил компонентные схемы и trade-offs по каждой.
+3. [proposal] [A03] В ответах явно закреплена мысль: “готового 1-box стека под все источники + Temporal нет; проект требует осознанной сборки из модулей”.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:4`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:14`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:31`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:39`
+- U02: `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:120`
+- U03: `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:280`
+- A01: `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:99`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:105`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:107`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:75`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:77`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:78`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:79`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:97`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:59`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:67`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:69`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:71`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:73`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:89`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:91`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:95`
+- A02: `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:149`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:151`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:288`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:307`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:312`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:155`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:157`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:338`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:355`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:358`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:162`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:166`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:390`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:405`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:417`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:169`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:172`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:432`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:446`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:478`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:271`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:273`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:274`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:385`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:482`
+- A03: `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:99`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:105`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:107`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:89`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:91`, `raw-exports/sdlc-discovery-iteration-00/I00-F0007-CHATGPT.md:95`
 
 ## Extracted Concepts
 
