@@ -1,7 +1,5 @@
 # I00-F0005-CHATGPT Concepts (Draft)
 
-[Analyzed source: I00-F0005-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I00-F0005-CHATGPT`
@@ -12,15 +10,24 @@
 
 ## User Prompts Summary
 
-1. Пользователь попросил структурировать идею Natural Language интерфейса для агентов без добавления новых сущностей: NL-запросы, формализация в схемы/JSON/код, версионируемый контекст-пакет, валидация в рамках контекста и пользовательская читаемость логов (`raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:4`).
-2. Пользователь попросил оценить идею по шкале 1-100 с обоснованием (`raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:107`).
-3. Пользователь запросил поиск максимально идентичного open-source решения и поручил самостоятельно определить приоритеты поиска (`raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:137`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:158`).
+1. [request] [U01] Пользователь попросил структурировать идею Natural Language интерфейса для агентов без добавления новых сущностей: NL-запросы, формализация в схемы/JSON/код, версионируемый контекст-пакет, валидация в рамках контекста и пользовательская читаемость логов.
+2. [request] [U02] Пользователь попросил оценить идею по шкале 1-100 с обоснованием.
+3. [request] [U03] Пользователь запросил поиск максимально идентичного open-source решения и поручил самостоятельно определить приоритеты поиска.
 
 ## AI Response Summary
 
-1. Агент оформил концепцию как dual-representation pipeline: human-readable logs + formal executable form под versioned context package (`C01`, `C02`, `C03`, `C04`).
-2. Идея оценена высоко (85/100) с явными рисками реализации (детерминизм NL-компиляции, стоимость сопровождения контекста, двусмысленность авто-логов) (`C06`).
-3. Дана подборка OSS-архетипов, покрывающих части идеи: dialog/NLU platforms, schema-first agent SDKs, NL-to-code executors, explicit context standard (`C07`, `C08`, `C09`, `C10`).
+1. [proposal] [A01] Агент оформил концепцию как dual-representation pipeline: human-readable logs + formal executable form под versioned context package.
+2. [risk] [A02] Идея оценена высоко (85/100) с явными рисками реализации (детерминизм NL-компиляции, стоимость сопровождения контекста, двусмысленность авто-логов).
+3. [proposal] [A03] Дана подборка OSS-архетипов, покрывающих части идеи: dialog/NLU platforms, schema-first agent SDKs, NL-to-code executors, explicit context standard.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:107`
+- U03: `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:137`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:158`
+- A01: `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:18`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:22`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:26`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:32`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:102`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:36`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:40`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:41`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:45`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:46`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:50`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:54`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:56`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:60`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:64`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:66`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:68`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:69`
+- A02: `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:111`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:125`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:126`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:127`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:130`
+- A03: `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:171`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:175`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:178`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:182`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:190`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:193`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:194`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:198`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:205`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:208`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:210`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:212`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:214`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:216`, `raw-exports/sdlc-discovery-iteration-00/I00-F0005-CHATGPT.md:217`
 
 ## Extracted Concepts
 
