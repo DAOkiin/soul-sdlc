@@ -1,7 +1,5 @@
 # I01-F0012-CHATGPT-DR Concepts (Draft)
 
-[Analyzed source: I01-F0012-CHATGPT-DR.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md)
-
 ## Source
 
 - chat_id: `I01-F0012-CHATGPT-DR`
@@ -12,15 +10,24 @@
 
 ## User Prompts Summary
 
-1. В данном экспорте пользовательские сообщения отсутствуют; файл содержит только текст готового deep research отчета (`raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:1`).
+1. [constraint] [U01] В данном экспорте пользовательские сообщения отсутствуют; файл содержит только текст готового deep research отчета.
 
 ## AI Response Summary
 
-1. Отчет задает многослойную модель состояния агента: workflow/process state, execution history, working memory и artifact state, привязывая это к lifecycle рабочего контекста (`C01`, `C02`).
-2. Для программируемых переходов рекомендованы graph/state-machine orchestration подходы с checkpointing, pause/resume и history query (`C03`, `C04`, `C05`).
-3. Отдельно выделен durable execution слой (Temporal и аналоги), где event history и replay становятся источником истины для resumability (`C06`, `C07`).
-4. В сравнении framework-подходов отмечено разделение process-state и memory, а также ограничения message-centric оркестрации без durable state (`C08`, `C09`).
-5. Для coding agents предложено трактовать branch/PR как artifact state machine и управлять merge/cleanup через guard conditions, observability и security controls (`C10`, `C11`, `C12`).
+1. [proposal] [A01] Отчет задает многослойную модель состояния агента: workflow/process state, execution history, working memory и artifact state, привязывая это к lifecycle рабочего контекста.
+2. [proposal] [A02] Для программируемых переходов рекомендованы graph/state-machine orchestration подходы с checkpointing, pause/resume и history query.
+3. [proposal] [A03] Отдельно выделен durable execution слой (Temporal и аналоги), где event history и replay становятся источником истины для resumability.
+4. [risk] [A04] В сравнении framework-подходов отмечено разделение process-state и memory, а также ограничения message-centric оркестрации без durable state.
+5. [proposal] [A05] Для coding agents предложено трактовать branch/PR как artifact state machine и управлять merge/cleanup через guard conditions, observability и security controls.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:1`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:7`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:12`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:9`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:128`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:20`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:22`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:26`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:156`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:27`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:149`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:152`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:53`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:55`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:73`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:66`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:71`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:75`
+- A04: `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:83`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:91`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:93`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:97`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:104`
+- A05: `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:108`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:113`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:124`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:137`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:156`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:158`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:162`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:169`, `raw-exports/sdlc-discovery-iteration-01/I01-F0012-CHATGPT-DR.md:171`
 
 ## Extracted Concepts
 
