@@ -1,7 +1,5 @@
 # I01-F0006-CHATGPT Concepts (Draft)
 
-[Analyzed source: I01-F0006-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I01-F0006-CHATGPT`
@@ -12,15 +10,24 @@
 
 ## User Prompts Summary
 
-1. Пользователь запросил объяснение `North Star` в контексте документации глобального видения технического проекта (`raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:4`).
-2. Затем пользователь попросил помочь определить North Star непосредственно из `global_vision.md` (`raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:55`).
+1. [request] [U01] Пользователь запросил объяснение `North Star` в контексте документации глобального видения технического проекта.
+2. [request] [U02] Затем пользователь попросил помочь определить North Star непосредственно из `global_vision.md`.
 
 ## AI Response Summary
 
-1. AI развел два смысла North Star: стратегический вектор (statement) и операциональная главная метрика (NSM) (`C01`).
-2. AI предложил шаблон `North Star + NSM + input metrics + guardrails + decision rule` и связал North Star с OKR (`C02`, `C03`).
-3. На основе `global_vision.md` AI вывел knowledge-centric North Star: проверяемое, типизированное, версионируемое знание и разграничение claim/fact (`C04`, `C05`).
-4. Для измерения предложен главный кандидат NSM `Traceable Verified Output Rate` с supporting-метриками и guardrails (`C06`, `C07`).
+1. [proposal] [A01] AI развел два смысла North Star: стратегический вектор (statement) и операциональная главная метрика (NSM).
+2. [decision] [A02] AI предложил шаблон `North Star + NSM + input metrics + guardrails + decision rule` и связал North Star с OKR.
+3. [proposal] [A03] На основе `global_vision.md` AI вывел knowledge-centric North Star: проверяемое, типизированное, версионируемое знание и разграничение claim/fact.
+4. [proposal] [A04] Для измерения предложен главный кандидат NSM `Traceable Verified Output Rate` с supporting-метриками и guardrails.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:55`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:8`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:10`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:25`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:30`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:32`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:34`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:38`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:39`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:67`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:68`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:69`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:70`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:71`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:83`
+- A04: `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:109`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:111`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:129`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:144`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:145`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:147`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:152`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:154`, `raw-exports/sdlc-discovery-iteration-01/I01-F0006-CHATGPT.md:158`
 
 ## Extracted Concepts
 
