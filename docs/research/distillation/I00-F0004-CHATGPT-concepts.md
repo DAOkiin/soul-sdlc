@@ -1,7 +1,5 @@
 # I00-F0004-CHATGPT Concepts (Draft)
 
-[Analyzed source: I00-F0004-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I00-F0004-CHATGPT`
@@ -12,15 +10,24 @@
 
 ## User Prompts Summary
 
-1. Пользователь попросил как системный архитектор структурировать полный pre-development пакет для гибкой parsing системы: кейсы, доменная модель, event model, стек, архитектура, DDL/модель данных и тестируемая симуляция до кода (`raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:4`).
-2. Пользователь уточнил, что речь именно про DDL (а не IDL): заранее описать SQL схемы/вставки/запросы и тестировать модель данных до реализации сервисов (`raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:186`).
-3. Пользователь запросил перепроверку обсуждённого через материалы крупных компаний и платформенных блогов, затем углублённый поиск по scraping pipeline architecture с event-driven фокусом (`raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:302`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:478`).
+1. [request] [U01] Пользователь попросил как системный архитектор структурировать полный pre-development пакет для гибкой parsing системы: кейсы, доменная модель, event model, стек, архитектура, DDL/модель данных и тестируемая симуляция до кода.
+2. [request] [U02] Пользователь уточнил, что речь именно про DDL (а не IDL): заранее описать SQL схемы/вставки/запросы и тестировать модель данных до реализации сервисов.
+3. [request] [U03] Пользователь запросил перепроверку обсуждённого через материалы крупных компаний и платформенных блогов, затем углублённый поиск по scraping pipeline architecture с event-driven фокусом.
 
 ## AI Response Summary
 
-1. Агент предложил SDLC-структуру артефактов и порядок работ до старта разработки с явными “пробелами, которые стоит закрыть” (`C01`, `C02`, `C03`, `C04`).
-2. После уточнения акцент сместился в DDL-first: schema-as-contract, SQL queries library, fixtures, SQL-level tests, state-machine и schema evolution (`C05`, `C06`, `C07`, `C10`).
-3. Углублённый ресёрч закрепил event-driven паттерны scraping/crawling: frontier/state/topics/contracts/retries/idempotency и decoupled raw snapshots (`C08`, `C09`).
+1. [proposal] [A01] Агент предложил SDLC-структуру артефактов и порядок работ до старта разработки с явными “пробелами, которые стоит закрыть”.
+2. [proposal] [A02] После уточнения акцент сместился в DDL-first: schema-as-contract, SQL queries library, fixtures, SQL-level tests, state-machine и schema evolution.
+3. [proposal] [A03] Углублённый ресёрч закрепил event-driven паттерны scraping/crawling: frontier/state/topics/contracts/retries/idempotency и decoupled raw snapshots.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:186`
+- U03: `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:302`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:478`
+- A01: `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:8`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:15`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:155`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:167`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:31`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:36`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:39`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:41`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:53`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:58`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:64`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:70`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:77`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:83`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:90`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:93`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:97`
+- A02: `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:186`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:190`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:213`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:224`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:200`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:203`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:207`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:230`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:237`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:245`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:254`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:259`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:265`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:274`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:294`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:295`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:435`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:463`
+- A03: `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:494`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:495`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:516`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:528`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:617`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:619`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:587`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:593`, `raw-exports/sdlc-discovery-iteration-00/I00-F0004-CHATGPT.md:595`
 
 ## Extracted Concepts
 
