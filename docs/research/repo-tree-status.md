@@ -21,8 +21,8 @@ Current snapshot after full distillation reset and transition to incremental mic
 | `raw-exports/sdlc-discovery-iteration-01/*.md` |    22 | IDs up to `I01-F0022-CHATGPT`      |
 | `raw-exports/sdlc-discovery-iteration-02/*.md` |    10 | IDs from `I02-F0001-CHATGPT`       |
 | `raw-exports/sdlc-discovery-iteration-03/*.md` |     1 | `I03-F0001-GEMINI-DR`              |
-| `docs/**/*.md`                                 |    33 | Curated docs                       |
-| `docs/research/distillation/*.md`              |    20 | Minimal contract + 17 pass artifacts |
+| `docs/**/*.md`                                 |    34 | Curated docs                       |
+| `docs/research/distillation/*.md`              |    21 | Minimal contract + 18 pass artifacts |
 | `docs/research/artifacts/**/*`                 |    11 | Canonical research artifacts       |
 
 ## Reset outcome
