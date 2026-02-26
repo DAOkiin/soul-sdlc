@@ -1,7 +1,5 @@
 # I01-F0015-CHATGPT Concepts (Draft)
 
-[Analyzed source: I01-F0015-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I01-F0015-CHATGPT`
@@ -12,14 +10,22 @@
 
 ## User Prompts Summary
 
-1. Пользователь попросил оценить идею управления разработкой через state machine по инновационности, оправданности и фокусу (`raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:4`).
-2. Пользователь уточнил практическую цель: агентно-управляемая разработка, и запросил ticket/spec на guards, pre-push enforcement, визуализацию графа и markdown-шаблон с выбранным дизайном реализации (`raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:114`).
+1. [request] [U01] Пользователь попросил оценить идею управления разработкой через state machine по инновационности, оправданности и фокусу.
+2. [goal] [U02] Пользователь уточнил практическую цель: агентно-управляемая разработка, и запросил ticket/spec на guards, pre-push enforcement, визуализацию графа и markdown-шаблон с выбранным дизайном реализации.
 
 ## AI Response Summary
 
-1. Агент оценил novelty концепта как низкую, но подтвердил высокий прикладной потенциал "тонкого quality-gate слоя" для agent-enforced разработки (`C01`, `C02`, `C03`).
-2. Ответ фокусируется на guarded transitions, автосинхронизации с CI/хуками и визуализации как ключевых факторов ROI (`C04`, `C05`).
-3. Во второй части выдан подробный ticket/spec с DDL guard schema, guard engine в `process_compiler`, CLI-командами (`guards/render/render-doc`), pre-push интеграцией, шаблоном docs и тестами (`C06`, `C07`, `C08`, `C09`, `C10`).
+1. [proposal] [A01] Агент оценил novelty концепта как низкую, но подтвердил высокий прикладной потенциал "тонкого quality-gate слоя" для agent-enforced разработки.
+2. [proposal] [A02] Ответ фокусируется на guarded transitions, автосинхронизации с CI/хуками и визуализации как ключевых факторов ROI.
+3. [proposal] [A03] Во второй части выдан подробный ticket/spec с DDL guard schema, guard engine в `process_compiler`, CLI-командами (`guards/render/render-doc`), pre-push интеграцией, шаблоном docs и тестами.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:114`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:8`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:10`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:14`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:27`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:28`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:42`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:45`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:50`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:52`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:79`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:90`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:92`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:77`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:95`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:97`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:137`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:179`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:182`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:210`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:218`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:221`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:299`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:301`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:303`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:149`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:278`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:348`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:377`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:403`, `raw-exports/sdlc-discovery-iteration-01/I01-F0015-CHATGPT.md:410`
 
 ## Extracted Concepts
 
