@@ -5,7 +5,8 @@
 ## Source
 
 - chat_id: `I01-F0001-CHATGPT`
-- source_path: `raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md`
+- source_path: [raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md)
+- source_path_abs: `/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md`
 - processed_on: `2026-02-26`
 - draft_status: `awaiting_user_alignment`
 
