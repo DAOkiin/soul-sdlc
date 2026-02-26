@@ -8,3 +8,5 @@ Operational protocol for reset-mode distillation.
 4. After each step, update exactly one row in `PRIMARY_PASS_REGISTRY.md`.
 5. Do not create global taxonomies (concept maps, slice maps, ontologies) before 5-10 processed sources.
 6. Keep raw sources immutable: never rewrite semantic content in `raw-exports/`.
+7. Treat `CONCEPTS_FORMAT_CONTRACT.md` as single source of truth for `*-concepts.md` structure and parser-facing constraints.
+8. Run `python check_concepts_contract.py --root docs/research/distillation --mode strict` before finalizing concept-format changes.

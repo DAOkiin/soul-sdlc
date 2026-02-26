@@ -15,7 +15,8 @@ Primary objective: keep repository knowledge legible and traceable while preserv
 5. `docs/research/distillation/ITERATION_LEDGER.md` (iteration progression)
 6. `docs/research/distillation/PRIMARY_PASS_REGISTRY.md` (micro-pass queue)
 7. `docs/research/distillation/WORKING_PROTOCOL.md` (operational micro rules)
-8. `docs/README.md` and `docs/research/README.md` (artifact definitions and research scope)
+8. `docs/research/distillation/CONCEPTS_FORMAT_CONTRACT.md` (canonical format for `*-concepts.md`)
+9. `docs/README.md` and `docs/research/README.md` (artifact definitions and research scope)
 
 ## Source-of-truth hierarchy
 
@@ -107,6 +108,7 @@ Run from repository root:
 - `rg -n "^\| [0-9]{4} \|" CHAT_REGISTRY_ITERATION_00.md | wc -l`
 - `rg -n "\| raw \|" CHAT_REGISTRY_ITERATION_00.md | wc -l`
 - `find raw-exports -type f -name '*.md' | wc -l`
+- `python check_concepts_contract.py --root docs/research/distillation --mode strict`
 
 ## Expected deliverables for each substantial pass
 
