@@ -1,7 +1,5 @@
 # I01-F0007-CHATGPT Concepts (Draft)
 
-[Analyzed source: I01-F0007-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I01-F0007-CHATGPT`
@@ -12,14 +10,22 @@
 
 ## User Prompts Summary
 
-1. Пользователь запросил исследование практик "хорошего git-flow" для AI-агентов (Codex/Claude/Gemini) по Medium, Dev.to и корпоративным блогам минимум 10 компаний (`raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:4`).
-2. Затем пользователь попросил сформировать практический Git Flow playbook на английском (`raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:155`).
+1. [request] [U01] Пользователь запросил исследование практик "хорошего git-flow" для AI-агентов (Codex/Claude/Gemini) по Medium, Dev.to и корпоративным блогам минимум 10 компаний.
+2. [request] [U02] Затем пользователь попросил сформировать практический Git Flow playbook на английском.
 
 ## AI Response Summary
 
-1. AI собрал обзор источников и вывел консенсусные паттерны агентной разработки через PR-centric процесс и изоляцию задач (`C01`, `C02`).
-2. AI сформировал детальный playbook: branch/worktree policy, commit/PR discipline, CI gates, human review, agent guardrails, merge/hotfix/dependency flows (`C03`-`C07`).
-3. Рекомендуемый default — trunk-based с короткоживущими ветками и обязательным human-in-the-loop (`C01`, `C04`).
+1. [proposal] [A01] AI собрал обзор источников и вывел консенсусные паттерны агентной разработки через PR-centric процесс и изоляцию задач.
+2. [proposal] [A02] AI сформировал детальный playbook: branch/worktree policy, commit/PR discipline, CI gates, human review, agent guardrails, merge/hotfix/dependency flows (-).
+3. [proposal] [A03] Рекомендуемый default — trunk-based с короткоживущими ветками и обязательным human-in-the-loop.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:155`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:87`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:91`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:290`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:93`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:95`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:245`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:247`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:190`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:194`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:200`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:204`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:185`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:186`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:410`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:416`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:87`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:91`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:290`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:181`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:182`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:136`, `raw-exports/sdlc-discovery-iteration-01/I01-F0007-CHATGPT.md:137`
 
 ## Extracted Concepts
 
