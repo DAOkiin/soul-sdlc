@@ -46,3 +46,4 @@ Primary pass tracker for Iteration-03 distillation.
 | P0040 | CHAT-CHATGPT-0030 | chat | iteration-02 | raw-exports/sdlc-discovery-iteration-02/CHAT-CHATGPT-0030.md | docs/research/distillation/primary-notes/CHAT-CHATGPT-0030.md | pending | - | - | - |
 | P0041 | CHAT-CHATGPT-0031 | chat | iteration-02 | raw-exports/sdlc-discovery-iteration-02/CHAT-CHATGPT-0031.md | docs/research/distillation/primary-notes/CHAT-CHATGPT-0031.md | pending | - | - | - |
 | P0042 | CHAT-CHATGPT-0032 | chat | iteration-02 | raw-exports/sdlc-discovery-iteration-02/CHAT-CHATGPT-0032.md | docs/research/distillation/primary-notes/CHAT-CHATGPT-0032.md | pending | - | - | - |
+| P0043 | CHAT-GEMINI-DR-0033 | deep_research | iteration-03 | raw-exports/sdlc-discovery-iteration-03/CHAT-GEMINI-DR-0033.md | docs/research/distillation/primary-notes/CHAT-GEMINI-DR-0033.md | pending | - | - | imported from iteration-03 raw export |

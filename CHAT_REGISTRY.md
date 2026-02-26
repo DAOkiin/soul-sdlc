@@ -2,7 +2,7 @@
 
 Manual ordering and processing registry for chat exports used in SDLC discovery.
 
-- Scope: `raw-exports/sdlc-discovery-iteration-01/*.md` and `raw-exports/sdlc-discovery-iteration-02/*.md`.
+- Scope: `raw-exports/sdlc-discovery-iteration-01/*.md`, `raw-exports/sdlc-discovery-iteration-02/*.md`, and `raw-exports/sdlc-discovery-iteration-03/*.md`.
 - Ordering policy: manual registry order (initialized from file creation chronology and then curated manually).
 - ID policy: `CHAT-<PROVIDER>-XXXX`; deep research: `CHAT-<PROVIDER>-DR-XXXX`.
 
@@ -40,3 +40,4 @@ Manual ordering and processing registry for chat exports used in SDLC discovery.
 | 0030 | CHAT-CHATGPT-0030 | CHATGPT | chat | ChatGPT-Проверка_документации_w-model | raw-exports/sdlc-discovery-iteration-02/CHAT-CHATGPT-0030.md | 2026-02-25 20:01:18 | raw | - | - |
 | 0031 | CHAT-CHATGPT-0031 | CHATGPT | chat | ChatGPT-Скорость_инференса_и_документация | raw-exports/sdlc-discovery-iteration-02/CHAT-CHATGPT-0031.md | 2026-02-25 20:01:37 | raw | - | - |
 | 0032 | CHAT-CHATGPT-0032 | CHATGPT | chat | ChatGPT-Эмоции_агентов_и_позиции | raw-exports/sdlc-discovery-iteration-02/CHAT-CHATGPT-0032.md | 2026-02-25 20:01:51 | raw | - | - |
+| 0033 | CHAT-GEMINI-DR-0033 | GEMINI | deep_research | Планирование_итерации_разработки_проекта | raw-exports/sdlc-discovery-iteration-03/CHAT-GEMINI-DR-0033.md | 2026-02-25 23:43:49 | raw | - | source-filename-original: Планирование_итерации_разработки_проекта.md |

@@ -9,16 +9,15 @@ Primary objective: keep repository knowledge legible, traceable, and dedup-ready
 ## Mandatory read order
 
 1. `AGENTS.md` (this file)
-2. `CHAT_REGISTRY.md` (manual ordering for SDLC iterations 01/02)
+2. `CHAT_REGISTRY.md` (manual ordering for SDLC iterations 01/02/03)
 3. `CHAT_REGISTRY_ITERATION_00.md` (legacy prehistory registry)
-4. `CHAT_DEDUP_REGISTRY.md` (exact-duplicate removals)
-5. `docs/research/repo-tree-status.md` (latest tree audit snapshot)
-6. `docs/research/distillation/ITERATION_LEDGER.md` (iteration progression)
+4. `docs/research/repo-tree-status.md` (latest tree audit snapshot)
+5. `docs/research/distillation/ITERATION_LEDGER.md` (iteration progression)
+6. `docs/research/distillation/ITERATION-03-INTENT.md` (context anchor for current iteration intent)
 7. `docs/research/distillation/ITERATION-03-PRIMARY-DISTILLATION.md` (current distillation runbook)
 8. `docs/research/distillation/PRIMARY_PASS_REGISTRY.md` (primary-pass queue)
 9. `Harring.md` (selected harness engineering quotes)
-10. `docs/README.md` and `docs/research/README.md`
-11. Target chat file(s) referenced by the registries
+10. `docs/README.md` and `docs/research/README.md` (for artifact definitions and research scope)
 
 ## Source-of-truth hierarchy
 
@@ -31,15 +30,15 @@ Primary objective: keep repository knowledge legible, traceable, and dedup-ready
 
 - `raw-exports/sdlc-discovery-iteration-00`: pre-SDLC-automation history (data collection/discovery).
 - `raw-exports/sdlc-discovery-iteration-01`: chats up to `CHAT-CHATGPT-0022` (inclusive).
-- `raw-exports/sdlc-discovery-iteration-02`: chats from `CHAT-CHATGPT-0023` and later.
+- `raw-exports/sdlc-discovery-iteration-02`: chats from `CHAT-CHATGPT-0023` to `CHAT-CHATGPT-0032`.
+- `raw-exports/sdlc-discovery-iteration-03`: chats from `CHAT-GEMINI-DR-0033` and later.
 - `docs/research/distillation/*` (`ITER-03`): primary distillation of all sources, followed by slice-based targeted redistillation.
 
 ## Hard constraints
 
 - Do not rewrite semantic content inside `raw-exports/` to "clean" it.
 - File path/filename normalization inside `raw-exports/` is allowed only by ID policies below.
-- Delete raw files only for exact SHA256 duplicates and only after recording the event in `CHAT_DEDUP_REGISTRY.md`.
-- Do not renumber existing `chat_id` values in `CHAT_REGISTRY.md` (`0001..0032` are stable).
+- Do not renumber existing `chat_id` values in `CHAT_REGISTRY.md` (`0001..0033` are stable).
 - Keep lineage explicit: every dedup or move must preserve provenance to prior path(s).
 
 ## ID policy
@@ -90,20 +89,21 @@ Allowed transition direction: `raw -> indexed -> parsed -> synthesized -> verifi
    - IDs (`US/UC/NFR/AT/ADR`) and missing-ID findings
    - quality notes (`Unsupported Content`, plugin insertions, corruption)
 4. Update row `status`, `linked_us`, and `notes`.
-5. If duplicates are detected, mark related rows and record resolved exact dedup events in `CHAT_DEDUP_REGISTRY.md`.
 
 ## Iteration-03 distillation workflow
 
-1. Take next `pending` row in `docs/research/distillation/PRIMARY_PASS_REGISTRY.md`.
-2. Create/update `docs/research/distillation/primary-notes/<SOURCE_ID>.md`.
-3. Extract atomic claims with explicit evidence references (`source_path:line`).
-4. Propose/adjust slice placement in `docs/research/distillation/CONTEXT_SLICE_MAP.md`.
-5. Add focused follow-up work into `docs/research/distillation/TARGETED_REDISTILL_BACKLOG.md`.
+1. Read `docs/research/distillation/ITERATION-03-INTENT.md` as context anchor before taking tasks.
+2. Take next `pending` row in `docs/research/distillation/PRIMARY_PASS_REGISTRY.md`.
+3. Create/update `docs/research/distillation/primary-notes/<SOURCE_ID>.md`.
+4. Extract atomic claims with explicit evidence references (`source_path:line`).
+5. Propose/adjust slice placement in `docs/research/distillation/CONTEXT_SLICE_MAP.md`.
+6. Add focused follow-up work into `docs/research/distillation/TARGETED_REDISTILL_BACKLOG.md`.
 
 ## Scope currently tracked by CHAT_REGISTRY
 
 - `raw-exports/sdlc-discovery-iteration-01/*.md`
 - `raw-exports/sdlc-discovery-iteration-02/*.md`
+- `raw-exports/sdlc-discovery-iteration-03/*.md`
 
 ## Quick checks before finalizing changes
 
@@ -113,6 +113,7 @@ Run from repository root:
 - `rg -n "CHAT-[A-Z0-9]+(-DR)?-[0-9]{4}" CHAT_REGISTRY.md`
 - `rg -n "CHAT-CHATGPT-I00-[0-9]{4}" CHAT_REGISTRY_ITERATION_00.md`
 - `find raw-exports/sdlc-discovery-iteration-01 raw-exports/sdlc-discovery-iteration-02 -maxdepth 1 -type f -name '*.md' | sed 's#.*/##' | rg -v '^CHAT-(CHATGPT|GEMINI)(-DR)?-[0-9]{4}\.md$'`
+- `find raw-exports/sdlc-discovery-iteration-03 -maxdepth 1 -type f -name '*.md' | sed 's#.*/##' | rg -v '^CHAT-(CHATGPT|GEMINI)(-DR)?-[0-9]{4}\.md$'`
 - `find raw-exports/sdlc-discovery-iteration-00 -maxdepth 1 -type f -name '*.md' | sed 's#.*/##' | rg -v '^(CHAT-CHATGPT-I00-[0-9]{4}\.md|README\.md)$'`
 
 ## Dedup preparation rule
@@ -127,7 +128,6 @@ Dedup decisions must be evidence-based:
 
 - updated `CHAT_REGISTRY.md` rows;
 - updated `CHAT_REGISTRY_ITERATION_00.md` rows when legacy scope is touched;
-- updated `CHAT_DEDUP_REGISTRY.md` when exact duplicates are removed;
 - updated `docs/research/repo-tree-status.md` snapshot if tree reality changed;
 - derived synthesis/traceability updates in `docs/`;
 - explicit list of unresolved ambiguities.
