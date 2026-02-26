@@ -1,7 +1,5 @@
 # I01-F0001-CHATGPT Concepts (Draft)
 
-[Analyzed source: I01-F0001-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I01-F0001-CHATGPT`
@@ -12,16 +10,26 @@
 
 ## User Prompts Summary
 
-1. Пользователь запросил аудит файла `SDLC_12207_Synthesis.md` по официальному документу стандарта (`raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:4`).
-2. Пользователь подтвердил запуск проверки (`raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:16`).
-3. Ключевой фокус пользовательских запросов: верификация соответствия SDLC нормативной модели (`C01`, `C03`, `C04`).
+1. [request] [U01] Пользователь запросил аудит файла `SDLC_12207_Synthesis.md` по официальному документу стандарта.
+2. [request] [U02] Пользователь подтвердил запуск проверки.
+3. [request] [U03] Ключевой фокус пользовательских запросов: верификация соответствия SDLC нормативной модели (`C01`, `C03`, `C04`).
 
 ## AI Response Summary
 
-1. AI зафиксировал эталон проверки: ISO/IEC/IEEE 12207:2017 и канадскую адаптацию CAN/CSA (`C01`).
-2. AI описал метод проверки через PRM и полное покрытие outcomes, а не через фиксированную модель разработки (`C03`).
-3. AI развернул контрольную архитектуру по 30 процессам и 4 группам, с акцентом на обязательность нетехнических групп (`C04`, `C05`).
-4. AI подчеркнул итеративно-рекурсивный характер технических процессов и совместимость с Agile/DevOps при сохранении требований стандарта (`C06`, `C07`).
+1. [proposal] [A01] AI зафиксировал эталон проверки: ISO/IEC/IEEE 12207:2017 и канадскую адаптацию CAN/CSA.
+2. [proposal] [A02] AI описал метод проверки через PRM и полное покрытие outcomes, а не через фиксированную модель разработки.
+3. [proposal] [A03] AI развернул контрольную архитектуру по 30 процессам и 4 группам, с акцентом на обязательность нетехнических групп.
+4. [proposal] [A04] AI подчеркнул итеративно-рекурсивный характер технических процессов и совместимость с Agile/DevOps при сохранении требований стандарта.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:16`
+- U03: `raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:1`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:551`, `raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:557`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:567`, `raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:569`, `raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:573`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:577`, `raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:601`, `raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:616`, `raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:581`, `raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:661`
+- A04: `raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:618`, `raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:652`, `raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:648`, `raw-exports/sdlc-discovery-iteration-01/I01-F0001-CHATGPT.md:650`
 
 ## Extracted Concepts
 
