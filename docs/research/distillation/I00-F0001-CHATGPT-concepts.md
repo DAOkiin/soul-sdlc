@@ -1,7 +1,5 @@
 # I00-F0001-CHATGPT Concepts (Draft)
 
-[Analyzed source: I00-F0001-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I00-F0001-CHATGPT`
@@ -12,18 +10,30 @@
 
 ## User Prompts Summary
 
-1. Пользователь попросил собрать из чатов рабочий контекст для одного документа и подготовить план дня: use cases, стек, архитектура, настройка агентской разработки (`raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:4`).
-2. Пользователь запросил фреймворк на один лист A4 для системного планирования сложного проекта (`raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:227`).
-3. Пользователь попросил валидировать формулировку идеи системы ingestion+rules pipeline (`raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:524`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:526`).
-4. Пользователь попросил переписать идею в точном техническом стиле для документа (`raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:715`).
-5. Пользователь попросил найти идентичные open-source решения с готовыми правилами и инструментами (`raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:748`).
+1. [request] [U01] Пользователь попросил собрать из чатов рабочий контекст для одного документа и подготовить план дня: use cases, стек, архитектура, настройка агентской разработки.
+2. [request] [U02] Пользователь запросил фреймворк на один лист A4 для системного планирования сложного проекта.
+3. [request] [U03] Пользователь попросил валидировать формулировку идеи системы ingestion+rules pipeline.
+4. [request] [U04] Пользователь попросил переписать идею в точном техническом стиле для документа.
+5. [request] [U05] Пользователь попросил найти идентичные open-source решения с готовыми правилами и инструментами.
 
 ## AI Response Summary
 
-1. Агент собрал структурированный рабочий документ: цель, MVP-границы, use cases, DDL-first data model, event-driven architecture, стек и план на день (`C01`, `C03`, `C04`, `C05`).
-2. Для planning предложен A4-canvas (6 блоков + оборот с декомпозицией), адаптированный под pipeline-проект (`C06`).
-3. Валидация идеи подтвердила жизнеспособность, но выделила риски по режимам управления пайплайном и отсутствию минимального контракта правил (`C07`, `C08`).
-4. Сформирована техдок-версия концепции и сравнительный список OSS-референсов по модели adapters + pipelines + tools (`C09`, `C10`).
+1. [goal] [A01] Агент собрал структурированный рабочий документ: цель, MVP-границы, use cases, DDL-first data model, event-driven architecture, стек и план на день.
+2. [proposal] [A02] Для planning предложен A4-canvas (6 блоков + оборот с декомпозицией), адаптированный под pipeline-проект.
+3. [risk] [A03] Валидация идеи подтвердила жизнеспособность, но выделила риски по режимам управления пайплайном и отсутствию минимального контракта правил.
+4. [proposal] [A04] Сформирована техдок-версия концепции и сравнительный список OSS-референсов по модели adapters + pipelines + tools.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:227`
+- U03: `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:524`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:526`
+- U04: `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:715`
+- U05: `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:748`
+- A01: `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:36`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:37`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:44`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:553`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:559`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:97`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:99`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:115`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:120`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:124`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:126`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:131`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:135`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:147`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:54`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:60`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:66`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:78`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:90`
+- A02: `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:235`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:265`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:269`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:280`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:288`
+- A03: `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:624`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:630`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:631`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:638`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:642`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:646`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:650`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:657`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:659`
+- A04: `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:606`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:607`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:733`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:734`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:752`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:756`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:782`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:792`, `raw-exports/sdlc-discovery-iteration-00/I00-F0001-CHATGPT.md:806`
 
 ## Extracted Concepts
 
