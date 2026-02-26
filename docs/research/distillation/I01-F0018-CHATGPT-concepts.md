@@ -1,7 +1,5 @@
 # I01-F0018-CHATGPT Concepts (Draft)
 
-[Analyzed source: I01-F0018-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I01-F0018-CHATGPT`
@@ -12,14 +10,22 @@
 
 ## User Prompts Summary
 
-1. Пользователь запросил исследование проверенных подходов и готовых решений для программного управления состоянием графа разработки, с учетом уже подготовленных v1/v2 материалов и текущей реализации (`raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:4`).
-2. Неявная цель запроса: перед масштабной имплементацией выбрать, какие части лучше взять готовыми (hooks/policy/workflow/state tooling), а какие оставить кастомными (`raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:22`).
+1. [request] [U01] Пользователь запросил исследование проверенных подходов и готовых решений для программного управления состоянием графа разработки, с учетом уже подготовленных v1/v2 материалов и текущей реализации.
+2. [goal] [U02] Неявная цель запроса: перед масштабной имплементацией выбрать, какие части лучше взять готовыми (hooks/policy/workflow/state tooling), а какие оставить кастомными.
 
 ## AI Response Summary
 
-1. Агент собрал обзор production-подходов: hook managers (`pre-commit`, `lefthook`), hard enforcement через CI/protected branches, policy-as-code (`OPA/Conftest`), FSM/workflow tooling и durable execution практики (`C01`-`C06`).
-2. Ответ закрепляет архитектурный принцип: pre-push как быстрый feedback слой, а обязательные правила должны дублироваться в CI (`C07`).
-3. В практической части дан конкретный интеграционный каркас `v1 + pre-commit + conftest`: snapshot contract, структура `policy/`, Rego правила, пример guard config, pre-push scripts и skeleton guard runner (`C08`, `C09`, `C10`, `C11`).
+1. [proposal] [A01] Агент собрал обзор production-подходов: hook managers (`pre-commit`, `lefthook`), hard enforcement через CI/protected branches, policy-as-code (`OPA/Conftest`), FSM/workflow tooling и durable execution практики (-).
+2. [proposal] [A02] Ответ закрепляет архитектурный принцип: pre-push как быстрый feedback слой, а обязательные правила должны дублироваться в CI.
+3. [proposal] [A03] В практической части дан конкретный интеграционный каркас `v1 + pre-commit + conftest`: snapshot contract, структура `policy/`, Rego правила, пример guard config, pre-push scripts и skeleton guard runner.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:22`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:33`, `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:37`, `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:179`, `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:191`, `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:193`
+- A02: `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:209`, `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:215`, `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:221`
+- A03: `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:235`, `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:241`, `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:245`, `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:4553`, `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:4561`, `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:4564`, `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:4608`, `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:4637`, `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:4703`, `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:4883`, `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:4897`, `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:4925`, `raw-exports/sdlc-discovery-iteration-01/I01-F0018-CHATGPT.md:4952`
 
 ## Extracted Concepts
 
