@@ -1,7 +1,5 @@
 # I01-F0011-CHATGPT Concepts (Draft)
 
-[Analyzed source: I01-F0011-CHATGPT.md](/Users/daokiin/projects/daokiin/soul/sdlc/raw-exports/sdlc-discovery-iteration-01/I01-F0011-CHATGPT.md)
-
 ## Source
 
 - chat_id: `I01-F0011-CHATGPT`
@@ -12,13 +10,20 @@
 
 ## User Prompts Summary
 
-1. Пользователь запросил исследование проектов по агентам, которые программно управляют состоянием и переходами (state transitions) в процессе работы (`raw-exports/sdlc-discovery-iteration-01/I01-F0011-CHATGPT.md:4`).
-2. В запросе описан целевой сценарий: отдельный worktree-состояние инициализируется при старте задачи, живет в течение task lifecycle, затем изменения вливаются в main, а временный worktree удаляется (`raw-exports/sdlc-discovery-iteration-01/I01-F0011-CHATGPT.md:4`).
-3. Пользователь дополнительно попросил перевод документа на русский (`raw-exports/sdlc-discovery-iteration-01/I01-F0011-CHATGPT.md:8`).
+1. [request] [U01] Пользователь запросил исследование проектов по агентам, которые программно управляют состоянием и переходами (state transitions) в процессе работы.
+2. [request] [U02] В запросе описан целевой сценарий: отдельный worktree-состояние инициализируется при старте задачи, живет в течение task lifecycle, затем изменения вливаются в main, а временный worktree удаляется.
+3. [request] [U03] Пользователь дополнительно попросил перевод документа на русский.
 
 ## AI Response Summary
 
-1. Ответ агента в этом источнике отсутствует; зафиксированы только пользовательские сообщения.
+1. [proposal] [A01] Ответ агента в этом источнике отсутствует; зафиксированы только пользовательские сообщения.
+
+## Summary Evidence Map
+
+- U01: `raw-exports/sdlc-discovery-iteration-01/I01-F0011-CHATGPT.md:4`
+- U02: `raw-exports/sdlc-discovery-iteration-01/I01-F0011-CHATGPT.md:4`
+- U03: `raw-exports/sdlc-discovery-iteration-01/I01-F0011-CHATGPT.md:8`
+- A01: `raw-exports/sdlc-discovery-iteration-01/I01-F0011-CHATGPT.md:1`
 
 ## Extracted Concepts
 
